@@ -1,0 +1,14 @@
+{
+    "name": "KALKULite",
+    "short_name": "KALKULite",
+    "description": "Aplikace pro řemeslníky – faktura a nabídka hlasem do 1 minuty.",
+    "lang": "cs",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#323044",
+    "theme_color": "#323044",
+    "icons": [
+        { "src": "/assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}
