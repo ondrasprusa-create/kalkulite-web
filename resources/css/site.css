@@ -1,3 +1,277 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 @source "../views";
 @source "../../content";
+@source "../js";
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        @apply bg-brand-dark font-sans text-slate-300 antialiased;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-chakra text-white;
+    }
+
+    ::selection {
+        background: rgba(31, 184, 170, 0.4);
+        color: #fff;
+    }
+
+    [x-cloak] { display: none !important; }
+}
+
+/* ---------- Brand utilities ---------- */
+
+@utility text-gradient {
+    background-image: linear-gradient(90deg, #0c92e9 0%, #1fb8aa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Jemná technická mřížka */
+@utility bg-tech-grid {
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+}
+
+@utility mask-fade-y {
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+@utility mask-radial {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+}
+
+/* Glass karta – sekundární plochy */
+@utility glass {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Zářící gradientní rámeček (pseudo-element maska) */
+@utility glow-border {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(135deg, #0c92e9, #1fb8aa 50%, rgba(255, 255, 255, 0.08));
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+
+/* Spotlight efekt sledující kurzor (proměnné nastavuje JS) */
+@utility spotlight {
+    background-image: radial-gradient(
+        420px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(31, 184, 170, 0.12),
+        transparent 45%
+    );
+}
+
+/* Aura – měkké barevné kruhy z pozadí prezentace (čisté CSS, žádný obrázek).
+   Kruh je vystředěný na roh sekce (záporné okraje) a volně přesahuje do sousedních sekcí.
+   `transform` řídí pomalý drift (animace), `translate` parallax z JS (--px/--py). */
+.aura-blob {
+    --aura-size: min(64rem, 130vw);
+    position: absolute;
+    width: var(--aura-size);
+    aspect-ratio: 1;
+    margin: calc(var(--aura-size) / -2);
+    border-radius: 9999px;
+    filter: blur(60px);
+    translate: var(--px, 0) var(--py, 0);
+    transition: translate 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: transform, translate;
+}
+.aura-blue {
+    background: radial-gradient(closest-side, rgba(36, 92, 150, 0.55) 0%, rgba(43, 74, 110, 0.3) 45%, rgba(43, 74, 110, 0.1) 70%, transparent 100%);
+}
+.aura-green {
+    background: radial-gradient(closest-side, rgba(38, 116, 96, 0.5) 0%, rgba(47, 90, 82, 0.28) 45%, rgba(47, 90, 82, 0.08) 70%, transparent 100%);
+}
+
+/* Obal stránky: jediný stacking context pro všechny aury, aby ležely pod veškerým obsahem.
+   overflow: clip ořízne jen přesah přes okraje celé stránky – mezi sekcemi se kruhy volně slévají.
+   (clip na rozdíl od hidden nevytváří scroll kontejner, takže sticky prvky fungují.) */
+.page-canvas {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+}
+
+/* ---------- Animace ---------- */
+
+@theme {
+    --animate-float: float 6s ease-in-out infinite;
+    --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+    --animate-wave: wave 1.1s ease-in-out infinite;
+    --animate-scan: scan 3.5s linear infinite;
+    --animate-marquee: marquee 40s linear infinite;
+    --animate-aura-a: aura-a 22s ease-in-out infinite;
+    --animate-aura-b: aura-b 26s ease-in-out infinite;
+    --animate-wiggle: wiggle 0.5s ease-in-out;
+    --animate-pop: pop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+    @keyframes aura-a {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-6%, 8%) scale(1.08); }
+    }
+    @keyframes aura-b {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(7%, -6%) scale(1.1); }
+    }
+    @keyframes dash {
+        to { stroke-dashoffset: -24; }
+    }
+    @keyframes wiggle {
+        0%, 100% { transform: rotate(0); }
+        25% { transform: rotate(-8deg); }
+        75% { transform: rotate(8deg); }
+    }
+    @keyframes pop {
+        from { opacity: 0; transform: scale(0.6) translateY(8px); }
+        to { opacity: 1; transform: none; }
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+    }
+    @keyframes pulse-ring {
+        0% { transform: scale(0.9); opacity: 0.7; }
+        100% { transform: scale(1.8); opacity: 0; }
+    }
+    @keyframes wave {
+        0%, 100% { transform: scaleY(0.35); }
+        50% { transform: scaleY(1); }
+    }
+    @keyframes scan {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(400%); }
+    }
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+}
+
+/* Reveal on scroll – aktivní jen když běží JS */
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+.js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    .js [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* ---------- Formuláře ---------- */
+
+.field-input {
+    @apply block min-h-14 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-base text-white transition-all duration-200 placeholder:text-slate-500 hover:border-white/20 focus:border-brand-teal focus:bg-white/[0.08] focus:ring-4 focus:ring-brand-teal/20 focus:outline-none;
+}
+.field-input[aria-invalid="true"] {
+    @apply border-rose-500/60 ring-4 ring-rose-500/15;
+}
+.field-select {
+    appearance: none;
+    padding-right: 3rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231fb8aa'%3E%3Cpath d='M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+}
+.field-select option { background: #26243a; }
+
+/* Posuvník s gradientní výplní (--fill nastavuje JS) */
+.range-brand {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2.75rem; /* velká dotyková plocha */
+    background: transparent;
+    cursor: pointer;
+    touch-action: pan-y;
+}
+.range-brand::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #0c92e9, #1fb8aa) 0 / var(--fill, 50%) 100% no-repeat, rgba(255, 255, 255, 0.1);
+}
+.range-brand::-moz-range-track {
+    height: 0.5rem;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #0c92e9, #1fb8aa) 0 / var(--fill, 50%) 100% no-repeat, rgba(255, 255, 255, 0.1);
+}
+.range-brand::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -0.625rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 9999px;
+    background: #fff;
+    border: 4px solid #1fb8aa;
+    box-shadow: 0 0 0 6px rgba(31, 184, 170, 0.18), 0 4px 14px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.range-brand::-moz-range-thumb {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    background: #fff;
+    border: 4px solid #1fb8aa;
+    box-shadow: 0 0 0 6px rgba(31, 184, 170, 0.18);
+}
+.range-brand:active::-webkit-slider-thumb { transform: scale(1.2); }
+.range-brand:focus-visible { outline: none; }
+.range-brand:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 8px rgba(31, 184, 170, 0.35); }
+
+/* SVG čáry, které se „nakreslí“ při odhalení */
+.js [data-draw] {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.3s;
+}
+.js .is-visible [data-draw] { stroke-dashoffset: 0; }
+
+/* Konfety – částice vystřelené po odeslání formuláře */
+.confetti {
+    position: fixed;
+    z-index: 100;
+    width: 8px;
+    height: 14px;
+    border-radius: 2px;
+    pointer-events: none;
+}

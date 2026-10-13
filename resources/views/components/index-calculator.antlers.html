@@ -1,0 +1,74 @@
+{{#
+    Interaktivní kalkulačka KALKULite Indexu (zjednodušený, orientační model – výpočet v site.js).
+#}}
+<section id="index" class="relative py-20 sm:py-28">
+    {{ partial:components/aura }}
+
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {{ partial:components/section-heading eyebrow="Zkus si to" lead="Posuň jezdci a sleduj, jak se mění skutečný hodinový výdělek. Přesně tohle KALKULite hlídá u každé zakázky." }}
+            Vyplatí se ta zakázka, nebo <span class="text-gradient">jen pálíš naftu?</span>
+        {{ /partial:components/section-heading }}
+
+        <div data-index-calc data-verdict="good" class="group/calc mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr]" data-reveal>
+            {{# Ovládání #}}
+            <div class="space-y-7 rounded-3xl glass p-6 sm:p-8">
+                {{# Mini výsledek – na mobilu zůstává vidět při posouvání jezdců #}}
+                <div class="sticky top-[4.5rem] z-10 -mx-2 flex items-center justify-between rounded-2xl border border-white/10 bg-brand-darker/95 px-4 py-3 shadow-xl backdrop-blur lg:hidden" aria-hidden="true">
+                    <span class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">Index</span>
+                    <span class="flex items-baseline gap-3">
+                        <span class="font-chakra text-2xl font-bold text-white" data-out="index">7,8</span>
+                        <span class="font-chakra text-sm font-bold group-data-[verdict=good]/calc:text-emerald-400 group-data-[verdict=meh]/calc:text-amber-400 group-data-[verdict=bad]/calc:text-rose-400" data-out="verdict">Vyplatí se ✓</span>
+                    </span>
+                </div>
+                {{ partial:components/range-field name="price" label="Cena zakázky" min="2000" max="60000" step="500" value="18000" unit="Kč" }}
+                {{ partial:components/range-field name="material" label="Materiál" min="0" max="30000" step="500" value="6000" unit="Kč" }}
+                {{ partial:components/range-field name="hours" label="Odpracované hodiny" min="1" max="40" step="1" value="12" unit="h" }}
+                {{ partial:components/range-field name="km" label="Najeté km (tam i zpět, celkem)" min="0" max="600" step="10" value="80" unit="km" }}
+            </div>
+
+            {{# Výsledek #}}
+            <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl glass p-6 text-center sm:p-8 glow-border">
+                <p class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">KALKULite Index</p>
+
+                {{# Gauge #}}
+                <div class="relative mt-4 w-full max-w-[17rem]">
+                    <svg viewBox="0 0 200 110" class="w-full" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="gaugeGrad" x1="0" x2="1">
+                                <stop offset="0" stop-color="#f43f5e"/>
+                                <stop offset="0.45" stop-color="#f59e0b"/>
+                                <stop offset="0.75" stop-color="#0c92e9"/>
+                                <stop offset="1" stop-color="#1fb8aa"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M15 100 A85 85 0 0 1 185 100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14" stroke-linecap="round"/>
+                        <path data-gauge-arc d="M15 100 A85 85 0 0 1 185 100" fill="none" stroke="url(#gaugeGrad)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="30" class="transition-[stroke-dashoffset] duration-700 ease-out"/>
+                        <g data-gauge-needle class="origin-[100px_100px] transition-transform duration-700 ease-[cubic-bezier(.34,1.56,.64,1)]" style="transform: rotate(36deg)">
+                            <line x1="100" y1="100" x2="100" y2="30" stroke="#fff" stroke-width="3" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+                        </g>
+                        <circle cx="100" cy="100" r="7" fill="#fff"/>
+                    </svg>
+                </div>
+
+                <p class="mt-3 font-chakra text-6xl leading-none font-bold text-white" data-out="index" aria-live="polite">7,8</p>
+
+                <p class="mt-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-chakra text-sm font-bold transition-colors duration-500
+                    group-data-[verdict=good]/calc:bg-emerald-500/15 group-data-[verdict=good]/calc:text-emerald-400
+                    group-data-[verdict=meh]/calc:bg-amber-500/15 group-data-[verdict=meh]/calc:text-amber-400
+                    group-data-[verdict=bad]/calc:bg-rose-500/15 group-data-[verdict=bad]/calc:text-rose-400" data-out="verdict">Vyplatí se ✓</p>
+
+                <dl class="mt-6 grid w-full grid-cols-2 gap-3 text-left text-sm">
+                    <div class="rounded-xl bg-black/20 p-3">
+                        <dt class="text-xs text-slate-400">Čistý hodinový výdělek</dt>
+                        <dd class="mt-1 font-chakra text-lg font-bold text-white"><span data-out="hourly">–</span> Kč/h</dd>
+                    </div>
+                    <div class="rounded-xl bg-black/20 p-3">
+                        <dt class="text-xs text-slate-400">Doprava tě stojí</dt>
+                        <dd class="mt-1 font-chakra text-lg font-bold text-white"><span data-out="travel">–</span> Kč</dd>
+                    </div>
+                </dl>
+                <p class="mt-4 text-[11px] text-slate-500">Orientační model: 7 Kč/km, průměr 60 km/h za volantem. V appce si nastavíš vlastní hodnoty.</p>
+            </div>
+        </div>
+    </div>
+</section>

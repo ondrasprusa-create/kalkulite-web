@@ -1,0 +1,29 @@
+{{#
+    Tlačítko / odkaz
+    Parametry:
+      href     – cíl odkazu (výchozí #waitlist)
+      variant  – primary | ghost (výchozí primary)
+      size     – sm | md | lg (výchozí md)
+      class    – další třídy
+      attrs    – libovolné HTML atributy (např. data-demo-open)
+      plan     – handle tarifu; JS ho předvyplní do waitlist formuláře
+    Obsah tlačítka se předává jako slot.
+#}}
+<a
+    href="{{ href ?? '#waitlist' }}"
+    {{ attrs }}
+    {{ if plan }}data-plan="{{ plan }}"{{ /if }}
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        {{ size == 'sm' ? 'px-4 py-2 text-sm' : (size == 'lg' ? 'px-7 py-4 text-base sm:text-lg' : 'px-5 py-3 text-base') }}
+        {{ if variant == 'ghost' }}
+            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+        {{ else }}
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        {{ /if }}
+        {{ class }}"
+>
+    {{ if variant != 'ghost' }}
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    {{ /if }}
+    <span class="relative inline-flex items-center gap-2">{{ slot }}</span>
+</a>

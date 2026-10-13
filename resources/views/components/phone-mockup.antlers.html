@@ -1,0 +1,120 @@
+{{#
+    Stylizovaný smartphone s UI aplikace (vychází z reálného prototypu).
+    Telefon se při pohybu myši naklání (data-tilt), plovoucí štítky mají parallax.
+#}}
+<div class="relative [perspective:1400px]" data-tilt-area>
+    {{# Záře za telefonem #}}
+    <div class="absolute inset-x-6 top-16 bottom-10 -z-10 rounded-[3rem] bg-brand-gradient-diagonal opacity-40 blur-3xl" aria-hidden="true"></div>
+
+    <div data-tilt class="relative mx-auto w-[min(19.5rem,82vw)] transition-transform duration-300 ease-out [transform-style:preserve-3d]">
+        {{# Rám telefonu #}}
+        <div class="relative rounded-[3rem] border border-white/15 bg-[#14131f] p-2.5 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)]">
+            <div class="relative overflow-hidden rounded-[2.4rem] bg-[#2b2a3d]">
+                {{# Dynamic island + status bar #}}
+                <div class="relative flex items-center justify-between px-6 pt-3 pb-1 text-[11px] font-semibold text-white">
+                    <span>7:42</span>
+                    <span class="absolute left-1/2 top-2.5 h-6 w-24 -translate-x-1/2 rounded-full bg-black"></span>
+                    <span class="flex items-center gap-1">5G <span class="rounded bg-white px-1 text-[9px] text-black">86</span></span>
+                </div>
+
+                <div class="space-y-3 px-4 pt-4 pb-24 text-left">
+                    {{# Hlavička aplikace #}}
+                    <div class="flex items-center justify-between">
+                        <span class="flex items-center gap-1.5 font-chakra text-sm font-bold text-white">
+                            <img src="/assets/logo.png" alt="" class="h-4 w-auto">
+                            KALKU<span class="text-gradient">Lite</span>
+                        </span>
+                        <span class="grid size-8 place-items-center rounded-full bg-white/10 text-slate-300">
+                            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                        </span>
+                    </div>
+                    <p class="font-chakra text-lg leading-tight font-bold text-white">Dobré ráno, Pavle.</p>
+
+                    {{# Karta dne #}}
+                    <div class="rounded-2xl bg-white/[0.07] p-3.5">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-chakra text-sm font-bold text-white">Úterý 13. 10.</p>
+                                <p class="text-[11px] text-slate-400">3 zastávky · 64 km</p>
+                            </div>
+                            <span class="rounded-full bg-brand-teal/15 px-2 py-0.5 font-chakra text-[10px] font-semibold text-brand-teal">−18 km</span>
+                        </div>
+                        {{# Mini trasa #}}
+                        <svg viewBox="0 0 240 44" class="mt-2 h-10 w-full" fill="none" aria-hidden="true">
+                            <path d="M8 34 C 50 34, 60 10, 110 14 S 180 38, 232 12" stroke="url(#phoneRoute)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 6" class="[animation:dash_1.5s_linear_infinite]"/>
+                            <circle cx="8" cy="34" r="4.5" fill="#0c92e9"/>
+                            <circle cx="110" cy="14" r="4.5" fill="#16a5ca"/>
+                            <circle cx="232" cy="12" r="4.5" fill="#1fb8aa"/>
+                            <defs><linearGradient id="phoneRoute" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
+                        </svg>
+                    </div>
+
+                    {{# Hlasové zadání #}}
+                    <div class="rounded-2xl border border-brand-teal/30 bg-brand-teal/10 p-3.5">
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex size-2.5"><span class="absolute inline-flex size-full animate-ping rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex size-2.5 rounded-full bg-red-500"></span></span>
+                            <span class="font-chakra text-[11px] font-semibold tracking-wider text-brand-teal uppercase">Diktuješ nabídku</span>
+                        </div>
+                        <p class="mt-2 text-[12px] leading-snug text-slate-200" data-typewriter="„Koupelna Novák, obklad dvanáct metrů, lepidlo, spárovačka, dva dny práce…“">„Koupelna Novák, obklad dvanáct metrů, lepidlo, spárovačka, dva dny práce…“</p>
+                        <div class="mt-2.5 flex h-8 items-center gap-[3px]" aria-hidden="true">
+                            {{ loop from="1" to="28" }}
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: {{ value % 5 * 18 + 20 }}%; animation-delay: -{{ value * 73 % 1000 }}ms"></span>
+                            {{ /loop }}
+                        </div>
+                    </div>
+
+                    {{# Vygenerovaná faktura #}}
+                    <div class="rounded-2xl bg-white/[0.07] p-3.5">
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <p class="text-[10px] tracking-wider text-slate-400 uppercase">Nabídka #2026-041</p>
+                                <p class="font-chakra text-xl font-bold text-white">18 450 Kč</p>
+                            </div>
+                            <span class="rounded-lg bg-brand-gradient px-2 py-1 font-chakra text-[10px] font-bold text-white">Hotovo · 47 s</span>
+                        </div>
+                        <div class="mt-2 space-y-1 text-[11px] text-slate-400">
+                            <div class="flex justify-between"><span>Obklad 12 m² + materiál</span><span class="text-slate-200">9 870 Kč</span></div>
+                            <div class="flex justify-between"><span>Práce 2 dny</span><span class="text-slate-200">8 580 Kč</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{# Spodní lišta s mikrofonem #}}
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-around border-t border-white/5 bg-[#24233a]/95 px-6 pt-2 pb-5 backdrop-blur">
+                    <svg class="size-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg>
+                    <span class="relative -mt-8 grid size-14 place-items-center rounded-full bg-brand-gradient-diagonal shadow-glow">
+                        <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/50"></span>
+                        <svg class="relative size-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                    </span>
+                    <svg class="size-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4M16 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+                </div>
+
+                {{# Skenovací linka – AI efekt #}}
+                <div class="pointer-events-none absolute inset-x-0 top-0 h-1/4 animate-scan bg-gradient-to-b from-transparent via-brand-teal/10 to-transparent" aria-hidden="true"></div>
+            </div>
+        </div>
+
+        {{# Plovoucí štítky #}}
+        <div data-depth="40" class="absolute top-40 -left-6 animate-float sm:-left-20">
+            <div class="flex items-center gap-2.5 rounded-2xl border border-white/15 bg-[#2b2940]/95 backdrop-blur-md px-3.5 py-2.5 shadow-xl">
+                <span class="grid size-8 place-items-center rounded-xl bg-brand-gradient text-white">
+                    <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <div class="leading-tight">
+                    <p class="font-chakra text-sm font-bold text-white">Faktura odeslána</p>
+                    <p class="text-[11px] text-slate-400">i s QR platbou</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-depth="70" class="absolute -right-4 bottom-36 animate-float [animation-delay:-3s] sm:-right-14">
+            <div class="rounded-2xl border border-white/15 bg-[#2b2940]/95 backdrop-blur-md px-4 py-3 shadow-xl">
+                <p class="font-chakra text-[10px] font-semibold tracking-widest text-slate-400 uppercase">KALKULite Index</p>
+                <p class="flex items-baseline gap-1.5">
+                    <span class="font-chakra text-3xl font-bold text-gradient">8,4</span>
+                    <span class="text-xs font-semibold text-emerald-400">Vyplatí se ↑</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

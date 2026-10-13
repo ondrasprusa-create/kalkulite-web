@@ -1,0 +1,43 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Kontakt
+        fields:
+          -
+            handle: contact_email
+            field: { type: text, input_type: email, display: 'Kontaktní e-mail' }
+      -
+        display: 'Sociální sítě'
+        fields:
+          -
+            handle: social_instagram
+            field: { type: text, input_type: url, display: Instagram, width: 50 }
+          -
+            handle: social_tiktok
+            field: { type: text, input_type: url, display: TikTok, width: 50 }
+          -
+            handle: social_facebook
+            field: { type: text, input_type: url, display: Facebook, width: 50 }
+          -
+            handle: social_linkedin
+            field: { type: text, input_type: url, display: LinkedIn, width: 50 }
+      -
+        display: Tým
+        fields:
+          -
+            handle: team
+            field:
+              type: grid
+              display: Tým
+              fields:
+                -
+                  handle: name
+                  field: { type: text, display: Jméno, width: 50 }
+                -
+                  handle: photo
+                  field: { type: text, display: 'Fotka (URL)', width: 50 }
+                -
+                  handle: roles
+                  field: { type: list, display: Role }

@@ -1,0 +1,50 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: E-mail
+              validate:
+                - required
+                - email
+          -
+            handle: name
+            field:
+              type: text
+              display: Jméno
+          -
+            handle: trade
+            field:
+              type: select
+              display: Obor
+              options:
+                zednik: Zedník
+                podlahar: Podlahář
+                instalater: Instalatér
+                elektrikar: Elektrikář
+                obkladac: Obkladač
+                malir: Malíř
+                truhlar: Truhlář
+                jine: Jiné
+              validate:
+                - required
+          -
+            handle: team_size
+            field:
+              type: select
+              display: 'Velikost party'
+              options:
+                solo: 'Sám (OSVČ)'
+                2-5: '2–5 lidí'
+                6+: '6 a více'
+          -
+            handle: plan
+            field:
+              type: text
+              display: 'Zájem o tarif'

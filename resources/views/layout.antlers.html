@@ -1,13 +1,36 @@
 <!doctype html>
-<html lang="{{ site:short_locale }}">
+<html lang="{{ site:short_locale }}" class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ (title ?? site:name) | sanitize }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>{{ (seo_title ?? title ?? site:name) | sanitize }} | KALKULite</title>
+        <meta name="description" content="{{ (seo_description ?? 'KALKULite – mobilní parťák pro řemeslníky. Nabídka i faktura hlasem do 1 minuty, plánovač tras a index ziskovosti zakázek.') | sanitize }}">
+        <meta name="theme-color" content="#323044">
+        <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
+        <link rel="apple-touch-icon" href="/assets/brand/kalkulite-icon.png">
+        <meta property="og:title" content="KALKULite – Od faktur zpět k nářadí!">
+        <meta property="og:description" content="AI fakturace hlasem, chytré trasy a KALKULite Index ziskovosti. Pro OSVČ a malé party řemeslníků.">
+        <meta property="og:type" content="website">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <script>document.documentElement.classList.replace('no-js', 'js');</script>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="antialiased bg-zinc-100 font-sans leading-normal text-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-        {{ template_content }}
+    <body class="min-h-dvh overflow-x-hidden bg-brand-dark font-sans leading-relaxed text-slate-300">
+        <a href="#obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-brand-dark">Přeskočit na obsah</a>
+
+        {{ partial:components/navbar }}
+
+        <div class="page-canvas">
+            <main id="obsah">
+                {{ template_content }}
+            </main>
+
+            {{ partial:components/footer }}
+        </div>
     </body>
 </html>

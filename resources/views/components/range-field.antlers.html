@@ -1,0 +1,14 @@
+{{# Posuvník kalkulačky. Parametry: name, label, min, max, step, value, unit #}}
+<label class="block">
+    <span class="flex items-baseline justify-between gap-4">
+        <span class="text-sm font-medium text-slate-300">{{ label }}</span>
+        <span class="font-chakra text-lg font-bold text-white tabular-nums"><span data-range-out="{{ name }}">{{ value }}</span> <span class="text-sm text-slate-400">{{ unit }}</span></span>
+    </span>
+    <input
+        type="range"
+        name="{{ name }}"
+        min="{{ min }}" max="{{ max }}" step="{{ step }}" value="{{ value }}"
+        class="range-brand mt-3 w-full"
+        style="--fill: {{ (value - min) / (max - min) * 100 }}%"
+    >
+</label>

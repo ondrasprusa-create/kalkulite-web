@@ -1,0 +1,15 @@
+{{#
+    Logo KALKULite (ikona z brand manuálu + wordmark KALKU/Lite)
+    Parametry: class, size (sm|md)
+#}}
+<a href="/" class="group inline-flex items-center gap-2.5 {{ class }}" aria-label="KALKULite – domů">
+    <img
+        src="/assets/brand/kalkulite-icon.png"
+        alt=""
+        width="40" height="40"
+        class="{{ size == 'sm' ? 'size-8' : 'size-9 sm:size-10' }} rounded-[22%] shadow-glow transition-transform duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-rotate-12 group-hover:scale-110"
+    >
+    <span class="font-chakra text-xl font-bold tracking-wide text-white sm:text-2xl">
+        KALKU<span class="text-gradient">Lite</span>
+    </span>
+</a>

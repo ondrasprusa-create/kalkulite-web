@@ -1,0 +1,116 @@
+{{# WAITLIST – Statamic formulář `waitlist` (resources/forms/waitlist.yaml) #}}
+<section id="waitlist" class="relative py-20 sm:py-28">
+    {{ partial:components/aura grid="true" }}
+
+    <div class="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:px-8">
+        {{# Text #}}
+        <div data-reveal class="text-center lg:sticky lg:top-28 lg:text-left">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+                <span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-brand-teal opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-brand-teal"></span></span>
+                Hledáme testery
+            </p>
+            <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+                Buď mezi prvními,<br class="hidden sm:block"> kdo <span class="text-gradient">zahodí šanon</span>
+            </h2>
+            <p class="mt-5 text-lg text-slate-300">
+                Hledáme řemeslníky, kteří appku vyzkouší v reálném provozu a řeknou nám na rovinu, co funguje a co ne.
+                Za to dostanou přednostní přístup a zvýhodněnou cenu natrvalo.
+            </p>
+
+            <ul class="mt-8 space-y-3 text-left">
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">1</span><span><strong class="text-white">Přednostní přístup</strong> do ostré verze.</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">2</span><span><strong class="text-white">Zakládací cena</strong> zamčená napořád.</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">3</span><span><strong class="text-white">Tvoje slovo</strong> v tom, co postavíme dál.</span></li>
+            </ul>
+
+            <p class="mt-8 text-sm text-slate-400">
+                Stavebniny, oborová komunita nebo investor? <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="font-medium text-white underline decoration-brand-teal/50 underline-offset-4 hover:decoration-brand-teal">Ozvěte se nám</a>.
+            </p>
+        </div>
+
+        {{# Formulář #}}
+        <div data-reveal style="--reveal-delay:120ms" class="relative">
+            <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-brand-gradient-diagonal opacity-20 blur-2xl" aria-hidden="true"></div>
+
+            {{ form:create in="waitlist" attr:data-waitlist-form="true" attr:novalidate="true" attr:class="glow-border relative rounded-3xl bg-brand-deep/70 p-6 backdrop-blur-xl sm:p-9" }}
+
+                {{# Úspěch (pro odeslání bez JS i s JS) #}}
+                <div data-form-success class="{{ success ? '' : 'hidden' }} py-10 text-center">
+                    <div class="mx-auto grid size-20 animate-pop place-items-center rounded-full bg-brand-gradient shadow-glow-lg">
+                        <svg class="size-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-bold">Jsi na seznamu! 🔨</h3>
+                    <p class="mt-2 text-slate-300">Ozveme se, jakmile pro tebe bude místo v testování. Zatím zpátky k nářadí.</p>
+                </div>
+
+                <div data-form-fields class="{{ success ? 'hidden' : '' }} space-y-7">
+                    <div>
+                        <h3 class="text-2xl font-bold">Chci do waitlistu</h3>
+                        <p class="mt-1 text-sm text-slate-400">Zabere to 20 vteřin. Bez spamu, slibujeme.</p>
+                    </div>
+
+                    <div data-form-errors class="{{ errors ? '' : 'hidden' }} rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-300" role="alert">
+                        {{ errors }}<p>{{ value }}</p>{{ /errors }}
+                    </div>
+
+                    {{# Obor – velká dotyková tlačítka #}}
+                    <fieldset>
+                        <legend class="mb-3 font-chakra text-sm font-semibold text-white">Čím se živíš?</legend>
+                        <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+                            {{ fields }}
+                                {{ if handle == 'trade' }}
+                                    {{ foreach:options as="option|label" }}
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="{{ option }}" class="peer sr-only" {{ if old:trade && old:trade == option }}checked{{ /if }} required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                {{ label }}
+                                            </span>
+                                        </label>
+                                    {{ /foreach:options }}
+                                {{ /if }}
+                            {{ /fields }}
+                        </div>
+                    </fieldset>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <label class="block">
+                            <span class="mb-2 block font-chakra text-sm font-semibold text-white">Jméno <span class="font-normal text-slate-500">(nepovinné)</span></span>
+                            <input type="text" name="name" value="{{ old:name }}" autocomplete="given-name" placeholder="Petr" class="field-input">
+                        </label>
+                        <label class="block">
+                            <span class="mb-2 block font-chakra text-sm font-semibold text-white">E-mail</span>
+                            <input type="email" name="email" value="{{ old:email }}" autocomplete="email" inputmode="email" required placeholder="petr@obklady.cz" class="field-input">
+                        </label>
+                    </div>
+
+                    <label class="block">
+                        <span class="mb-2 block font-chakra text-sm font-semibold text-white">Velikost party</span>
+                        <select name="team_size" class="field-input field-select">
+                            <option value="solo" {{ old:team_size == 'solo' ? 'selected' : '' }}>Jsem na to sám (OSVČ)</option>
+                            <option value="2-5" {{ old:team_size == '2-5' ? 'selected' : '' }}>Parta 2–5 lidí</option>
+                            <option value="6+" {{ old:team_size == '6+' ? 'selected' : '' }}>6 a více lidí</option>
+                        </select>
+                    </label>
+
+                    <input type="hidden" name="plan" value="{{ old:plan }}" data-plan-input>
+                    <p data-plan-note class="hidden rounded-xl border border-brand-teal/30 bg-brand-teal/10 px-4 py-2.5 text-sm text-slate-200">
+                        Zájem o tarif <strong class="font-chakra text-white" data-plan-label></strong> ✓
+                    </p>
+
+                    {{# Honeypot #}}
+                    <div class="hidden" aria-hidden="true">
+                        <input type="text" name="{{ honeypot ?? 'website' }}" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit" data-submit class="group/btn relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-brand-gradient px-7 py-4 font-chakra text-lg font-semibold tracking-wide text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-lg active:scale-[0.98] disabled:pointer-events-none disabled:opacity-70">
+                        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+                        <span data-submit-label class="relative">Zapsat se do waitlistu</span>
+                        <svg data-submit-spinner class="relative hidden size-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-opacity=".3" stroke-width="3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                    </button>
+
+                    <p class="text-center text-xs text-slate-500">Odesláním souhlasíš se zpracováním e-mailu za účelem informování o spuštění KALKULite. Odhlásit se můžeš kdykoliv.</p>
+                </div>
+            {{ /form:create }}
+        </div>
+    </div>
+</section>

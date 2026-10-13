@@ -1,0 +1,14 @@
+{{# Řádek srovnání. Parametry: label, them, us #}}
+<div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-brand-teal/30 group-data-[state=us]/cmp:bg-brand-teal/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">{{ label }}</dt>
+    <dd class="grid">
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
+            {{ them }}
+        </span>
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
+            {{ us }}
+        </span>
+    </dd>
+</div>

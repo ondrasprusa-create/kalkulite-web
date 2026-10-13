@@ -1,0 +1,124 @@
+title: 'Landing page'
+tabs:
+  main:
+    display: Obsah
+    sections:
+      -
+        display: Základ
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Titulek
+              required: true
+              localizable: true
+          -
+            handle: seo_title
+            field:
+              type: text
+              display: 'SEO titulek'
+              localizable: true
+          -
+            handle: seo_description
+            field:
+              type: textarea
+              display: 'SEO popis'
+              localizable: true
+  pricing:
+    display: Ceník
+    sections:
+      -
+        fields:
+          -
+            handle: plans
+            field:
+              type: grid
+              display: Tarify
+              mode: stacked
+              add_row: 'Přidat tarif'
+              fields:
+                -
+                  handle: name
+                  field: { type: text, display: Název, width: 33, validate: [required] }
+                -
+                  handle: handle
+                  field: { type: slug, display: 'Handle (pro formulář)', width: 33, validate: [required] }
+                -
+                  handle: price
+                  field: { type: text, display: 'Cena (Kč)', width: 33, validate: [required] }
+                -
+                  handle: period
+                  field: { type: text, display: Období, width: 33, default: měsíc }
+                -
+                  handle: featured
+                  field: { type: toggle, display: 'Zvýraznit (Nejoblíbenější)', width: 33 }
+                -
+                  handle: cta_label
+                  field: { type: text, display: 'Text tlačítka', width: 33 }
+                -
+                  handle: tagline
+                  field: { type: text, display: Podtitulek }
+                -
+                  handle: features
+                  field: { type: list, display: 'Co obsahuje' }
+  proof:
+    display: 'Z terénu'
+    sections:
+      -
+        fields:
+          -
+            handle: stats
+            field:
+              type: grid
+              display: Čísla
+              fields:
+                -
+                  handle: prefix
+                  field: { type: text, display: Prefix, width: 25 }
+                -
+                  handle: value
+                  field: { type: text, display: 'Hodnota (číslo se animuje)', width: 25 }
+                -
+                  handle: suffix
+                  field: { type: text, display: Suffix, width: 25 }
+                -
+                  handle: label
+                  field: { type: text, display: Popisek, width: 25 }
+          -
+            handle: trades
+            field:
+              type: list
+              display: 'Obory (běžící pás)'
+          -
+            handle: testimonials
+            field:
+              type: grid
+              display: Citace
+              mode: stacked
+              fields:
+                -
+                  handle: quote
+                  field: { type: textarea, display: Citace }
+                -
+                  handle: author
+                  field: { type: text, display: Jméno, width: 50 }
+                -
+                  handle: trade
+                  field: { type: text, display: 'Obor / místo', width: 50 }
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Šablona

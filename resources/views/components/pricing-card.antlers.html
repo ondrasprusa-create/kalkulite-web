@@ -1,0 +1,53 @@
+{{#
+    Karta tarifu. Očekává proměnné z položky gridu `plans`:
+    name, tagline, price, period, featured, features (list), cta_label, handle
+#}}
+<article
+    data-reveal
+    data-tilt-card
+    style="--reveal-delay: {{ index * 90 }}ms"
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+        {{ if featured }}
+            glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg backdrop-blur-md xl:-my-4 xl:py-11
+        {{ else }}
+            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
+        {{ /if }}"
+>
+    {{ if featured }}
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-4 py-1 font-chakra text-xs font-bold tracking-wider whitespace-nowrap text-white uppercase shadow-glow">
+            ★ Nejoblíbenější
+        </span>
+    {{ /if }}
+
+    <h3 class="font-chakra text-2xl font-bold">{{ name }}</h3>
+    <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">{{ tagline }}</p>
+
+    <p class="mt-6 flex items-baseline gap-1.5">
+        <span class="font-chakra text-5xl font-bold tracking-tight {{ featured ? 'text-gradient' : 'text-white' }}">{{ price }}</span>
+        <span class="font-chakra text-lg text-white">Kč</span>
+        <span class="text-sm text-slate-400">/ {{ period ?? 'měsíc' }}</span>
+    </p>
+
+    <ul class="mt-7 flex-1 space-y-3 text-sm">
+        {{ features }}
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full {{ featured ? 'bg-brand-gradient text-white' : 'bg-brand-teal/15 text-brand-teal' }}" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">{{ value }}</span>
+            </li>
+        {{ /features }}
+    </ul>
+
+    <div class="mt-8">
+        {{ if featured }}
+            {{ partial:components/button href="#waitlist" class="w-full" :plan="handle" }}
+                {{ cta_label ?? 'Chci tenhle tarif' }}
+            {{ /partial:components/button }}
+        {{ else }}
+            {{ partial:components/button href="#waitlist" variant="ghost" class="w-full" :plan="handle" }}
+                {{ cta_label ?? 'Chci tenhle tarif' }}
+            {{ /partial:components/button }}
+        {{ /if }}
+    </div>
+</article>

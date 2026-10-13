@@ -1,0 +1,23 @@
+{{#
+    Aura – rozmazané modré a zelené kruhy v rozích (styl pozadí z prezentace), čisté CSS.
+    Kruhy nejsou ořezané sekcí: přesahují do sousedních sekcí a plynule se slévají.
+    Vrstva se vykresluje pod veškerým obsahem stránky (stacking context je na obalu v layoutu),
+    proto sekce NESMÍ mít `isolate`, `overflow-hidden` ani z-index.
+
+    Parametry:
+      corners   – tr-bl (modrá vpravo nahoře, zelená vlevo dole – výchozí) | tl-br
+      grid      – true = přidá jemnou technickou mřížku
+      intensity – soft | normal (výchozí normal)
+#}}
+<div class="pointer-events-none absolute inset-0 -z-10 {{ intensity == 'soft' ? 'opacity-60' : '' }}" aria-hidden="true" data-aura>
+    {{ if corners == 'tl-br' }}
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 left-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green right-0 bottom-0 animate-aura-b"></div>
+    {{ else }}
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 right-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green bottom-0 left-0 animate-aura-b"></div>
+    {{ /if }}
+    {{ if grid }}
+        <div class="absolute inset-0 bg-tech-grid mask-radial opacity-70"></div>
+    {{ /if }}
+</div>
