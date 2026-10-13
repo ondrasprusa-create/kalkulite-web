@@ -1,0 +1,1862 @@
+<!doctype html>
+<html lang="cs" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Od faktur zpět k nářadí! | KALKULite</title>
+        <meta name="description" content="KALKULite – AI mobilní parťák pro řemeslníky. Nabídka i faktura hlasem do 1 minuty, plánovač tras a KALKULite Index ziskovosti zakázek.">
+        <meta name="theme-color" content="#323044">
+        <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
+        <link rel="apple-touch-icon" href="/assets/brand/kalkulite-icon.png">
+        <meta property="og:title" content="KALKULite – Od faktur zpět k nářadí!">
+        <meta property="og:description" content="AI fakturace hlasem, chytré trasy a KALKULite Index ziskovosti. Pro OSVČ a malé party řemeslníků.">
+        <meta property="og:type" content="website">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <script>document.documentElement.classList.replace('no-js', 'js');</script>
+        <link rel="preload" as="style" href="http://localhost:8000/build/assets/site-DHVip5Go.css" /><link rel="modulepreload" as="script" href="http://localhost:8000/build/assets/site-Dgccv1DF.js" /><link rel="stylesheet" href="http://localhost:8000/build/assets/site-DHVip5Go.css" /><script type="module" src="http://localhost:8000/build/assets/site-Dgccv1DF.js"></script>
+    </head>
+    <body class="min-h-dvh overflow-x-hidden bg-brand-dark font-sans leading-relaxed text-slate-300">
+        <a href="#obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-brand-dark">Přeskočit na obsah</a>
+
+        <header
+    data-navbar
+    class="group/nav fixed inset-x-0 top-0 z-50 border-b border-transparent pt-[env(safe-area-inset-top)] transition-all duration-300 data-[scrolled=true]:border-white/10 data-[scrolled=true]:bg-brand-dark/80 data-[scrolled=true]:backdrop-blur-xl"
+>
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8" aria-label="Hlavní navigace">
+        <a href="/" class="group inline-flex items-center gap-2.5 " aria-label="KALKULite – domů">
+    <img
+        src="/assets/brand/kalkulite-icon.png"
+        alt=""
+        width="40" height="40"
+        class="size-9 sm:size-10 rounded-[22%] shadow-glow transition-transform duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-rotate-12 group-hover:scale-110"
+    >
+    <span class="font-chakra text-xl font-bold tracking-wide text-white sm:text-2xl">
+        KALKU<span class="text-gradient">Lite</span>
+    </span>
+</a>
+
+
+        <ul class="hidden items-center gap-1 md:flex">
+            <li><a href="#problem" data-nav-link class="relative rounded-lg px-4 py-2 font-chakra text-sm font-medium text-slate-300 transition-colors hover:text-white after:absolute after:inset-x-4 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-brand-gradient after:transition-transform hover:after:scale-x-100">Proč my</a></li>
+<li><a href="#funkce" data-nav-link class="relative rounded-lg px-4 py-2 font-chakra text-sm font-medium text-slate-300 transition-colors hover:text-white after:absolute after:inset-x-4 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-brand-gradient after:transition-transform hover:after:scale-x-100">Funkce</a></li>
+<li><a href="#cenik" data-nav-link class="relative rounded-lg px-4 py-2 font-chakra text-sm font-medium text-slate-300 transition-colors hover:text-white after:absolute after:inset-x-4 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-brand-gradient after:transition-transform hover:after:scale-x-100">Ceník</a></li>
+<li><a href="#reference" data-nav-link class="relative rounded-lg px-4 py-2 font-chakra text-sm font-medium text-slate-300 transition-colors hover:text-white after:absolute after:inset-x-4 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-brand-gradient after:transition-transform hover:after:scale-x-100">Z terénu</a></li>
+
+        </ul>
+
+        <div class="flex items-center gap-2">
+            <div class="hidden sm:block">
+            <a
+    href="#waitlist"
+    
+    
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-4 py-2 text-sm
+        
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        
+        "
+>
+    
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    
+    <span class="relative inline-flex items-center gap-2">Chci do waitlistu
+                <svg class="size-4 transition-transform group-hover/btn:translate-x-0.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-4.22-4.22a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.22-4.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg></span>
+</a>
+
+            </div>
+
+            <button
+                type="button"
+                data-menu-toggle
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                class="relative grid size-11 place-items-center rounded-xl glass text-white md:hidden"
+            >
+                <span class="sr-only">Otevřít menu</span>
+                <span class="flex w-5 flex-col gap-1.5" aria-hidden="true">
+                    <span class="h-0.5 w-full origin-center rounded bg-current transition-transform duration-300 group-data-[menu=open]/nav:translate-y-2 group-data-[menu=open]/nav:rotate-45"></span>
+                    <span class="h-0.5 w-full rounded bg-current transition-opacity duration-300 group-data-[menu=open]/nav:opacity-0"></span>
+                    <span class="h-0.5 w-full origin-center rounded bg-current transition-transform duration-300 group-data-[menu=open]/nav:-translate-y-2 group-data-[menu=open]/nav:-rotate-45"></span>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    
+    <div
+        id="mobile-menu"
+        class="grid grid-rows-[0fr] overflow-hidden border-white/10 bg-brand-dark/95 backdrop-blur-xl transition-[grid-template-rows] duration-300 group-data-[menu=open]/nav:grid-rows-[1fr] group-data-[menu=open]/nav:border-t md:hidden"
+    >
+        <div class="min-h-0">
+            <ul class="space-y-1 px-4 pt-4">
+                <li><a href="#problem" data-nav-link class="flex items-center justify-between rounded-xl px-4 py-4 font-chakra text-lg font-medium text-white transition-colors hover:bg-white/5 active:bg-white/10">Proč my</a></li>
+<li><a href="#funkce" data-nav-link class="flex items-center justify-between rounded-xl px-4 py-4 font-chakra text-lg font-medium text-white transition-colors hover:bg-white/5 active:bg-white/10">Funkce</a></li>
+<li><a href="#cenik" data-nav-link class="flex items-center justify-between rounded-xl px-4 py-4 font-chakra text-lg font-medium text-white transition-colors hover:bg-white/5 active:bg-white/10">Ceník</a></li>
+<li><a href="#reference" data-nav-link class="flex items-center justify-between rounded-xl px-4 py-4 font-chakra text-lg font-medium text-white transition-colors hover:bg-white/5 active:bg-white/10">Z terénu</a></li>
+
+            </ul>
+            <div class="p-4 pb-6">
+                <a
+    href="#waitlist"
+    
+    
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-7 py-4 text-base sm:text-lg
+        
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        
+        w-full"
+>
+    
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    
+    <span class="relative inline-flex items-center gap-2">Chci do waitlistu</span>
+</a>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+        <div class="page-canvas">
+            <main id="obsah">
+                <section class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40">
+    <div class="pointer-events-none absolute inset-0 -z-10 " aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 right-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green bottom-0 left-0 animate-aura-b"></div>
+    
+    
+        <div class="absolute inset-0 bg-tech-grid mask-radial opacity-70"></div>
+    
+</div>
+
+
+    <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-8 lg:px-8">
+        
+        <div class="text-center lg:text-left">
+            <p data-reveal class="mb-6 inline-flex items-center gap-2 rounded-full glass py-1.5 pr-4 pl-1.5 text-sm text-slate-200">
+                <span class="rounded-full bg-brand-gradient px-2.5 py-0.5 font-chakra text-xs font-bold tracking-wider text-white uppercase">AI</span>
+                Mobilní parťák pro řemeslníky v terénu
+            </p>
+
+            <h1 data-reveal style="--reveal-delay:80ms" class="text-[2.6rem] leading-[1.05] font-bold tracking-tight text-balance sm:text-6xl lg:text-7xl">
+                Od faktur zpět<br class="hidden sm:block">
+                k <span class="relative inline-block">
+                    <span class="text-gradient">nářadí!</span>
+                    <svg class="absolute -bottom-2 left-0 w-full text-brand-teal sm:-bottom-3" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                        <path data-draw d="M2 9C40 3 120 1 198 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="1" />
+                    </svg>
+                </span>
+            </h1>
+
+            <p data-reveal style="--reveal-delay:160ms" class="mx-auto mt-7 max-w-xl text-lg text-pretty text-slate-300 sm:text-xl lg:mx-0">
+                Nabídku i fakturu nadiktuješ <strong class="font-semibold text-white">do 1 minuty</strong> přímo ze stavby.
+                KALKULite spočítá materiál, naplánuje trasu a pohlídá, jestli se zakázka vůbec vyplatí.
+                Papíry vyřídí appka – ty se vrátíš k práci.
+            </p>
+
+            <div data-reveal style="--reveal-delay:240ms" class="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
+                <a
+    href="#waitlist"
+    data-magnetic
+    
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-7 py-4 text-base sm:text-lg
+        
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        
+        "
+>
+    
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    
+    <span class="relative inline-flex items-center gap-2">Připojit se k waitlistu
+                    <svg class="size-5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-4.22-4.22a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.22-4.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg></span>
+</a>
+
+                <a
+    href="#demo"
+    data-demo-open
+    
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-7 py-4 text-base sm:text-lg
+        
+            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+        
+        "
+>
+    
+    <span class="relative inline-flex items-center gap-2"><span class="relative grid size-7 place-items-center rounded-full bg-brand-gradient">
+                        <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/60"></span>
+                        <svg class="relative size-3.5 translate-x-px text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"/></svg>
+                    </span>
+                    Přehrát demo</span>
+</a>
+
+            </div>
+
+            <p data-reveal style="--reveal-delay:320ms" class="mt-6 text-sm text-slate-400">
+                Nebo si rovnou
+                <a href="https://app.kalkulite.cz" target="_blank" rel="noopener" class="font-medium text-white underline decoration-brand-teal/50 underline-offset-4 transition-colors hover:decoration-brand-teal">vyzkoušej prototyp na app.kalkulite.cz</a>
+            </p>
+
+            <ul data-reveal style="--reveal-delay:400ms" class="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3 font-chakra text-sm text-slate-400 lg:justify-start">
+                <li class="flex items-center gap-2"><span class="text-brand-teal">✓</span> Ovládání jednou rukou</li>
+                <li class="flex items-center gap-2"><span class="text-brand-teal">✓</span> Funguje i v rukavicích</li>
+                <li class="flex items-center gap-2"><span class="text-brand-teal">✓</span> QR platby v ceně</li>
+            </ul>
+        </div>
+
+        
+        <div data-reveal style="--reveal-delay:200ms" class="relative mx-auto w-full max-w-sm lg:max-w-md">
+            <div class="relative [perspective:1400px]" data-tilt-area>
+    
+    <div class="absolute inset-x-6 top-16 bottom-10 -z-10 rounded-[3rem] bg-brand-gradient-diagonal opacity-40 blur-3xl" aria-hidden="true"></div>
+
+    <div data-tilt class="relative mx-auto w-[min(19.5rem,82vw)] transition-transform duration-300 ease-out [transform-style:preserve-3d]">
+        
+        <div class="relative rounded-[3rem] border border-white/15 bg-[#14131f] p-2.5 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)]">
+            <div class="relative overflow-hidden rounded-[2.4rem] bg-[#2b2a3d]">
+                
+                <div class="relative flex items-center justify-between px-6 pt-3 pb-1 text-[11px] font-semibold text-white">
+                    <span>7:42</span>
+                    <span class="absolute left-1/2 top-2.5 h-6 w-24 -translate-x-1/2 rounded-full bg-black"></span>
+                    <span class="flex items-center gap-1">5G <span class="rounded bg-white px-1 text-[9px] text-black">86</span></span>
+                </div>
+
+                <div class="space-y-3 px-4 pt-4 pb-24 text-left">
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="flex items-center gap-1.5 font-chakra text-sm font-bold text-white">
+                            <img src="/assets/logo.png" alt="" class="h-4 w-auto">
+                            KALKU<span class="text-gradient">Lite</span>
+                        </span>
+                        <span class="grid size-8 place-items-center rounded-full bg-white/10 text-slate-300">
+                            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                        </span>
+                    </div>
+                    <p class="font-chakra text-lg leading-tight font-bold text-white">Dobré ráno, Pavle.</p>
+
+                    
+                    <div class="rounded-2xl bg-white/[0.07] p-3.5">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="font-chakra text-sm font-bold text-white">Úterý 13. 10.</p>
+                                <p class="text-[11px] text-slate-400">3 zastávky · 64 km</p>
+                            </div>
+                            <span class="rounded-full bg-brand-teal/15 px-2 py-0.5 font-chakra text-[10px] font-semibold text-brand-teal">−18 km</span>
+                        </div>
+                        
+                        <svg viewBox="0 0 240 44" class="mt-2 h-10 w-full" fill="none" aria-hidden="true">
+                            <path d="M8 34 C 50 34, 60 10, 110 14 S 180 38, 232 12" stroke="url(#phoneRoute)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 6" class="[animation:dash_1.5s_linear_infinite]"/>
+                            <circle cx="8" cy="34" r="4.5" fill="#0c92e9"/>
+                            <circle cx="110" cy="14" r="4.5" fill="#16a5ca"/>
+                            <circle cx="232" cy="12" r="4.5" fill="#1fb8aa"/>
+                            <defs><linearGradient id="phoneRoute" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
+                        </svg>
+                    </div>
+
+                    
+                    <div class="rounded-2xl border border-brand-teal/30 bg-brand-teal/10 p-3.5">
+                        <div class="flex items-center gap-2">
+                            <span class="relative flex size-2.5"><span class="absolute inline-flex size-full animate-ping rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex size-2.5 rounded-full bg-red-500"></span></span>
+                            <span class="font-chakra text-[11px] font-semibold tracking-wider text-brand-teal uppercase">Diktuješ nabídku</span>
+                        </div>
+                        <p class="mt-2 text-[12px] leading-snug text-slate-200" data-typewriter="„Koupelna Novák, obklad dvanáct metrů, lepidlo, spárovačka, dva dny práce…“">„Koupelna Novák, obklad dvanáct metrů, lepidlo, spárovačka, dva dny práce…“</p>
+                        <div class="mt-2.5 flex h-8 items-center gap-[3px]" aria-hidden="true">
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 1%; animation-delay: -73ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 2%; animation-delay: -146ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 3%; animation-delay: -219ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 4%; animation-delay: -292ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 5%; animation-delay: -365ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 6%; animation-delay: -438ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 7%; animation-delay: -511ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 8%; animation-delay: -584ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 9%; animation-delay: -657ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 10%; animation-delay: -730ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 11%; animation-delay: -803ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 12%; animation-delay: -876ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 13%; animation-delay: -949ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 14%; animation-delay: -22ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 15%; animation-delay: -95ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 16%; animation-delay: -168ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 17%; animation-delay: -241ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 18%; animation-delay: -314ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 19%; animation-delay: -387ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 20%; animation-delay: -460ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 21%; animation-delay: -533ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 22%; animation-delay: -606ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 23%; animation-delay: -679ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 24%; animation-delay: -752ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 25%; animation-delay: -825ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 26%; animation-delay: -898ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 27%; animation-delay: -971ms"></span>
+                            
+                                <span class="w-[3px] flex-1 origin-center animate-wave rounded-full bg-brand-gradient" style="height: 28%; animation-delay: -44ms"></span>
+                            
+                        </div>
+                    </div>
+
+                    
+                    <div class="rounded-2xl bg-white/[0.07] p-3.5">
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <p class="text-[10px] tracking-wider text-slate-400 uppercase">Nabídka #2026-041</p>
+                                <p class="font-chakra text-xl font-bold text-white">18 450 Kč</p>
+                            </div>
+                            <span class="rounded-lg bg-brand-gradient px-2 py-1 font-chakra text-[10px] font-bold text-white">Hotovo · 47 s</span>
+                        </div>
+                        <div class="mt-2 space-y-1 text-[11px] text-slate-400">
+                            <div class="flex justify-between"><span>Obklad 12 m² + materiál</span><span class="text-slate-200">9 870 Kč</span></div>
+                            <div class="flex justify-between"><span>Práce 2 dny</span><span class="text-slate-200">8 580 Kč</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="absolute inset-x-0 bottom-0 flex items-center justify-around border-t border-white/5 bg-[#24233a]/95 px-6 pt-2 pb-5 backdrop-blur">
+                    <svg class="size-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/></svg>
+                    <span class="relative -mt-8 grid size-14 place-items-center rounded-full bg-brand-gradient-diagonal shadow-glow">
+                        <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/50"></span>
+                        <svg class="relative size-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                    </span>
+                    <svg class="size-5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4M16 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+                </div>
+
+                
+                <div class="pointer-events-none absolute inset-x-0 top-0 h-1/4 animate-scan bg-gradient-to-b from-transparent via-brand-teal/10 to-transparent" aria-hidden="true"></div>
+            </div>
+        </div>
+
+        
+        <div data-depth="40" class="absolute top-40 -left-6 animate-float sm:-left-20">
+            <div class="flex items-center gap-2.5 rounded-2xl border border-white/15 bg-[#2b2940]/95 backdrop-blur-md px-3.5 py-2.5 shadow-xl">
+                <span class="grid size-8 place-items-center rounded-xl bg-brand-gradient text-white">
+                    <svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <div class="leading-tight">
+                    <p class="font-chakra text-sm font-bold text-white">Faktura odeslána</p>
+                    <p class="text-[11px] text-slate-400">i s QR platbou</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-depth="70" class="absolute -right-4 bottom-36 animate-float [animation-delay:-3s] sm:-right-14">
+            <div class="rounded-2xl border border-white/15 bg-[#2b2940]/95 backdrop-blur-md px-4 py-3 shadow-xl">
+                <p class="font-chakra text-[10px] font-semibold tracking-widest text-slate-400 uppercase">KALKULite Index</p>
+                <p class="flex items-baseline gap-1.5">
+                    <span class="font-chakra text-3xl font-bold text-gradient">8,4</span>
+                    <span class="text-xs font-semibold text-emerald-400">Vyplatí se ↑</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">01</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Problém
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="problem" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-60" aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 left-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green right-0 bottom-0 animate-aura-b"></div>
+    
+    
+</div>
+
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto text-center max-w-3xl" data-reveal>
+    
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+            <span class="size-1.5 rounded-full bg-brand-teal"></span>
+            Známe problém
+        </p>
+    
+    <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+        Celý den na stavbě,<br class="hidden sm:block"> večer <span class="text-gradient">u faktur</span>.
+    </h2>
+    
+        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">Řemeslo tě baví. Papíry ne. A přesto na ně padají večery, které by patřily rodině.</p>
+    
+</div>
+
+
+        
+        <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <li data-reveal style="--reveal-delay: 0ms" class="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:bg-white/[0.08]">
+    <span class="grid size-12 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-slate-300 transition-all duration-300 group-hover:animate-wiggle group-hover:border-brand-teal/50 group-hover:text-brand-teal">
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 14l2 2 4-4"/></svg>
+    </span>
+    <h3 class="mt-5 text-lg font-semibold">Chaos v plánování</h3>
+    <p class="mt-2 text-sm text-slate-400">Zakázky se hromadí bez přehledu a bez priorit.</p>
+</li>
+
+            <li data-reveal style="--reveal-delay: 80ms" class="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:bg-white/[0.08]">
+    <span class="grid size-12 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-slate-300 transition-all duration-300 group-hover:animate-wiggle group-hover:border-brand-teal/50 group-hover:text-brand-teal">
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h5"/></svg>
+    </span>
+    <h3 class="mt-5 text-lg font-semibold">Večery u papírů</h3>
+    <p class="mt-2 text-sm text-slate-400">Nabídky a faktury vznikají ručně, až po pracovní době.</p>
+</li>
+
+            <li data-reveal style="--reveal-delay: 160ms" class="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:bg-white/[0.08]">
+    <span class="grid size-12 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-slate-300 transition-all duration-300 group-hover:animate-wiggle group-hover:border-brand-teal/50 group-hover:text-brand-teal">
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20l-5.45-2.72A1 1 0 0 1 3 16.38V5.62a1 1 0 0 1 1.45-.9L9 7m0 13 6-3m-6 3V7m6 10 4.55 2.28A1 1 0 0 0 21 18.38V7.62a1 1 0 0 0-.55-.9L15 4m0 13V4m0 0L9 7"/></svg>
+    </span>
+    <h3 class="mt-5 text-lg font-semibold">Neefektivní trasy</h3>
+    <p class="mt-2 text-sm text-slate-400">Kilometry navíc zvedají náklady, únavu i ztracený čas.</p>
+</li>
+
+            <li data-reveal style="--reveal-delay: 240ms" class="group relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:bg-white/[0.08]">
+    <span class="grid size-12 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-slate-300 transition-all duration-300 group-hover:animate-wiggle group-hover:border-brand-teal/50 group-hover:text-brand-teal">
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM12 8v3M12 14h.01"/></svg>
+    </span>
+    <h3 class="mt-5 text-lg font-semibold">Pomalá komunikace</h3>
+    <p class="mt-2 text-sm text-slate-400">Zákazník čeká na nabídku dny. A mezitím volá jinam.</p>
+</li>
+
+        </ul>
+
+        
+        <div data-compare data-state="them" class="group/cmp mt-20 rounded-3xl glass p-5 sm:p-8 lg:p-10" data-reveal>
+            <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+                <div class="text-center lg:text-left">
+                    <p class="font-chakra text-sm font-semibold tracking-widest text-brand-teal uppercase">Existují řešení, ale…</p>
+                    <h3 class="mt-2 text-2xl font-bold sm:text-3xl">Přepni a porovnej</h3>
+                </div>
+
+                
+                <div role="tablist" aria-label="Srovnání řešení" class="relative grid w-full max-w-sm grid-cols-2 rounded-2xl border border-white/10 bg-black/20 p-1.5 font-chakra text-sm font-semibold sm:text-base">
+                    <span class="absolute inset-y-1.5 left-1.5 w-[calc(50%-0.375rem)] rounded-xl bg-white/10 transition-all duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:translate-x-full group-data-[state=us]/cmp:bg-brand-gradient group-data-[state=us]/cmp:shadow-glow" aria-hidden="true"></span>
+                    <button type="button" role="tab" data-compare-btn="them" aria-selected="true" class="relative z-10 rounded-xl px-4 py-3 text-white transition-colors group-data-[state=us]/cmp:text-slate-400">Ostatní appky</button>
+                    <button type="button" role="tab" data-compare-btn="us" aria-selected="false" class="relative z-10 flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-slate-400 transition-colors group-data-[state=us]/cmp:text-white">
+                        <img src="/assets/brand/kalkulite-icon.png" alt="" class="size-5 rounded-md">KALKULite
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-10 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr]">
+                
+                <div class="relative mx-auto grid aspect-square w-full max-w-xs place-items-center" aria-hidden="true">
+                    <div class="absolute inset-0 rounded-full border border-dashed border-white/10 transition-all duration-700 group-data-[state=us]/cmp:scale-75 group-data-[state=us]/cmp:border-brand-teal/40"></div>
+
+                    
+                    <div class="absolute top-[8%] left-[10%] transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:scale-0 group-data-[state=us]/cmp:rotate-45 group-data-[state=us]/cmp:opacity-0">
+    <div class="-rotate-12 flex flex-col items-center gap-1.5 animate-float [animation-duration:5s]">
+        <span class="grid size-14 place-items-center rounded-2xl bg-emerald-600 font-chakra text-xl font-bold text-white/90 shadow-lg">E</span>
+        <span class="text-xs text-slate-400">Excel</span>
+    </div>
+</div>
+
+                    <div class="absolute top-[14%] right-[6%] transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:scale-0 group-data-[state=us]/cmp:rotate-45 group-data-[state=us]/cmp:opacity-0">
+    <div class="rotate-6 flex flex-col items-center gap-1.5 animate-float [animation-duration:5s]">
+        <span class="grid size-14 place-items-center rounded-2xl bg-sky-600 font-chakra text-xl font-bold text-white/90 shadow-lg">M</span>
+        <span class="text-xs text-slate-400">Mapy</span>
+    </div>
+</div>
+
+                    <div class="absolute bottom-[12%] left-[4%] transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:scale-0 group-data-[state=us]/cmp:rotate-45 group-data-[state=us]/cmp:opacity-0">
+    <div class="rotate-12 flex flex-col items-center gap-1.5 animate-float [animation-duration:5s]">
+        <span class="grid size-14 place-items-center rounded-2xl bg-amber-500 font-chakra text-xl font-bold text-white/90 shadow-lg">P</span>
+        <span class="text-xs text-slate-400">Poznámky</span>
+    </div>
+</div>
+
+                    <div class="absolute bottom-[6%] right-[14%] transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:scale-0 group-data-[state=us]/cmp:rotate-45 group-data-[state=us]/cmp:opacity-0">
+    <div class="-rotate-6 flex flex-col items-center gap-1.5 animate-float [animation-duration:5s]">
+        <span class="grid size-14 place-items-center rounded-2xl bg-rose-500 font-chakra text-xl font-bold text-white/90 shadow-lg">F</span>
+        <span class="text-xs text-slate-400">Fakturace</span>
+    </div>
+</div>
+
+
+                    
+                    <div class="relative grid place-items-center transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] scale-50 opacity-30 grayscale group-data-[state=us]/cmp:scale-100 group-data-[state=us]/cmp:opacity-100 group-data-[state=us]/cmp:grayscale-0">
+                        <span class="absolute size-40 rounded-full bg-brand-gradient opacity-0 blur-2xl transition-opacity duration-700 group-data-[state=us]/cmp:opacity-50"></span>
+                        <img src="/assets/brand/kalkulite-icon.png" alt="" class="relative size-28 rounded-[26%] shadow-glow-lg">
+                    </div>
+                    <p class="absolute -bottom-2 font-chakra text-sm font-semibold text-slate-400">
+                        <span class="group-data-[state=us]/cmp:hidden">3+ aplikace, nic nepropojené</span>
+                        <span class="hidden text-brand-teal group-data-[state=us]/cmp:inline">1 appka. Všechno v ní.</span>
+                    </p>
+                </div>
+
+                
+                <dl class="space-y-3">
+                    <div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-brand-teal/30 group-data-[state=us]/cmp:bg-brand-teal/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">Propojení</dt>
+    <dd class="grid">
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
+            Každý nástroj zvlášť, data zadáváš pořád dokola.
+        </span>
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
+            Nabídka → zakázka → trasa → faktura → platba. V jednom toku.
+        </span>
+    </dd>
+</div>
+
+                    <div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-brand-teal/30 group-data-[state=us]/cmp:bg-brand-teal/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">Do terénu</dt>
+    <dd class="grid">
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
+            Navržené do kanceláře. Drobná tlačítka, spousta psaní.
+        </span>
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
+            Do rukavic: velká tlačítka, ovládání jednou rukou a hlasem.
+        </span>
+    </dd>
+</div>
+
+                    <div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-brand-teal/30 group-data-[state=us]/cmp:bg-brand-teal/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">AI mozek</dt>
+    <dd class="grid">
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
+            Žádná AI. Materiál a práci počítáš ručně v Excelu.
+        </span>
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
+            AI spočítá materiál i práci a nabídku sestaví do minuty.
+        </span>
+    </dd>
+</div>
+
+                    <div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-brand-teal/30 group-data-[state=us]/cmp:bg-brand-teal/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">Ziskovost</dt>
+    <dd class="grid">
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
+            Až na konci měsíce zjistíš, jestli se zakázka vyplatila.
+        </span>
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
+            KALKULite Index ti to řekne ještě před výjezdem.
+        </span>
+    </dd>
+</div>
+
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">02</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Funkce
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="funkce" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 bg-tech-grid mask-fade-y opacity-60" aria-hidden="true"></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto text-center max-w-3xl" data-reveal>
+    
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+            <span class="size-1.5 rounded-full bg-brand-teal"></span>
+            Co umí
+        </p>
+    
+    <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+        Tvůj parťák s <span class="text-gradient">AI mozkem</span>
+    </h2>
+    
+        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">Čtyři pilíře, které ti vrátí večery a pohlídají zisk. Všechno v jedné appce, kterou ovládneš jednou rukou.</p>
+    
+</div>
+
+
+        <div class="mt-14 grid auto-rows-auto gap-4 lg:grid-cols-6">
+
+            
+            <article data-spotlight data-reveal data-voice-card class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-4 lg:row-span-2">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative flex h-full flex-col">
+                    <span class="inline-flex items-center gap-2 font-chakra text-xs font-semibold tracking-widest text-brand-teal uppercase">
+    <span class="h-px w-6 bg-brand-gradient"></span>AI automatizace
+</span>
+
+                    <h3 class="mt-4 text-2xl font-bold sm:text-3xl">Nabídka i faktura <span class="text-gradient">hlasem do 1 minuty</span></h3>
+                    <p class="mt-3 max-w-lg text-slate-300">Nadiktuješ, co děláš. AI dopočítá materiál, práci i DPH a pošle zákazníkovi hotovou nabídku nebo fakturu s QR platbou. Rovnou ze stavby.</p>
+
+                    
+                    <div class="mt-8 grid flex-1 content-center gap-5 rounded-2xl border border-white/10 bg-brand-deep/60 p-4 sm:grid-cols-[auto_1fr] sm:p-6">
+                        <button type="button" data-voice-trigger class="group/mic relative mx-auto grid size-24 place-items-center self-center rounded-full bg-brand-gradient-diagonal text-white shadow-glow transition-transform active:scale-95 sm:size-28" aria-label="Spustit ukázku hlasového zadání">
+                            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/40"></span>
+                            <span class="absolute inset-0 rounded-full bg-brand-teal/40 [animation-delay:0.7s] animate-pulse-ring"></span>
+                            <svg class="relative size-10 transition-transform group-hover/mic:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                        </button>
+                        <div class="min-w-0">
+                            <p class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase" data-voice-status>Klepni na mikrofon ↓</p>
+                            <p class="mt-2 min-h-[3rem] text-sm text-white sm:text-base" data-voice-text>„Pokládka vinylu v obýváku, třicet dva metrů, podložka, lišty, jeden a půl dne.“</p>
+                            <ul class="mt-3 space-y-1.5 text-sm" data-voice-items></ul>
+                            <div class="mt-3 flex items-center justify-between border-t border-white/10 pt-3 font-chakra opacity-0 transition-opacity duration-500" data-voice-total>
+                                <span class="text-slate-400">Celkem s DPH</span>
+                                <span class="text-xl font-bold text-gradient">27 890 Kč</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative">
+                    <span class="inline-flex items-center gap-2 font-chakra text-xs font-semibold tracking-widest text-brand-teal uppercase">
+    <span class="h-px w-6 bg-brand-gradient"></span>KALKULite Index
+</span>
+
+                    <h3 class="mt-4 text-xl font-bold">Vyplatí se, nebo jen pálíš naftu?</h3>
+                    <p class="mt-2 text-sm text-slate-300">Algoritmus poměří čas, vzdálenost a fakturaci. Hned víš, které zakázky brát.</p>
+                    <div class="mt-5 flex items-end gap-1.5" aria-hidden="true">
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 11px; transition-delay: 40ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 16px; transition-delay: 80ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 21px; transition-delay: 120ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 26px; transition-delay: 160ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 31px; transition-delay: 200ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 36px; transition-delay: 240ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 41px; transition-delay: 280ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-brand-gradient" style="height: 46px; transition-delay: 320ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-white/10" style="height: 51px; transition-delay: 360ms"></span>
+                        
+                            <span class="flex-1 rounded-sm transition-all duration-500 bg-white/10" style="height: 56px; transition-delay: 400ms"></span>
+                        
+                    </div>
+                    <p class="mt-3 flex items-baseline justify-between font-chakra"><span class="text-3xl font-bold text-white">8,4</span><span class="text-sm font-semibold text-emerald-400">Bereme ✓</span></p>
+                </div>
+            </article>
+
+            
+            <article data-spotlight data-reveal style="--reveal-delay:160ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative">
+                    <span class="inline-flex items-center gap-2 font-chakra text-xs font-semibold tracking-widest text-brand-teal uppercase">
+    <span class="h-px w-6 bg-brand-gradient"></span>Smart logistika
+</span>
+
+                    <h3 class="mt-4 text-xl font-bold">Trasa, která šetří naftu</h3>
+                    <p class="mt-2 text-sm text-slate-300">Seřadí zakázky do optimální trasy. Méně kilometrů, víc času na práci.</p>
+                    <svg viewBox="0 0 260 110" class="mt-4 w-full" fill="none" aria-hidden="true">
+                        <path d="M20 90 L 70 30 L 140 80 L 200 20 L 240 70" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="4 5"/>
+                        <path data-draw d="M20 90 C 60 70, 80 60, 140 80 S 220 60, 240 70 M140 80 C 160 50, 180 30, 200 20" stroke="url(#routeGrad)" stroke-width="3" stroke-linecap="round" pathLength="1"/>
+                        <g class="font-chakra" font-size="9" fill="#fff">
+                            <circle cx="20" cy="90" r="6" fill="#0c92e9"/><circle cx="70" cy="30" r="4" fill="rgba(255,255,255,0.3)"/>
+                            <circle cx="140" cy="80" r="6" fill="#139fd5"/><circle cx="200" cy="20" r="6" fill="#18abc0"/><circle cx="240" cy="70" r="6" fill="#1fb8aa"/>
+                        </g>
+                        <defs><linearGradient id="routeGrad" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
+                    </svg>
+                    <p class="mt-2 font-chakra text-sm text-slate-400">Dnes ušetřeno <span class="font-bold text-white" data-count="23">23</span> km</p>
+                </div>
+            </article>
+
+            
+            <article data-spotlight data-reveal class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-3">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center">
+                    <div>
+                        <span class="inline-flex items-center gap-2 font-chakra text-xs font-semibold tracking-widest text-brand-teal uppercase">
+    <span class="h-px w-6 bg-brand-gradient"></span>Automatické SMS
+</span>
+
+                        <h3 class="mt-4 text-xl font-bold">Zákazník ví, že jedeš</h3>
+                        <p class="mt-2 text-sm text-slate-300">Zpoždění na stavbě? Appka sama pošle SMS. Profesionálně a bez telefonování za volantem.</p>
+                    </div>
+                    <div class="space-y-2 text-sm" data-chat>
+                        <p class="ml-auto w-fit max-w-[90%] rounded-2xl rounded-br-md bg-brand-gradient px-3.5 py-2 text-white shadow-glow">Dobrý den, jsem na cestě, budu u Vás cca v 10:20. Petr, Obklady Novák</p>
+                        <p class="w-fit max-w-[80%] rounded-2xl rounded-bl-md bg-white/10 px-3.5 py-2 text-slate-200">Super, děkuju za info 👍</p>
+                        <p class="text-right text-[11px] text-slate-500">Odesláno automaticky · 9:58</p>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-3">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center">
+                    <div>
+                        <span class="inline-flex items-center gap-2 font-chakra text-xs font-semibold tracking-widest text-brand-teal uppercase">
+    <span class="h-px w-6 bg-brand-gradient"></span>Klid v hlavě
+</span>
+
+                        <h3 class="mt-4 text-xl font-bold">Peníze ti neutečou</h3>
+                        <p class="mt-2 text-sm text-slate-300">Hlídání splatností, upomínky, QR platby a archiv všech zakázek. Na nic nezapomeneš.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-038 · Dvořák</span><span class="rounded-full bg-emerald-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-emerald-400">Zaplaceno</span></li>
+                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-040 · Malá</span><span class="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-amber-400">Za 3 dny</span></li>
+                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-035 · Horák</span><span class="rounded-full bg-rose-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-rose-400">SMS odeslána</span></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">03</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            KALKULite Index
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="index" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 " aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 right-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green bottom-0 left-0 animate-aura-b"></div>
+    
+    
+</div>
+
+
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto text-center max-w-3xl" data-reveal>
+    
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+            <span class="size-1.5 rounded-full bg-brand-teal"></span>
+            Zkus si to
+        </p>
+    
+    <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+        Vyplatí se ta zakázka, nebo <span class="text-gradient">jen pálíš naftu?</span>
+    </h2>
+    
+        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">Posuň jezdci a sleduj, jak se mění skutečný hodinový výdělek. Přesně tohle KALKULite hlídá u každé zakázky.</p>
+    
+</div>
+
+
+        <div data-index-calc data-verdict="good" class="group/calc mt-14 grid gap-6 lg:grid-cols-[1.2fr_1fr]" data-reveal>
+            
+            <div class="space-y-7 rounded-3xl glass p-6 sm:p-8">
+                
+                <div class="sticky top-[4.5rem] z-10 -mx-2 flex items-center justify-between rounded-2xl border border-white/10 bg-brand-darker/95 px-4 py-3 shadow-xl backdrop-blur lg:hidden" aria-hidden="true">
+                    <span class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">Index</span>
+                    <span class="flex items-baseline gap-3">
+                        <span class="font-chakra text-2xl font-bold text-white" data-out="index">7,8</span>
+                        <span class="font-chakra text-sm font-bold group-data-[verdict=good]/calc:text-emerald-400 group-data-[verdict=meh]/calc:text-amber-400 group-data-[verdict=bad]/calc:text-rose-400" data-out="verdict">Vyplatí se ✓</span>
+                    </span>
+                </div>
+                <label class="block">
+    <span class="flex items-baseline justify-between gap-4">
+        <span class="text-sm font-medium text-slate-300">Cena zakázky</span>
+        <span class="font-chakra text-lg font-bold text-white tabular-nums"><span data-range-out="price">18000</span> <span class="text-sm text-slate-400">Kč</span></span>
+    </span>
+    <input
+        type="range"
+        name="price"
+        min="2000" max="60000" step="500" value="18000"
+        class="range-brand mt-3 w-full"
+        style="--fill: 0.0027586206896552%"
+    >
+</label>
+
+                <label class="block">
+    <span class="flex items-baseline justify-between gap-4">
+        <span class="text-sm font-medium text-slate-300">Materiál</span>
+        <span class="font-chakra text-lg font-bold text-white tabular-nums"><span data-range-out="material">6000</span> <span class="text-sm text-slate-400">Kč</span></span>
+    </span>
+    <input
+        type="range"
+        name="material"
+        min="0" max="30000" step="500" value="6000"
+        class="range-brand mt-3 w-full"
+        style="--fill: 0.002%"
+    >
+</label>
+
+                <label class="block">
+    <span class="flex items-baseline justify-between gap-4">
+        <span class="text-sm font-medium text-slate-300">Odpracované hodiny</span>
+        <span class="font-chakra text-lg font-bold text-white tabular-nums"><span data-range-out="hours">12</span> <span class="text-sm text-slate-400">h</span></span>
+    </span>
+    <input
+        type="range"
+        name="hours"
+        min="1" max="40" step="1" value="12"
+        class="range-brand mt-3 w-full"
+        style="--fill: 0.0028205128205128%"
+    >
+</label>
+
+                <label class="block">
+    <span class="flex items-baseline justify-between gap-4">
+        <span class="text-sm font-medium text-slate-300">Najeté km (tam i zpět, celkem)</span>
+        <span class="font-chakra text-lg font-bold text-white tabular-nums"><span data-range-out="km">80</span> <span class="text-sm text-slate-400">km</span></span>
+    </span>
+    <input
+        type="range"
+        name="km"
+        min="0" max="600" step="10" value="80"
+        class="range-brand mt-3 w-full"
+        style="--fill: 0.0013333333333333%"
+    >
+</label>
+
+            </div>
+
+            
+            <div class="relative flex flex-col items-center justify-center overflow-hidden rounded-3xl glass p-6 text-center sm:p-8 glow-border">
+                <p class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">KALKULite Index</p>
+
+                
+                <div class="relative mt-4 w-full max-w-[17rem]">
+                    <svg viewBox="0 0 200 110" class="w-full" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="gaugeGrad" x1="0" x2="1">
+                                <stop offset="0" stop-color="#f43f5e"/>
+                                <stop offset="0.45" stop-color="#f59e0b"/>
+                                <stop offset="0.75" stop-color="#0c92e9"/>
+                                <stop offset="1" stop-color="#1fb8aa"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M15 100 A85 85 0 0 1 185 100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14" stroke-linecap="round"/>
+                        <path data-gauge-arc d="M15 100 A85 85 0 0 1 185 100" fill="none" stroke="url(#gaugeGrad)" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="30" class="transition-[stroke-dashoffset] duration-700 ease-out"/>
+                        <g data-gauge-needle class="origin-[100px_100px] transition-transform duration-700 ease-[cubic-bezier(.34,1.56,.64,1)]" style="transform: rotate(36deg)">
+                            <line x1="100" y1="100" x2="100" y2="30" stroke="#fff" stroke-width="3" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+                        </g>
+                        <circle cx="100" cy="100" r="7" fill="#fff"/>
+                    </svg>
+                </div>
+
+                <p class="mt-3 font-chakra text-6xl leading-none font-bold text-white" data-out="index" aria-live="polite">7,8</p>
+
+                <p class="mt-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 font-chakra text-sm font-bold transition-colors duration-500
+                    group-data-[verdict=good]/calc:bg-emerald-500/15 group-data-[verdict=good]/calc:text-emerald-400
+                    group-data-[verdict=meh]/calc:bg-amber-500/15 group-data-[verdict=meh]/calc:text-amber-400
+                    group-data-[verdict=bad]/calc:bg-rose-500/15 group-data-[verdict=bad]/calc:text-rose-400" data-out="verdict">Vyplatí se ✓</p>
+
+                <dl class="mt-6 grid w-full grid-cols-2 gap-3 text-left text-sm">
+                    <div class="rounded-xl bg-black/20 p-3">
+                        <dt class="text-xs text-slate-400">Čistý hodinový výdělek</dt>
+                        <dd class="mt-1 font-chakra text-lg font-bold text-white"><span data-out="hourly">–</span> Kč/h</dd>
+                    </div>
+                    <div class="rounded-xl bg-black/20 p-3">
+                        <dt class="text-xs text-slate-400">Doprava tě stojí</dt>
+                        <dd class="mt-1 font-chakra text-lg font-bold text-white"><span data-out="travel">–</span> Kč</dd>
+                    </div>
+                </dl>
+                <p class="mt-4 text-[11px] text-slate-500">Orientační model: 7 Kč/km, průměr 60 km/h za volantem. V appce si nastavíš vlastní hodnoty.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">04</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Ceník
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="cenik" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 " aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 left-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green right-0 bottom-0 animate-aura-b"></div>
+    
+    
+        <div class="absolute inset-0 bg-tech-grid mask-radial opacity-70"></div>
+    
+</div>
+
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto text-center max-w-3xl" data-reveal>
+    
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+            <span class="size-1.5 rounded-full bg-brand-teal"></span>
+            Vyber si tarif
+        </p>
+    
+    <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+        Cena jedné <span class="text-gradient">ušetřené hodiny</span> měsíčně
+    </h2>
+    
+        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">Začni zdarma. Až ti KALKULite ušetří první večer, vybereš si tarif, který sedí tvé partě.</p>
+    
+</div>
+
+
+        <div class="mt-16 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            
+                <article
+    data-reveal
+    data-tilt-card
+    style="--reveal-delay: 0ms"
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+        
+            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
+        "
+>
+    
+
+    <h3 class="font-chakra text-2xl font-bold">Učeň</h3>
+    <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Na zkoušku. Vyzkoušej AI fakturaci na jednotlivých zakázkách.</p>
+
+    <p class="mt-6 flex items-baseline gap-1.5">
+        <span class="font-chakra text-5xl font-bold tracking-tight text-white">0</span>
+        <span class="font-chakra text-lg text-white">Kč</span>
+        <span class="text-sm text-slate-400">/ navždy</span>
+    </p>
+
+    <ul class="mt-7 flex-1 space-y-3 text-sm">
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">AI faktura hlasem na jednotlivé zakázky</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">QR platba na faktuře</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Bez platební karty</span>
+            </li>
+        
+    </ul>
+
+    <div class="mt-8">
+        
+            <a
+    href="#waitlist"
+    
+    data-plan="ucen"
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-5 py-3 text-base
+        
+            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+        
+        w-full"
+>
+    
+    <span class="relative inline-flex items-center gap-2">Začít zdarma</span>
+</a>
+
+        
+    </div>
+</article>
+
+            
+                <article
+    data-reveal
+    data-tilt-card
+    style="--reveal-delay: 90ms"
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+        
+            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
+        "
+>
+    
+
+    <h3 class="font-chakra text-2xl font-bold">Parťák</h3>
+    <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pořádek v papírech pro OSVČ, která chce mít klid.</p>
+
+    <p class="mt-6 flex items-baseline gap-1.5">
+        <span class="font-chakra text-5xl font-bold tracking-tight text-white">290</span>
+        <span class="font-chakra text-lg text-white">Kč</span>
+        <span class="text-sm text-slate-400">/ měsíc</span>
+    </p>
+
+    <ul class="mt-7 flex-1 space-y-3 text-sm">
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Základní evidence zakázek</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Hlídání splatností</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Automatické SMS zákazníkům</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Archiv zakázek a QR platby</span>
+            </li>
+        
+    </ul>
+
+    <div class="mt-8">
+        
+            <a
+    href="#waitlist"
+    
+    data-plan="partak"
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-5 py-3 text-base
+        
+            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+        
+        w-full"
+>
+    
+    <span class="relative inline-flex items-center gap-2">Chci Parťáka</span>
+</a>
+
+        
+    </div>
+</article>
+
+            
+                <article
+    data-reveal
+    data-tilt-card
+    style="--reveal-delay: 180ms"
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+        
+            glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg backdrop-blur-md xl:-my-4 xl:py-11
+        "
+>
+    
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-4 py-1 font-chakra text-xs font-bold tracking-wider whitespace-nowrap text-white uppercase shadow-glow">
+            ★ Nejoblíbenější
+        </span>
+    
+
+    <h3 class="font-chakra text-2xl font-bold">Mistr</h3>
+    <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Plná síla AI. Pro ty, kdo chtějí vydělávat víc, ne jen víc makat.</p>
+
+    <p class="mt-6 flex items-baseline gap-1.5">
+        <span class="font-chakra text-5xl font-bold tracking-tight text-gradient">590</span>
+        <span class="font-chakra text-lg text-white">Kč</span>
+        <span class="text-sm text-slate-400">/ měsíc</span>
+    </p>
+
+    <ul class="mt-7 flex-1 space-y-3 text-sm">
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-white" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Vše z tarifu Parťák</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-white" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">AI výpočty materiálu a práce</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-white" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">KALKULite Index ziskovosti</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-white" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Optimalizace tras mezi zakázkami</span>
+            </li>
+        
+    </ul>
+
+    <div class="mt-8">
+        
+            <a
+    href="#waitlist"
+    
+    data-plan="mistr"
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-5 py-3 text-base
+        
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        
+        w-full"
+>
+    
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    
+    <span class="relative inline-flex items-center gap-2">Chci Mistra</span>
+</a>
+
+        
+    </div>
+</article>
+
+            
+                <article
+    data-reveal
+    data-tilt-card
+    style="--reveal-delay: 270ms"
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+        
+            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
+        "
+>
+    
+
+    <h3 class="font-chakra text-2xl font-bold">Profík</h3>
+    <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pro malé party, které jedou na plný plyn.</p>
+
+    <p class="mt-6 flex items-baseline gap-1.5">
+        <span class="font-chakra text-5xl font-bold tracking-tight text-white">990</span>
+        <span class="font-chakra text-lg text-white">Kč</span>
+        <span class="text-sm text-slate-400">/ měsíc</span>
+    </p>
+
+    <ul class="mt-7 flex-1 space-y-3 text-sm">
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Vše z tarifu Mistr</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Neomezená agenda</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Prioritní AI zpracování</span>
+            </li>
+        
+            <li class="flex items-start gap-3">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-teal/15 text-brand-teal" aria-hidden="true">
+                    <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                </span>
+                <span class="text-slate-200">Podpora pro malé týmy</span>
+            </li>
+        
+    </ul>
+
+    <div class="mt-8">
+        
+            <a
+    href="#waitlist"
+    
+    data-plan="profik"
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-5 py-3 text-base
+        
+            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+        
+        w-full"
+>
+    
+    <span class="relative inline-flex items-center gap-2">Chci Profíka</span>
+</a>
+
+        
+    </div>
+</article>
+
+            
+        </div>
+
+        <p class="mt-10 text-center text-sm text-slate-400" data-reveal>Nevíš, který vybrat? Začni s Učněm a přejdi výš, až ti appka začne šetřit čas.</p>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">05</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Z terénu
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="reference" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 bg-tech-grid mask-fade-y opacity-50" aria-hidden="true"></div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto text-center max-w-3xl" data-reveal>
+    
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+            <span class="size-1.5 rounded-full bg-brand-teal"></span>
+            Z dodávky, ne z kanceláře
+        </p>
+    
+    <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+        Postaveno <span class="text-gradient">s řemeslníky</span>, ne pro prezentace
+    </h2>
+    
+        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">KALKULite vzniká v dodávkách a na stavbách, ne v kanceláři. Každou funkci testujeme s řemeslníky, kteří ji budou používat.</p>
+    
+</div>
+
+
+        
+        <dl class="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            
+                <div data-reveal style="--reveal-delay: 0ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
+                    <dt class="mt-2 text-sm text-slate-400">od diktování k hotové faktuře</dt>
+                    <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
+                        <span data-count="1">1</span> min
+                    </dd>
+                </div>
+            
+                <div data-reveal style="--reveal-delay: 80ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
+                    <dt class="mt-2 text-sm text-slate-400">administrativy týdně zpět u nářadí</dt>
+                    <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
+                        <span data-count="5–10">5–10</span> h
+                    </dd>
+                </div>
+            
+                <div data-reveal style="--reveal-delay: 160ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
+                    <dt class="mt-2 text-sm text-slate-400">místo 3+ nepropojených nástrojů</dt>
+                    <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
+                        <span data-count="1">1</span> appka
+                    </dd>
+                </div>
+            
+                <div data-reveal style="--reveal-delay: 240ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
+                    <dt class="mt-2 text-sm text-slate-400">řemeslníků v ČR, pro které to stavíme</dt>
+                    <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
+                        <span data-count="180000">180000</span>
+                    </dd>
+                </div>
+            
+        </dl>
+
+        
+        <div class="relative mt-14 overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]" aria-label="Pro koho je KALKULite">
+            <ul class="flex w-max animate-marquee gap-3 hover:[animation-play-state:paused]">
+                
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Zedníci
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Podlaháři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Instalatéři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Elektrikáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Obkladači
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Malíři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Truhláři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Sádrokartonáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Topenáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Pokrývači
+                        </li>
+                    
+                
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Zedníci
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Podlaháři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Instalatéři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Elektrikáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Obkladači
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Malíři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Truhláři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Sádrokartonáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Topenáři
+                        </li>
+                    
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                            <span class="size-1.5 rounded-full bg-brand-gradient"></span>Pokrývači
+                        </li>
+                    
+                
+            </ul>
+        </div>
+
+        
+        <div class="mt-14 grid gap-5 md:grid-cols-3">
+            
+                <figure data-reveal style="--reveal-delay: 0ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
+                    <svg class="size-9 text-brand-teal/40 transition-colors group-hover:text-brand-teal" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M9.3 25C5.8 25 3 22.2 3 18.2 3 12 7.6 7.4 13.4 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S12.6 25 9.3 25Zm15.4 0c-3.5 0-6.3-2.8-6.3-6.8C18.4 12 23 7.4 28.8 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S28 25 24.7 25Z"/></svg>
+                    <blockquote class="mt-4 flex-1 text-lg leading-relaxed text-white">„Faktury dělám v neděli večer, protože přes týden na to není čas. Kdyby to šlo nadiktovat v dodávce, beru hned.“</blockquote>
+                    <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                        <span class="grid size-11 place-items-center rounded-full bg-brand-gradient-diagonal font-chakra font-bold text-white">Z</span>
+                        <span>
+                            <span class="block font-chakra font-semibold text-white">Zedník, OSVČ</span>
+                            <span class="block text-sm text-slate-400">Z rozhovorů při validaci · nahradit reálnou citací</span>
+                        </span>
+                    </figcaption>
+                </figure>
+            
+                <figure data-reveal style="--reveal-delay: 100ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
+                    <svg class="size-9 text-brand-teal/40 transition-colors group-hover:text-brand-teal" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M9.3 25C5.8 25 3 22.2 3 18.2 3 12 7.6 7.4 13.4 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S12.6 25 9.3 25Zm15.4 0c-3.5 0-6.3-2.8-6.3-6.8C18.4 12 23 7.4 28.8 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S28 25 24.7 25Z"/></svg>
+                    <blockquote class="mt-4 flex-1 text-lg leading-relaxed text-white">„Nejvíc mě štve, že nevím, jestli se mi zakázka na druhém konci kraje vůbec vyplatila. Počítám to od oka.“</blockquote>
+                    <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                        <span class="grid size-11 place-items-center rounded-full bg-brand-gradient-diagonal font-chakra font-bold text-white">P</span>
+                        <span>
+                            <span class="block font-chakra font-semibold text-white">Podlahář, parta 3 lidí</span>
+                            <span class="block text-sm text-slate-400">Z rozhovorů při validaci · nahradit reálnou citací</span>
+                        </span>
+                    </figcaption>
+                </figure>
+            
+                <figure data-reveal style="--reveal-delay: 200ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
+                    <svg class="size-9 text-brand-teal/40 transition-colors group-hover:text-brand-teal" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M9.3 25C5.8 25 3 22.2 3 18.2 3 12 7.6 7.4 13.4 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S12.6 25 9.3 25Zm15.4 0c-3.5 0-6.3-2.8-6.3-6.8C18.4 12 23 7.4 28.8 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S28 25 24.7 25Z"/></svg>
+                    <blockquote class="mt-4 flex-1 text-lg leading-relaxed text-white">„Kancelářský software mám, ale na stavbě v rukavicích ho nepoužiju. Musí to jít jednou rukou.“</blockquote>
+                    <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
+                        <span class="grid size-11 place-items-center rounded-full bg-brand-gradient-diagonal font-chakra font-bold text-white">I</span>
+                        <span>
+                            <span class="block font-chakra font-semibold text-white">Instalatér, OSVČ</span>
+                            <span class="block text-sm text-slate-400">Z rozhovorů při validaci · nahradit reálnou citací</span>
+                        </span>
+                    </figcaption>
+                </figure>
+            
+        </div>
+    </div>
+</section>
+
+<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">06</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Waitlist
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+<section id="waitlist" class="relative py-20 sm:py-28">
+    <div class="pointer-events-none absolute inset-0 -z-10 " aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 right-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green bottom-0 left-0 animate-aura-b"></div>
+    
+    
+        <div class="absolute inset-0 bg-tech-grid mask-radial opacity-70"></div>
+    
+</div>
+
+
+    <div class="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:px-8">
+        
+        <div data-reveal class="text-center lg:sticky lg:top-28 lg:text-left">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
+                <span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-brand-teal opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-brand-teal"></span></span>
+                Hledáme testery
+            </p>
+            <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
+                Buď mezi prvními,<br class="hidden sm:block"> kdo <span class="text-gradient">zahodí šanon</span>
+            </h2>
+            <p class="mt-5 text-lg text-slate-300">
+                Hledáme řemeslníky, kteří appku vyzkouší v reálném provozu a řeknou nám na rovinu, co funguje a co ne.
+                Za to dostanou přednostní přístup a zvýhodněnou cenu natrvalo.
+            </p>
+
+            <ul class="mt-8 space-y-3 text-left">
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">1</span><span><strong class="text-white">Přednostní přístup</strong> do ostré verze.</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">2</span><span><strong class="text-white">Zakládací cena</strong> zamčená napořád.</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">3</span><span><strong class="text-white">Tvoje slovo</strong> v tom, co postavíme dál.</span></li>
+            </ul>
+
+            <p class="mt-8 text-sm text-slate-400">
+                Stavebniny, oborová komunita nebo investor? <a href="mailto:info@kalkulite.cz" class="font-medium text-white underline decoration-brand-teal/50 underline-offset-4 hover:decoration-brand-teal">Ozvěte se nám</a>.
+            </p>
+        </div>
+
+        
+        <div data-reveal style="--reveal-delay:120ms" class="relative">
+            <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-brand-gradient-diagonal opacity-20 blur-2xl" aria-hidden="true"></div>
+
+            <form method="POST" action="http://localhost:8000/!/forms/waitlist" data-waitlist-form="true" novalidate="true" class="glow-border relative rounded-3xl bg-brand-deep/70 p-6 backdrop-blur-xl sm:p-9"><input type="hidden" name="_token" value="5hHHaJu1xXet3cbTSkmnsYn0aZna2Tj5MdFq2qUx" autocomplete="off">
+
+                
+                <div data-form-success class="hidden py-10 text-center">
+                    <div class="mx-auto grid size-20 animate-pop place-items-center rounded-full bg-brand-gradient shadow-glow-lg">
+                        <svg class="size-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                    </div>
+                    <h3 class="mt-6 text-2xl font-bold">Jsi na seznamu! 🔨</h3>
+                    <p class="mt-2 text-slate-300">Ozveme se, jakmile pro tebe bude místo v testování. Zatím zpátky k nářadí.</p>
+                </div>
+
+                <div data-form-fields class=" space-y-7">
+                    <div>
+                        <h3 class="text-2xl font-bold">Chci do waitlistu</h3>
+                        <p class="mt-1 text-sm text-slate-400">Zabere to 20 vteřin. Bez spamu, slibujeme.</p>
+                    </div>
+
+                    <div data-form-errors class="hidden rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-300" role="alert">
+                        
+                    </div>
+
+                    
+                    <fieldset>
+                        <legend class="mb-3 font-chakra text-sm font-semibold text-white">Čím se živíš?</legend>
+                        <div class="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+                            
+                                
+                            
+                                
+                            
+                                
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="zednik" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Zedník
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="podlahar" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Podlahář
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="instalater" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Instalatér
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="elektrikar" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Elektrikář
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="obkladac" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Obkladač
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="malir" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Malíř
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="truhlar" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Truhlář
+                                            </span>
+                                        </label>
+                                    
+                                        <label class="group/opt relative cursor-pointer">
+                                            <input type="radio" name="trade" value="jine" class="peer sr-only"  required>
+                                            <span class="flex h-full min-h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-2 py-3 text-center font-chakra text-sm font-semibold text-slate-300 transition-all duration-200 group-hover/opt:border-brand-teal/50 group-hover/opt:text-white peer-checked:scale-[1.03] peer-checked:border-transparent peer-checked:bg-brand-gradient peer-checked:text-white peer-checked:shadow-glow peer-focus-visible:outline-2 peer-focus-visible:outline-brand-teal">
+                                                Jiné
+                                            </span>
+                                        </label>
+                                    
+                                
+                            
+                                
+                            
+                                
+                            
+                        </div>
+                    </fieldset>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <label class="block">
+                            <span class="mb-2 block font-chakra text-sm font-semibold text-white">Jméno <span class="font-normal text-slate-500">(nepovinné)</span></span>
+                            <input type="text" name="name" value="" autocomplete="given-name" placeholder="Petr" class="field-input">
+                        </label>
+                        <label class="block">
+                            <span class="mb-2 block font-chakra text-sm font-semibold text-white">E-mail</span>
+                            <input type="email" name="email" value="" autocomplete="email" inputmode="email" required placeholder="petr@obklady.cz" class="field-input">
+                        </label>
+                    </div>
+
+                    <label class="block">
+                        <span class="mb-2 block font-chakra text-sm font-semibold text-white">Velikost party</span>
+                        <select name="team_size" class="field-input field-select">
+                            <option value="solo" >Jsem na to sám (OSVČ)</option>
+                            <option value="2-5" >Parta 2–5 lidí</option>
+                            <option value="6+" >6 a více lidí</option>
+                        </select>
+                    </label>
+
+                    <input type="hidden" name="plan" value="" data-plan-input>
+                    <p data-plan-note class="hidden rounded-xl border border-brand-teal/30 bg-brand-teal/10 px-4 py-2.5 text-sm text-slate-200">
+                        Zájem o tarif <strong class="font-chakra text-white" data-plan-label></strong> ✓
+                    </p>
+
+                    
+                    <div class="hidden" aria-hidden="true">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <button type="submit" data-submit class="group/btn relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-brand-gradient px-7 py-4 font-chakra text-lg font-semibold tracking-wide text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-lg active:scale-[0.98] disabled:pointer-events-none disabled:opacity-70">
+                        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+                        <span data-submit-label class="relative">Zapsat se do waitlistu</span>
+                        <svg data-submit-spinner class="relative hidden size-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-opacity=".3" stroke-width="3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                    </button>
+
+                    <p class="text-center text-xs text-slate-500">Odesláním souhlasíš se zpracováním e-mailu za účelem informování o spuštění KALKULite. Odhlásit se můžeš kdykoliv.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+            </main>
+
+            <footer class="relative pt-10 pb-10">
+    <div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
+
+    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
+        <span class="relative grid size-7 place-items-center">
+            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
+            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
+        </span>
+        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
+            <span class="text-gradient">07</span>
+            <span class="mx-1.5 text-white/20">/</span>
+            Tým
+        </span>
+    </span>
+
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+</div>
+
+    <div class="pointer-events-none absolute inset-0 -z-10 opacity-60" aria-hidden="true" data-aura>
+    
+        <div data-aura-blob="1" class="aura-blob aura-blue top-0 left-0 animate-aura-a"></div>
+        <div data-aura-blob="-1" class="aura-blob aura-green right-0 bottom-0 animate-aura-b"></div>
+    
+    
+</div>
+
+
+    <div class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+            <div data-reveal>
+                <a href="/" class="group inline-flex items-center gap-2.5 " aria-label="KALKULite – domů">
+    <img
+        src="/assets/brand/kalkulite-icon.png"
+        alt=""
+        width="40" height="40"
+        class="size-9 sm:size-10 rounded-[22%] shadow-glow transition-transform duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] group-hover:-rotate-12 group-hover:scale-110"
+    >
+    <span class="font-chakra text-xl font-bold tracking-wide text-white sm:text-2xl">
+        KALKU<span class="text-gradient">Lite</span>
+    </span>
+</a>
+
+                <p class="mt-5 max-w-md text-lg text-slate-300">Měníme způsob, jak řemeslníci pracují. Aby se konečně mohli soustředit na práci, ne na papíry.</p>
+                <a href="https://app.kalkulite.cz" target="_blank" rel="noopener" class="group mt-6 inline-flex items-center gap-2 font-chakra font-semibold text-white">
+                    <span class="text-gradient">app.kalkulite.cz</span>
+                    <svg class="size-4 text-brand-teal transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.2 14.8a.75.75 0 0 1 0-1.06L12.94 6H7.75a.75.75 0 0 1 0-1.5h7a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-1.5 0V7.06l-7.74 7.74a.75.75 0 0 1-1.06 0Z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+
+            <div>
+                <p class="mb-5 font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase" data-reveal>Náš tým</p>
+                <ul class="grid gap-4 sm:grid-cols-2">
+                    
+                        <li data-reveal style="--reveal-delay: 0ms" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
+                            <span class="relative size-20 shrink-0 overflow-hidden rounded-2xl bg-brand-gradient-diagonal">
+                                <img src="/assets/team/vaclav-samal.webp" alt="Václav Šámal" loading="lazy" class="absolute inset-x-0 -bottom-1 h-[115%] w-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                            </span>
+                            <span>
+                                <span class="block font-chakra text-lg font-bold text-white">Václav Šámal</span>
+                                <span class="mt-1 flex flex-wrap gap-1.5">
+                                    <span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Validace trhu</span><span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Marketing</span><span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Akvizice zákazníků</span>
+                                </span>
+                            </span>
+                        </li>
+                    
+                        <li data-reveal style="--reveal-delay: 100ms" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
+                            <span class="relative size-20 shrink-0 overflow-hidden rounded-2xl bg-brand-gradient-diagonal">
+                                <img src="/assets/team/ondrej-prusa.webp" alt="Ondřej Průša" loading="lazy" class="absolute inset-x-0 -bottom-1 h-[115%] w-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+                            </span>
+                            <span>
+                                <span class="block font-chakra text-lg font-bold text-white">Ondřej Průša</span>
+                                <span class="mt-1 flex flex-wrap gap-1.5">
+                                    <span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Vývoj aplikace</span><span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Vizuální identita</span><span class="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300">Grafický design</span>
+                                </span>
+                            </span>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="mt-16 grid gap-8 border-t border-white/10 pt-10 sm:grid-cols-3 sm:items-center">
+            <nav aria-label="Patička" class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:justify-start">
+                <a href="#funkce" class="text-slate-400 transition-colors hover:text-white">Funkce</a>
+                <a href="#cenik" class="text-slate-400 transition-colors hover:text-white">Ceník</a>
+                <a href="#waitlist" class="text-slate-400 transition-colors hover:text-white">Waitlist</a>
+                <a href="mailto:info@kalkulite.cz" class="text-slate-400 transition-colors hover:text-white">info@kalkulite.cz</a>
+            </nav>
+
+            <ul class="flex justify-center gap-2" aria-label="Sociální sítě">
+                <li>
+    <a href="#" target="_blank" rel="noopener" aria-label="Instagram" class="grid size-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-brand-gradient hover:text-white hover:shadow-glow">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+    </a>
+</li>
+
+                <li>
+    <a href="#" target="_blank" rel="noopener" aria-label="TikTok" class="grid size-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-brand-gradient hover:text-white hover:shadow-glow">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9a7.4 7.4 0 0 0 4.3 1.4V7.3a4.3 4.3 0 0 1-3.2-1.5z"/></svg>
+    </a>
+</li>
+
+                <li>
+    <a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="grid size-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-brand-gradient hover:text-white hover:shadow-glow">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+    </a>
+</li>
+
+                <li>
+    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid size-11 place-items-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-brand-gradient hover:text-white hover:shadow-glow">
+        <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+    </a>
+</li>
+
+            </ul>
+
+            <p class="text-center text-sm text-slate-500 sm:text-right">© 2026 KALKULite. Od faktur zpět k nářadí.</p>
+        </div>
+    </div>
+</footer>
+
+<dialog data-demo-dialog aria-labelledby="demo-title" class="m-auto w-[min(28rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-slate-300 backdrop:bg-brand-deep/80 backdrop:backdrop-blur-sm open:animate-pop">
+    <div class="glow-border relative rounded-3xl bg-brand-dark p-6 shadow-2xl sm:p-8">
+        <button type="button" data-demo-close class="absolute top-4 right-4 grid size-10 place-items-center rounded-xl text-slate-400 transition-colors hover:bg-white/10 hover:text-white" aria-label="Zavřít">
+            <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+        </button>
+
+        <p class="font-chakra text-xs font-semibold tracking-[0.25em] text-brand-teal uppercase">Demo · 60 vteřin</p>
+        <h2 id="demo-title" class="mt-2 text-2xl font-bold">Faktura ze stavby, hlasem</h2>
+
+        
+        <ol class="mt-6 grid grid-cols-3 gap-2 font-chakra text-[11px] font-semibold text-slate-500 uppercase" aria-hidden="true">
+            <li data-demo-step="1" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">1 · Diktuješ</li>
+            <li data-demo-step="2" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">2 · AI počítá</li>
+            <li data-demo-step="3" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">3 · Hotovo</li>
+        </ol>
+
+        <div class="mt-5 min-h-[17rem] rounded-2xl border border-white/10 bg-brand-deep/60 p-5">
+            <div class="flex items-center gap-3">
+                <span class="relative grid size-10 shrink-0 place-items-center rounded-full bg-brand-gradient text-white">
+                    <span data-demo-ring class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/50"></span>
+                    <svg class="relative size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+                </span>
+                <p data-demo-transcript class="min-h-[2.5rem] text-sm text-white"></p>
+            </div>
+            <ul data-demo-items class="mt-5 space-y-2 text-sm"></ul>
+            <div data-demo-total class="mt-4 flex items-center justify-between border-t border-white/10 pt-4 font-chakra opacity-0 transition-opacity duration-500">
+                <span class="text-slate-400">Celkem s DPH</span>
+                <span class="text-2xl font-bold text-gradient">18 450 Kč</span>
+            </div>
+        </div>
+
+        <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <button type="button" data-demo-replay class="rounded-xl glass px-4 py-3 font-chakra font-semibold text-white transition-colors hover:bg-white/10">↻ Přehrát znovu</button>
+            <a href="https://app.kalkulite.cz" target="_blank" rel="noopener" class="rounded-xl bg-brand-gradient px-4 py-3 text-center font-chakra font-semibold text-white shadow-glow transition-transform hover:-translate-y-0.5">Vyzkoušet prototyp</a>
+        </div>
+    </div>
+</dialog>
+
+
+        </div>
+    </body>
+</html>
