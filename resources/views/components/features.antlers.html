@@ -3,8 +3,8 @@
     <div class="pointer-events-none absolute inset-0 -z-10 bg-tech-grid mask-fade-y opacity-60" aria-hidden="true"></div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {{ partial:components/section-heading eyebrow="Co umí" lead="Čtyři pilíře, které ti vrátí večery a pohlídají zisk. Všechno v jedné appce, kterou ovládneš jednou rukou." }}
-            Tvůj parťák s <span class="text-gradient">AI mozkem</span>
+        {{ partial:components/section-heading lead="Všechno v jedné aplikaci, kterou ovládneš jednou rukou." }}
+            Nabídky, faktury a trasy na jednom místě
         {{ /partial:components/section-heading }}
 
         <div class="mt-14 grid auto-rows-auto gap-4 lg:grid-cols-6">
@@ -13,8 +13,7 @@
             <article data-spotlight data-reveal data-voice-card class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-4 lg:row-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative flex h-full flex-col">
-                    {{ partial:components/feature-badge label="AI automatizace" }}
-                    <h3 class="mt-4 text-2xl font-bold sm:text-3xl">Nabídka i faktura <span class="text-gradient">hlasem do 1 minuty</span></h3>
+                    <h3 class="text-2xl font-bold sm:text-3xl">Nabídka i faktura hlasem do 1 minuty</h3>
                     <p class="mt-3 max-w-lg text-slate-300">Nadiktuješ, co děláš. AI dopočítá materiál, práci i DPH a pošle zákazníkovi hotovou nabídku nebo fakturu s QR platbou. Rovnou ze stavby.</p>
 
                     {{# Mini interaktivní ukázka #}}
@@ -25,7 +24,7 @@
                             <svg class="relative size-10 transition-transform group-hover/mic:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
                         </button>
                         <div class="min-w-0">
-                            <p class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase" data-voice-status>Klepni na mikrofon ↓</p>
+                            <p class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase" data-voice-status>Klepni na mikrofon</p>
                             <p class="mt-2 min-h-[3rem] text-sm text-white sm:text-base" data-voice-text>„Pokládka vinylu v obýváku, třicet dva metrů, podložka, lišty, jeden a půl dne.“</p>
                             <ul class="mt-3 space-y-1.5 text-sm" data-voice-items></ul>
                             <div class="mt-3 flex items-center justify-between border-t border-white/10 pt-3 font-chakra opacity-0 transition-opacity duration-500" data-voice-total>
@@ -41,8 +40,7 @@
             <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative">
-                    {{ partial:components/feature-badge label="KALKULite Index" }}
-                    <h3 class="mt-4 text-xl font-bold">Vyplatí se, nebo jen pálíš naftu?</h3>
+                    <h3 class="text-xl font-bold">Vyplatí se, nebo jen pálíš naftu?</h3>
                     <p class="mt-2 text-sm text-slate-300">Algoritmus poměří čas, vzdálenost a fakturaci. Hned víš, které zakázky brát.</p>
                     <div class="mt-5 flex items-end gap-1.5" aria-hidden="true">
                         {{ loop from="1" to="10" }}
@@ -57,8 +55,7 @@
             <article data-spotlight data-reveal style="--reveal-delay:160ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative">
-                    {{ partial:components/feature-badge label="Smart logistika" }}
-                    <h3 class="mt-4 text-xl font-bold">Trasa, která šetří naftu</h3>
+                    <h3 class="text-xl font-bold">Trasa, která šetří naftu</h3>
                     <p class="mt-2 text-sm text-slate-300">Seřadí zakázky do optimální trasy. Méně kilometrů, víc času na práci.</p>
                     <svg viewBox="0 0 260 110" class="mt-4 w-full" fill="none" aria-hidden="true">
                         <path d="M20 90 L 70 30 L 140 80 L 200 20 L 240 70" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="4 5"/>
@@ -69,7 +66,7 @@
                         </g>
                         <defs><linearGradient id="routeGrad" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
                     </svg>
-                    <p class="mt-2 font-chakra text-sm text-slate-400">Dnes ušetřeno <span class="font-bold text-white" data-count="23">23</span> km</p>
+                    <p class="mt-2 font-chakra text-sm text-slate-400">Dnes ušetřeno <span class="font-bold text-white">23</span> km</p>
                 </div>
             </article>
 
@@ -78,8 +75,7 @@
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center">
                     <div>
-                        {{ partial:components/feature-badge label="Automatické SMS" }}
-                        <h3 class="mt-4 text-xl font-bold">Zákazník ví, že jedeš</h3>
+                        <h3 class="text-xl font-bold">Zákazník ví, že jedeš</h3>
                         <p class="mt-2 text-sm text-slate-300">Zpoždění na stavbě? Appka sama pošle SMS. Profesionálně a bez telefonování za volantem.</p>
                     </div>
                     <div class="space-y-2 text-sm" data-chat>
@@ -95,8 +91,7 @@
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center">
                     <div>
-                        {{ partial:components/feature-badge label="Klid v hlavě" }}
-                        <h3 class="mt-4 text-xl font-bold">Peníze ti neutečou</h3>
+                        <h3 class="text-xl font-bold">Peníze ti neutečou</h3>
                         <p class="mt-2 text-sm text-slate-300">Hlídání splatností, upomínky, QR platby a archiv všech zakázek. Na nic nezapomeneš.</p>
                     </div>
                     <ul class="space-y-2 text-sm">

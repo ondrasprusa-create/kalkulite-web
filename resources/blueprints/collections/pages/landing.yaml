@@ -24,7 +24,13 @@ tabs:
             field:
               type: textarea
               display: 'SEO popis'
+              instructions: 'Ideálně 140–160 znaků. Zobrazí se ve výsledcích Googlu.'
               localizable: true
+          -
+            handle: no_index
+            field:
+              type: toggle
+              display: 'Skrýt před vyhledávači (noindex)'
   pricing:
     display: Ceník
     sections:
@@ -78,7 +84,7 @@ tabs:
                   field: { type: text, display: Prefix, width: 25 }
                 -
                   handle: value
-                  field: { type: text, display: 'Hodnota (číslo se animuje)', width: 25 }
+                  field: { type: text, display: Hodnota, width: 25 }
                 -
                   handle: suffix
                   field: { type: text, display: Suffix, width: 25 }
@@ -106,6 +112,26 @@ tabs:
                 -
                   handle: trade
                   field: { type: text, display: 'Obor / místo', width: 50 }
+  faq_tab:
+    display: FAQ
+    sections:
+      -
+        fields:
+          -
+            handle: faq
+            field:
+              type: grid
+              display: 'Časté otázky'
+              instructions: 'Zobrazí se na webu a zároveň jako strukturovaná data FAQPage pro Google.'
+              mode: stacked
+              add_row: 'Přidat otázku'
+              fields:
+                -
+                  handle: question
+                  field: { type: text, display: Otázka, validate: [required] }
+                -
+                  handle: answer
+                  field: { type: textarea, display: Odpověď, validate: [required] }
   sidebar:
     display: Sidebar
     sections:

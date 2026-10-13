@@ -1,0 +1,7 @@
+User-agent: *
+{{ if config:seo:allow_indexing }}Disallow: /cp
+Disallow: /!/
+
+Sitemap: {{ config:app:url }}/sitemap.xml
+{{ else }}Disallow: /
+{{ /if }}

@@ -1,19 +1,13 @@
 {{#
-    Nadpis sekce
-    Parametry: eyebrow (štítek nad nadpisem), lead (perex), align (center|left)
-    Slot: samotný nadpis (může obsahovat <span class="text-gradient">)
+    Nadpis sekce (H2)
+    Parametry: lead (krátký perex – volitelný), align (center|left)
+    Slot: samotný nadpis
 #}}
 <div class="{{ align == 'left' ? 'text-left' : 'mx-auto text-center' }} max-w-3xl" data-reveal>
-    {{ if eyebrow }}
-        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
-            <span class="size-1.5 rounded-full bg-brand-teal"></span>
-            {{ eyebrow }}
-        </p>
-    {{ /if }}
     <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
         {{ slot }}
     </h2>
     {{ if lead }}
-        <p class="mt-5 text-base text-pretty text-slate-300 sm:text-lg">{{ lead }}</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">{{ lead }}</p>
     {{ /if }}
 </div>

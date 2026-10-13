@@ -1,18 +1,19 @@
 {{#
     Úvodní one-page. Každá sekce je samostatná komponenta v resources/views/components/.
     Sekce odděluje `section-divider`; pozadí (aura) se mezi sekcemi plynule slévá.
-    Data (tarify, čísla, citace, tým) se upravují v Control Panelu → Pages → Home.
+    Data (tarify, čísla, FAQ, tým) se upravují v Control Panelu → Pages → Home.
 #}}
 {{ partial:components/hero }}
-{{ partial:components/section-divider number="01" label="Problém" }}
+{{ partial:components/section-divider }}
 {{ partial:components/problem-solution }}
-{{ partial:components/section-divider number="02" label="Funkce" }}
+{{ partial:components/section-divider }}
 {{ partial:components/features }}
-{{ partial:components/section-divider number="03" label="KALKULite Index" }}
+{{ partial:components/section-divider }}
 {{ partial:components/index-calculator }}
-{{ partial:components/section-divider number="04" label="Ceník" }}
+{{ partial:components/section-divider }}
 {{ partial:components/pricing }}
-{{ partial:components/section-divider number="05" label="Z terénu" }}
+{{ partial:components/section-divider }}
 {{ partial:components/social-proof }}
-{{ partial:components/section-divider number="06" label="Waitlist" }}
+{{ partial:components/faq }}
+{{ partial:components/section-divider }}
 {{ partial:components/waitlist }}

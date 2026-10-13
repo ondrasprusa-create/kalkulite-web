@@ -5,25 +5,15 @@
     <div class="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:px-8">
         {{# Text #}}
         <div data-reveal class="text-center lg:sticky lg:top-28 lg:text-left">
-            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-3 py-1 font-chakra text-xs font-semibold tracking-[0.2em] text-brand-teal uppercase">
-                <span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-brand-teal opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-brand-teal"></span></span>
-                Hledáme testery
-            </p>
             <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
                 Buď mezi prvními,<br class="hidden sm:block"> kdo <span class="text-gradient">zahodí šanon</span>
             </h2>
             <p class="mt-5 text-lg text-slate-300">
                 Hledáme řemeslníky, kteří appku vyzkouší v reálném provozu a řeknou nám na rovinu, co funguje a co ne.
-                Za to dostanou přednostní přístup a zvýhodněnou cenu natrvalo.
+                Na oplátku se do ostré verze dostanou mezi prvními.
             </p>
 
-            <ul class="mt-8 space-y-3 text-left">
-                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">1</span><span><strong class="text-white">Přednostní přístup</strong> do ostré verze.</span></li>
-                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">2</span><span><strong class="text-white">Zakládací cena</strong> zamčená napořád.</span></li>
-                <li class="flex items-start gap-3"><span class="mt-1 grid size-6 shrink-0 place-items-center rounded-lg bg-brand-gradient font-chakra text-xs font-bold text-white">3</span><span><strong class="text-white">Tvoje slovo</strong> v tom, co postavíme dál.</span></li>
-            </ul>
-
-            <p class="mt-8 text-sm text-slate-400">
+            <p class="mt-6 text-sm text-slate-400">
                 Stavebniny, oborová komunita nebo investor? <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="font-medium text-white underline decoration-brand-teal/50 underline-offset-4 hover:decoration-brand-teal">Ozvěte se nám</a>.
             </p>
         </div>
@@ -39,14 +29,14 @@
                     <div class="mx-auto grid size-20 animate-pop place-items-center rounded-full bg-brand-gradient shadow-glow-lg">
                         <svg class="size-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
                     </div>
-                    <h3 class="mt-6 text-2xl font-bold">Jsi na seznamu! 🔨</h3>
+                    <h3 class="mt-6 text-2xl font-bold">Jsi na seznamu</h3>
                     <p class="mt-2 text-slate-300">Ozveme se, jakmile pro tebe bude místo v testování. Zatím zpátky k nářadí.</p>
                 </div>
 
                 <div data-form-fields class="{{ success ? 'hidden' : '' }} space-y-7">
                     <div>
                         <h3 class="text-2xl font-bold">Chci do waitlistu</h3>
-                        <p class="mt-1 text-sm text-slate-400">Zabere to 20 vteřin. Bez spamu, slibujeme.</p>
+                        <p class="mt-1 text-sm text-slate-400">Zabere to 20 vteřin.</p>
                     </div>
 
                     <div data-form-errors class="{{ errors ? '' : 'hidden' }} rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-300" role="alert">

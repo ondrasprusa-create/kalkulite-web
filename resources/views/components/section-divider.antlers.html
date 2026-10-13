@@ -1,22 +1,6 @@
-{{#
-    Předěl mezi sekcemi – vlasová gradientní linka, která se do stran rozplývá,
-    se svítícím uzlem a technickým popiskem (číslo + název další sekce).
-    Parametry: number (např. 02), label (např. Funkce)
-#}}
-<div class="relative mx-auto flex max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8" data-reveal aria-hidden="true">
-    <span class="h-px flex-1 bg-gradient-to-r from-transparent via-white/10 to-brand-blue/50"></span>
-
-    <span class="group/div relative flex items-center gap-3 rounded-full border border-white/10 bg-brand-dark/70 py-1.5 pr-4 pl-1.5 backdrop-blur-md">
-        <span class="relative grid size-7 place-items-center">
-            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/30"></span>
-            <span class="relative size-2.5 rotate-45 rounded-[2px] bg-brand-gradient shadow-glow"></span>
-        </span>
-        <span class="font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase">
-            <span class="text-gradient">{{ number }}</span>
-            <span class="mx-1.5 text-white/20">/</span>
-            {{ label }}
-        </span>
-    </span>
-
-    <span class="h-px flex-1 bg-gradient-to-l from-transparent via-white/10 to-brand-teal/50"></span>
+{{# Předěl mezi sekcemi – vlasová gradientní linka rozplývající se do stran se svítícím bodem uprostřed #}}
+<div class="mx-auto flex max-w-5xl items-center gap-3 px-4 sm:px-6 lg:px-8" aria-hidden="true">
+    <span class="h-px flex-1 bg-gradient-to-r from-transparent to-brand-blue/40"></span>
+    <span class="size-1.5 rotate-45 bg-brand-gradient shadow-glow"></span>
+    <span class="h-px flex-1 bg-gradient-to-l from-transparent to-brand-teal/40"></span>
 </div>

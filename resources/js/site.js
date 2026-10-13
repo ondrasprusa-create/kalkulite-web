@@ -15,20 +15,51 @@ function initNavbar() {
     const nav = $('[data-navbar]');
     if (!nav) return;
 
-    const onScroll = () => (nav.dataset.scrolled = window.scrollY > 12);
+    const onScroll = () => {
+        if (nav.dataset.menu !== 'open') nav.dataset.scrolled = window.scrollY > 12;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
+    // Fullscreen mobilní menu
     const toggle = $('[data-menu-toggle]', nav);
+    const overlay = $('[data-menu-overlay]');
+    const label = $('.sr-only', toggle);
+    const isOpen = () => overlay?.dataset.open === 'true';
+
     const setOpen = (open) => {
+        if (!overlay || open === isOpen()) return;
+        overlay.dataset.open = open;
+        overlay.inert = !open;
         nav.dataset.menu = open ? 'open' : 'closed';
         toggle.setAttribute('aria-expanded', open);
-        if (open) nav.dataset.scrolled = true;
+        label.textContent = open ? 'Zavřít menu' : 'Otevřít menu';
+        document.documentElement.classList.toggle('overflow-hidden', open);
+        // Obsah za menu není dosažitelný klávesnicí ani čtečkou; fokus zůstává na tlačítku Zavřít
+        const page = $('.page-canvas');
+        if (page) page.inert = open;
+        if (open) nav.dataset.scrolled = false; // hlavička splyne s menu
         else onScroll();
     };
-    toggle?.addEventListener('click', () => setOpen(nav.dataset.menu !== 'open'));
-    $$('#mobile-menu a', nav).forEach((a) => a.addEventListener('click', () => setOpen(false)));
-    document.addEventListener('keydown', (e) => e.key === 'Escape' && setOpen(false));
+
+    toggle?.addEventListener('click', () => setOpen(!isOpen()));
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isOpen()) { setOpen(false); toggle.focus(); }
+    });
+    // Při přechodu na desktop menu zavřít
+    window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => e.matches && setOpen(false));
+
+    // Odkaz v menu: zavřít, odemknout scroll a teprve pak plynule sjet na sekci
+    $$('a[href^="#"]', overlay).forEach((a) => a.addEventListener('click', (e) => {
+        const target = $(a.hash);
+        if (!target) return;
+        e.preventDefault();
+        setOpen(false);
+        requestAnimationFrame(() => {
+            target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+            history.pushState(null, '', a.hash);
+        });
+    }));
 
     // Zvýraznění aktivní sekce v menu
     const links = $$('[data-nav-link]');
@@ -56,32 +87,6 @@ function initReveal() {
         { threshold: 0.15, rootMargin: '0px 0px -40px 0px' },
     );
     items.forEach((el) => io.observe(el));
-}
-
-/* ---------- Počítadla čísel ---------- */
-function initCounters() {
-    const io = new IntersectionObserver((entries) => entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        io.unobserve(entry.target);
-        const el = entry.target;
-        const target = Number(el.dataset.count);
-        if (!Number.isFinite(target)) return;
-        if (reducedMotion) return (el.textContent = czk(target));
-
-        const start = performance.now();
-        const duration = 1400;
-        const tick = (now) => {
-            const p = Math.min((now - start) / duration, 1);
-            el.textContent = czk(target * (1 - Math.pow(1 - p, 3)));
-            if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-    }), { threshold: 0.6 });
-
-    $$('[data-count]').forEach((el) => {
-        if (Number.isFinite(Number(el.dataset.count))) el.textContent = '0';
-        io.observe(el);
-    });
 }
 
 /* ---------- Spotlight na kartách (sleduje kurzor) ---------- */
@@ -417,7 +422,7 @@ function initWaitlist() {
 }
 
 [
-    initNavbar, initReveal, initCounters, initSpotlight, initAura, initTilt,
+    initNavbar, initReveal, initSpotlight, initAura, initTilt,
     initMagnetic, initCompare, initVoiceCard, initIndexCalc, initDemo, initWaitlist,
 ].forEach((fn) => {
     try { fn(); } catch (err) { console.error(`[KALKULite] ${fn.name}`, err); }

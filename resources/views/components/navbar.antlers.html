@@ -35,20 +35,36 @@
         </div>
     </nav>
 
-    {{# Mobilní menu #}}
-    <div
-        id="mobile-menu"
-        class="grid grid-rows-[0fr] overflow-hidden border-white/10 bg-brand-dark/95 backdrop-blur-xl transition-[grid-template-rows] duration-300 group-data-[menu=open]/nav:grid-rows-[1fr] group-data-[menu=open]/nav:border-t md:hidden"
-    >
-        <div class="min-h-0">
-            <ul class="space-y-1 px-4 pt-4">
-                {{ partial:components/nav-links link_class="flex items-center justify-between rounded-xl px-4 py-4 font-chakra text-lg font-medium text-white transition-colors hover:bg-white/5 active:bg-white/10" }}
-            </ul>
-            <div class="p-4 pb-6">
-                {{ partial:components/button href="#waitlist" size="lg" class="w-full" }}
-                    Chci do waitlistu
-                {{ /partial:components/button }}
-            </div>
-        </div>
-    </div>
 </header>
+
+{{#
+    Fullscreen mobilní menu. Leží pod hlavičkou (z-40 vs. z-50), takže hamburger
+    zůstává nahoře a mění se v křížek. Stav řídí site.js přes data-open.
+#}}
+<div
+    id="mobile-menu"
+    data-menu-overlay
+    data-open="false"
+    inert
+    class="group/menu invisible fixed inset-0 z-40 flex flex-col overflow-y-auto bg-brand-dark opacity-0 transition-[opacity,visibility] duration-300 data-[open=true]:visible data-[open=true]:opacity-100 md:hidden"
+>
+    {{ partial:components/aura grid="true" }}
+
+    <nav class="flex flex-1 flex-col justify-center px-6 pt-[calc(5rem+env(safe-area-inset-top))]" aria-label="Mobilní navigace">
+        <ul class="space-y-1">
+            {{ partial:components/nav-links
+                li_class="translate-y-6 opacity-0 transition-all duration-500 ease-[cubic-bezier(.2,.7,.2,1)] [transition-delay:calc(var(--i)*60ms)] group-data-[open=true]/menu:translate-y-0 group-data-[open=true]/menu:opacity-100 group-data-[open=true]/menu:[transition-delay:calc(var(--i)*60ms+120ms)]"
+                link_class="group/link flex items-center justify-between py-3 font-chakra text-4xl font-bold text-white transition-colors active:text-brand-teal" }}
+        </ul>
+    </nav>
+
+    <div class="translate-y-6 space-y-4 px-6 pt-8 pb-[calc(2rem+env(safe-area-inset-bottom))] opacity-0 transition-all delay-0 duration-500 group-data-[open=true]/menu:translate-y-0 group-data-[open=true]/menu:opacity-100 group-data-[open=true]/menu:delay-[380ms]">
+        {{ partial:components/button href="#waitlist" size="lg" class="w-full" attrs="data-menu-link" }}
+            Chci do waitlistu
+        {{ /partial:components/button }}
+        <p class="flex items-center justify-between text-sm text-slate-400">
+            <a href="https://app.kalkulite.cz" target="_blank" rel="noopener" class="font-medium text-white underline decoration-brand-teal/50 underline-offset-4">Vyzkoušet prototyp</a>
+            <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
+        </p>
+    </div>
+</div>

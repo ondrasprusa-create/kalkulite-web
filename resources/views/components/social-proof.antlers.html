@@ -3,8 +3,8 @@
     <div class="pointer-events-none absolute inset-0 -z-10 bg-tech-grid mask-fade-y opacity-50" aria-hidden="true"></div>
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {{ partial:components/section-heading eyebrow="Z dodávky, ne z kanceláře" lead="KALKULite vzniká v dodávkách a na stavbách, ne v kanceláři. Každou funkci testujeme s řemeslníky, kteří ji budou používat." }}
-            Postaveno <span class="text-gradient">s řemeslníky</span>, ne pro prezentace
+        {{ partial:components/section-heading lead="Vzniká v dodávkách a na stavbách, ne v kanceláři. Každou funkci zkoušíme s řemeslníky, kteří ji budou používat." }}
+            Postaveno s řemeslníky
         {{ /partial:components/section-heading }}
 
         {{# Čísla #}}
@@ -13,7 +13,7 @@
                 <div data-reveal style="--reveal-delay: {{ index * 80 }}ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
                     <dt class="mt-2 text-sm text-slate-400">{{ label }}</dt>
                     <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
-                        {{ prefix }}<span data-count="{{ value }}">{{ value }}</span>{{ suffix }}
+                        {{ prefix }}{{ value }}{{ suffix }}
                     </dd>
                 </div>
             {{ /stats }}
@@ -32,7 +32,8 @@
             </ul>
         </div>
 
-        {{# Citace #}}
+        {{# Citace – zobrazí se, až budou v CMS vyplněné #}}
+        {{ if testimonials }}
         <div class="mt-14 grid gap-5 md:grid-cols-3">
             {{ testimonials }}
                 <figure data-reveal style="--reveal-delay: {{ index * 100 }}ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
@@ -48,5 +49,6 @@
                 </figure>
             {{ /testimonials }}
         </div>
+        {{ /if }}
     </div>
 </section>

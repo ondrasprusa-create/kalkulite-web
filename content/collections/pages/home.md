@@ -3,8 +3,8 @@ title: 'Mobilní parťák pro řemeslníky'
 id: 049ed0c0-9796-43f7-b158-4f6129328c12
 template: home
 blueprint: landing
-seo_title: 'Od faktur zpět k nářadí!'
-seo_description: 'KALKULite – AI mobilní parťák pro řemeslníky. Nabídka i faktura hlasem do 1 minuty, plánovač tras a KALKULite Index ziskovosti zakázek.'
+seo_title: 'Aplikace pro řemeslníky: faktura hlasem z mobilu'
+seo_description: 'Fakturace a cenové nabídky pro řemeslníky přímo z mobilu. Nadiktuj zakázku, KALKULite spočítá materiál i práci, naplánuje trasu a ohlídá zisk.'
 plans:
   -
     id: plan0ucen
@@ -83,7 +83,7 @@ stats:
   -
     id: st4
     prefix: ''
-    value: '180000'
+    value: '180 000'
     suffix: ''
     label: 'řemeslníků v ČR, pro které to stavíme'
 trades:
@@ -97,20 +97,25 @@ trades:
   - Sádrokartonáři
   - Topenáři
   - Pokrývači
-testimonials:
+faq:
   -
-    id: tq1
-    quote: 'Faktury dělám v neděli večer, protože přes týden na to není čas. Kdyby to šlo nadiktovat v dodávce, beru hned.'
-    author: 'Zedník, OSVČ'
-    trade: 'Z rozhovorů při validaci · nahradit reálnou citací'
+    id: faq1
+    question: 'Pro koho je KALKULite?'
+    answer: 'Pro řemeslníky na volné noze a malé party – zedníky, podlaháře, instalatéry, elektrikáře, obkladače a další. Pro každého, kdo tráví den na stavbě a nechce večery trávit nad fakturami.'
   -
-    id: tq2
-    quote: 'Nejvíc mě štve, že nevím, jestli se mi zakázka na druhém konci kraje vůbec vyplatila. Počítám to od oka.'
-    author: 'Podlahář, parta 3 lidí'
-    trade: 'Z rozhovorů při validaci · nahradit reálnou citací'
+    id: faq2
+    question: 'Jak funguje faktura nebo nabídka hlasem?'
+    answer: 'Do telefonu nadiktuješ, co jsi dělal nebo co budeš dělat. AI z toho dopočítá materiál a práci, sestaví cenovou nabídku nebo fakturu a přidá QR platbu. Celé to zvládneš přímo ze stavby zhruba do minuty.'
   -
-    id: tq3
-    quote: 'Kancelářský software mám, ale na stavbě v rukavicích ho nepoužiju. Musí to jít jednou rukou.'
-    author: 'Instalatér, OSVČ'
-    trade: 'Z rozhovorů při validaci · nahradit reálnou citací'
+    id: faq3
+    question: 'Co je KALKULite Index?'
+    answer: 'Číslo od 0 do 10, které porovná čas, najeté kilometry a fakturovanou částku. Hned uvidíš, jestli se zakázka vyplatí, nebo jen pálíš naftu.'
+  -
+    id: faq4
+    question: 'Kolik KALKULite stojí?'
+    answer: 'Tarif Učeň je zdarma. Parťák stojí 290 Kč měsíčně, Mistr 590 Kč a Profík pro malé týmy 990 Kč měsíčně.'
+  -
+    id: faq5
+    question: 'Kdy můžu aplikaci začít používat?'
+    answer: 'Prototyp si můžeš vyzkoušet hned na app.kalkulite.cz. Do ostrého provozu pouštíme řemeslníky postupně podle waitlistu.'
 ---

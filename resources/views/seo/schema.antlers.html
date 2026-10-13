@@ -1,0 +1,65 @@
+{{#
+    Strukturovaná data (schema.org JSON-LD) pro Google.
+    Organization + WebSite + SoftwareApplication (tarify z pole `plans`) + FAQPage (pole `faq`).
+    Všechny texty jdou přes `to_json`, aby byly správně escapované.
+#}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "{{ config:app:url }}/#organization",
+            "name": "KALKULite",
+            "url": "{{ config:app:url }}",
+            "logo": "{{ config:app:url }}/assets/brand/icon-512.png",
+            "slogan": "Od faktur zpět k nářadí!"{{ if contact_email }},
+            "email": {{ contact_email | to_json }}{{ /if }},
+            "sameAs": {{ arr(social_instagram, social_tiktok, social_facebook, social_linkedin) | filter_empty | values | to_json }}
+        },
+        {
+            "@type": "WebSite",
+            "@id": "{{ config:app:url }}/#website",
+            "name": "KALKULite",
+            "url": "{{ config:app:url }}",
+            "inLanguage": "cs-CZ",
+            "publisher": { "@id": "{{ config:app:url }}/#organization" }
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "KALKULite",
+            "url": "https://app.kalkulite.cz",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Fakturace a cenové nabídky pro řemeslníky",
+            "operatingSystem": "Web, Android, iOS",
+            "inLanguage": "cs-CZ",
+            "description": {{ seo_description | to_json }},
+            "image": "{{ config:app:url }}/assets/brand/og-image.jpg",
+            "publisher": { "@id": "{{ config:app:url }}/#organization" },
+            "offers": [
+                {{ plans }}
+                {
+                    "@type": "Offer",
+                    "name": {{ name | to_json }},
+                    "description": {{ tagline | to_json }},
+                    "price": "{{ price }}",
+                    "priceCurrency": "CZK"
+                }{{ unless last }},{{ /unless }}
+                {{ /plans }}
+            ]
+        }{{ if faq }},
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {{ faq }}
+                {
+                    "@type": "Question",
+                    "name": {{ question | to_json }},
+                    "acceptedAnswer": { "@type": "Answer", "text": {{ answer | to_json }} }
+                }{{ unless last }},{{ /unless }}
+                {{ /faq }}
+            ]
+        }{{ /if }}
+    ]
+}
+</script>

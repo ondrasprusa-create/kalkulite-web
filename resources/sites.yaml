@@ -1,0 +1,5 @@
+default:
+  name: KALKULite
+  url: /
+  locale: cs_CZ
+  lang: cs

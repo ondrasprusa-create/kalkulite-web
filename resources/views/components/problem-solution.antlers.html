@@ -3,7 +3,7 @@
     {{ partial:components/aura corners="tl-br" intensity="soft" }}
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {{ partial:components/section-heading eyebrow="Známe problém" lead="Řemeslo tě baví. Papíry ne. A přesto na ně padají večery, které by patřily rodině." }}
+        {{ partial:components/section-heading lead="Řemeslo tě baví, papíry ne. Přesto na ně padají večery, které by patřily rodině." }}
             Celý den na stavbě,<br class="hidden sm:block"> večer <span class="text-gradient">u faktur</span>.
         {{ /partial:components/section-heading }}
 
@@ -18,17 +18,14 @@
         {{# Interaktivní srovnání #}}
         <div data-compare data-state="them" class="group/cmp mt-20 rounded-3xl glass p-5 sm:p-8 lg:p-10" data-reveal>
             <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
-                <div class="text-center lg:text-left">
-                    <p class="font-chakra text-sm font-semibold tracking-widest text-brand-teal uppercase">Existují řešení, ale…</p>
-                    <h3 class="mt-2 text-2xl font-bold sm:text-3xl">Přepni a porovnej</h3>
-                </div>
+                <h3 class="text-center text-2xl font-bold sm:text-3xl lg:text-left">Nástroje existují. Jen ne pro stavbu.</h3>
 
                 {{# Přepínač #}}
                 <div role="tablist" aria-label="Srovnání řešení" class="relative grid w-full max-w-sm grid-cols-2 rounded-2xl border border-white/10 bg-black/20 p-1.5 font-chakra text-sm font-semibold sm:text-base">
                     <span class="absolute inset-y-1.5 left-1.5 w-[calc(50%-0.375rem)] rounded-xl bg-white/10 transition-all duration-500 ease-[cubic-bezier(.34,1.56,.64,1)] group-data-[state=us]/cmp:translate-x-full group-data-[state=us]/cmp:bg-brand-gradient group-data-[state=us]/cmp:shadow-glow" aria-hidden="true"></span>
                     <button type="button" role="tab" data-compare-btn="them" aria-selected="true" class="relative z-10 rounded-xl px-4 py-3 text-white transition-colors group-data-[state=us]/cmp:text-slate-400">Ostatní appky</button>
                     <button type="button" role="tab" data-compare-btn="us" aria-selected="false" class="relative z-10 flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-slate-400 transition-colors group-data-[state=us]/cmp:text-white">
-                        <img src="/assets/brand/kalkulite-icon.png" alt="" class="size-5 rounded-md">KALKULite
+                        <img src="/assets/brand/kalkulite-icon-96.webp" alt="" width="20" height="20" class="size-5 rounded-md">KALKULite
                     </button>
                 </div>
             </div>
@@ -47,7 +44,7 @@
                     {{# Jedna appka #}}
                     <div class="relative grid place-items-center transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] scale-50 opacity-30 grayscale group-data-[state=us]/cmp:scale-100 group-data-[state=us]/cmp:opacity-100 group-data-[state=us]/cmp:grayscale-0">
                         <span class="absolute size-40 rounded-full bg-brand-gradient opacity-0 blur-2xl transition-opacity duration-700 group-data-[state=us]/cmp:opacity-50"></span>
-                        <img src="/assets/brand/kalkulite-icon.png" alt="" class="relative size-28 rounded-[26%] shadow-glow-lg">
+                        <img src="/assets/brand/kalkulite-icon-224.webp" alt="" width="112" height="112" loading="lazy" class="relative size-28 rounded-[26%] shadow-glow-lg">
                     </div>
                     <p class="absolute -bottom-2 font-chakra text-sm font-semibold text-slate-400">
                         <span class="group-data-[state=us]/cmp:hidden">3+ aplikace, nic nepropojené</span>
