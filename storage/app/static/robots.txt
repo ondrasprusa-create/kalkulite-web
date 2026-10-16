@@ -2,5 +2,5 @@ User-agent: *
 Disallow: /cp
 Disallow: /!/
 
-Sitemap: https://kalkulite-web.vercel.app/sitemap.xml
+Sitemap: https://www.kalkulite.cz/sitemap.xml
 
