@@ -330,8 +330,13 @@ function initCookies() {
     const read = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
     const write = (v) => { try { localStorage.setItem(KEY, v); } catch { /* bez úložiště se lišta ukáže znovu */ } };
 
-    const show = () => (banner.hidden = false);
-    const hide = () => (banner.hidden = true);
+    // Dokud je lišta vidět, přidáme stránce dole místo, aby nezakrývala patičku (odkazy na zásady apod.)
+    const reserve = () => {
+        document.body.style.paddingBottom = banner.hidden ? '' : `${banner.offsetHeight + 24}px`;
+    };
+    const show = () => { banner.hidden = false; reserve(); };
+    const hide = () => { banner.hidden = true; reserve(); };
+    window.addEventListener('resize', reserve, { passive: true });
 
     if (!read()) show();
 
