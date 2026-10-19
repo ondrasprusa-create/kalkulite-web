@@ -14,13 +14,13 @@
                 </a>
 
                 {{# Kontakt – sem míří odkaz „Kontakt“ v menu #}}
-                <a href="mailto:{{ contact_email ?? 'kalkulite@gmail.com' }}" class="group mt-8 flex w-fit items-center gap-3 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-3 backdrop-blur-md transition-colors hover:border-brand-teal/50">
+                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="group mt-8 flex w-fit items-center gap-3 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-3 backdrop-blur-md transition-colors hover:border-brand-teal/50">
                     <span class="grid size-10 place-items-center rounded-xl bg-brand-gradient text-white">
                         <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                     </span>
                     <span>
                         <span class="block text-xs text-slate-400">Napište nám</span>
-                        <span class="block font-chakra font-semibold text-white">{{ contact_email ?? 'kalkulite@gmail.com' }}</span>
+                        <span class="block font-chakra font-semibold text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</span>
                     </span>
                 </a>
             </div>
@@ -68,7 +68,7 @@
                 <a href="/#cenik" class="text-slate-400 transition-colors hover:text-white">Ceník</a>
                 <a href="/#faq" class="text-slate-400 transition-colors hover:text-white">Časté otázky</a>
                 <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">Aplikace</a>
-                <a href="mailto:{{ contact_email ?? 'kalkulite@gmail.com' }}" class="text-slate-400 transition-colors hover:text-white">{{ contact_email ?? 'kalkulite@gmail.com' }}</a>
+                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
                 <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}/privacy" class="text-slate-400 transition-colors hover:text-white">Zásady ochrany soukromí</a>
                 <a href="/zasady-ochrany-osobnich-udaju" class="text-slate-400 transition-colors hover:text-white">Ochrana údajů na webu</a>
                 <button type="button" data-cookie-settings class="text-slate-400 transition-colors hover:text-white">Nastavení cookies</button>
