@@ -10,7 +10,7 @@
         {{# Čísla #}}
         <dl class="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-3">
             {{ stats }}
-                <div data-reveal style="--reveal-delay: {{ index * 80 }}ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
+                <div data-reveal style="--reveal-delay: {{ index * 80 }}ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/25 sm:p-7">
                     <dt class="mt-2 text-sm text-slate-400">{{ label }}</dt>
                     <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
                         {{ prefix }}{{ value }}{{ suffix }}
@@ -24,7 +24,7 @@
             <ul class="flex w-max animate-marquee gap-3 hover:[animation-play-state:paused]">
                 {{ loop from="1" to="2" }}
                     {{ trades }}
-                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-brand-teal/50 hover:text-white">
+                        <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 font-chakra text-sm font-semibold whitespace-nowrap text-slate-200 transition-colors hover:border-white/25 hover:text-white">
                             <span class="size-1.5 rounded-full bg-brand-gradient"></span>{{ value }}
                         </li>
                     {{ /trades }}
@@ -36,8 +36,8 @@
         {{ if testimonials }}
         <div class="mt-14 grid gap-5 md:grid-cols-3">
             {{ testimonials }}
-                <figure data-reveal style="--reveal-delay: {{ index * 100 }}ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50">
-                    <svg class="size-9 text-brand-teal/40 transition-colors group-hover:text-brand-teal" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M9.3 25C5.8 25 3 22.2 3 18.2 3 12 7.6 7.4 13.4 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S12.6 25 9.3 25Zm15.4 0c-3.5 0-6.3-2.8-6.3-6.8C18.4 12 23 7.4 28.8 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S28 25 24.7 25Z"/></svg>
+                <figure data-reveal style="--reveal-delay: {{ index * 100 }}ms" class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
+                    <svg class="size-9 text-white/25 transition-colors group-hover:text-white" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M9.3 25C5.8 25 3 22.2 3 18.2 3 12 7.6 7.4 13.4 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S12.6 25 9.3 25Zm15.4 0c-3.5 0-6.3-2.8-6.3-6.8C18.4 12 23 7.4 28.8 6l.9 2.1c-3.3 1.2-5.3 3.7-5.6 6.4h.9c3 0 5.3 2.2 5.3 5.2S28 25 24.7 25Z"/></svg>
                     <blockquote class="mt-4 flex-1 text-lg leading-relaxed text-white">„{{ quote }}“</blockquote>
                     <figcaption class="mt-6 flex items-center gap-3 border-t border-white/10 pt-5">
                         <span class="grid size-11 place-items-center rounded-full bg-brand-gradient-diagonal font-chakra font-bold text-white">{{ author | substr(0, 1) }}</span>

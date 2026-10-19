@@ -33,13 +33,13 @@
             <div class="mt-10 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr]">
                 {{# Vizuál: chaos aplikací vs. jedna appka #}}
                 <div class="relative mx-auto grid aspect-square w-full max-w-xs place-items-center" aria-hidden="true">
-                    <div class="absolute inset-0 rounded-full border border-dashed border-white/10 transition-all duration-700 group-data-[state=us]/cmp:scale-75 group-data-[state=us]/cmp:border-brand-teal/40"></div>
+                    <div class="absolute inset-0 rounded-full border border-dashed border-white/10 transition-all duration-700 group-data-[state=us]/cmp:scale-75 group-data-[state=us]/cmp:border-white/25"></div>
 
                     {{# Roztříštěné appky #}}
-                    {{ partial:components/app-chip pos="top-[8%] left-[10%]" rot="-rotate-12" label="Excel" color="bg-emerald-600" }}
-                    {{ partial:components/app-chip pos="top-[14%] right-[6%]" rot="rotate-6" label="Mapy" color="bg-sky-600" }}
-                    {{ partial:components/app-chip pos="bottom-[12%] left-[4%]" rot="rotate-12" label="Poznámky" color="bg-amber-500" }}
-                    {{ partial:components/app-chip pos="bottom-[6%] right-[14%]" rot="-rotate-6" label="Fakturace" color="bg-rose-500" }}
+                    {{ partial:components/app-chip pos="top-[8%] left-[10%]" rot="-rotate-12" label="Excel" color="bg-slate-600" }}
+                    {{ partial:components/app-chip pos="top-[14%] right-[6%]" rot="rotate-6" label="Mapy" color="bg-slate-500" }}
+                    {{ partial:components/app-chip pos="bottom-[12%] left-[4%]" rot="rotate-12" label="Poznámky" color="bg-slate-600" }}
+                    {{ partial:components/app-chip pos="bottom-[6%] right-[14%]" rot="-rotate-6" label="Fakturace" color="bg-slate-500" }}
 
                     {{# Jedna appka #}}
                     <div class="relative grid place-items-center transition-all duration-700 ease-[cubic-bezier(.34,1.56,.64,1)] scale-50 opacity-30 grayscale group-data-[state=us]/cmp:scale-100 group-data-[state=us]/cmp:opacity-100 group-data-[state=us]/cmp:grayscale-0">
@@ -48,7 +48,7 @@
                     </div>
                     <p class="absolute -bottom-2 font-chakra text-sm font-semibold text-slate-400">
                         <span class="group-data-[state=us]/cmp:hidden">3+ aplikace, nic nepropojené</span>
-                        <span class="hidden text-brand-teal group-data-[state=us]/cmp:inline">1 appka. Všechno v ní.</span>
+                        <span class="hidden text-gradient group-data-[state=us]/cmp:inline">1 appka. Všechno v ní.</span>
                     </p>
                 </div>
 

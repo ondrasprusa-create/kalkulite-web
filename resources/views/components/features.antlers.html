@@ -1,4 +1,4 @@
-{{# KLÍČOVÉ FUNKCE – Bento grid #}}
+{{# KLÍČOVÉ FUNKCE – 6 hlavních boxů s ukázkou + krátký seznam dalších funkcí #}}
 <section id="funkce" class="relative py-20 sm:py-28">
     <div class="pointer-events-none absolute inset-0 -z-10 bg-tech-grid mask-fade-y opacity-60" aria-hidden="true"></div>
 
@@ -9,18 +9,17 @@
 
         <div class="mt-14 grid auto-rows-auto gap-4 lg:grid-cols-6">
 
-            {{# 1) AI hlasová fakturace #}}
-            <article data-spotlight data-reveal data-voice-card class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-4 lg:row-span-2">
+            {{# 1) Faktura ze stavby – interaktivní ukázka hlasového zadání #}}
+            <article data-spotlight data-reveal data-voice-card class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-4 lg:row-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative flex h-full flex-col">
                     <h3 class="text-2xl font-bold sm:text-3xl">Faktura ze stavby za minutu</h3>
                     <p class="mt-3 max-w-lg text-slate-300">Nadiktuj, co jsi dělal. KALKULite sestaví nabídku nebo fakturu s QR platbou a pošleš ji zákazníkovi dřív, než sbalíš nářadí.</p>
 
-                    {{# Mini interaktivní ukázka #}}
                     <div class="mt-8 grid flex-1 content-center gap-5 rounded-2xl border border-white/10 bg-brand-deep/60 p-4 sm:grid-cols-[auto_1fr] sm:p-6">
                         <button type="button" data-voice-trigger class="group/mic relative mx-auto grid size-24 place-items-center self-center rounded-full bg-brand-gradient-diagonal text-white shadow-glow transition-transform active:scale-95 sm:size-28" aria-label="Spustit ukázku hlasového zadání">
-                            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/40"></span>
-                            <span class="absolute inset-0 rounded-full bg-brand-teal/40 [animation-delay:0.7s] animate-pulse-ring"></span>
+                            <span class="absolute inset-0 animate-pulse-ring rounded-full bg-white/25"></span>
+                            <span class="absolute inset-0 rounded-full bg-white/25 [animation-delay:0.7s] animate-pulse-ring"></span>
                             <svg class="relative size-10 transition-transform group-hover/mic:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
                         </button>
                         <div class="min-w-0">
@@ -37,7 +36,7 @@
             </article>
 
             {{# 2) KALKULite Index #}}
-            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
+            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative">
                     <h3 class="text-xl font-bold">Víš, jestli se zakázka vyplatí</h3>
@@ -47,12 +46,12 @@
                             <span class="flex-1 rounded-sm transition-all duration-500 {{ value <= 6 ? 'bg-brand-gradient' : 'bg-white/10' }}" style="height: {{ value * 5 + 6 }}px; transition-delay: {{ value * 40 }}ms"></span>
                         {{ /loop }}
                     </div>
-                    <p class="mt-3 flex items-baseline justify-between font-chakra"><span class="text-3xl font-bold text-white">64<span class="text-base text-slate-400"> / 100</span></span><span class="text-sm font-semibold text-emerald-400">Bereme ✓</span></p>
+                    <p class="mt-3 flex items-baseline justify-between font-chakra"><span class="text-3xl font-bold text-white">64<span class="text-base text-slate-400"> / 100</span></span><span class="text-sm font-semibold text-gradient">Vyplatí se ✓</span></p>
                 </div>
             </article>
 
-            {{# 3) Plánovač tras #}}
-            <article data-spotlight data-reveal style="--reveal-delay:160ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-2">
+            {{# 3) Trasa dne #}}
+            <article data-spotlight data-reveal style="--reveal-delay:160ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
                 <div class="relative">
                     <h3 class="text-xl font-bold">Trasa dne</h3>
@@ -60,107 +59,77 @@
                     <svg viewBox="0 0 260 110" class="mt-4 w-full" fill="none" aria-hidden="true">
                         <path d="M20 90 L 70 30 L 140 80 L 200 20 L 240 70" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="4 5"/>
                         <path data-draw d="M20 90 C 60 70, 80 60, 140 80 S 220 60, 240 70 M140 80 C 160 50, 180 30, 200 20" stroke="url(#routeGrad)" stroke-width="3" stroke-linecap="round" pathLength="1"/>
-                        <g class="font-chakra" font-size="9" fill="#fff">
-                            <circle cx="20" cy="90" r="6" fill="#0c92e9"/><circle cx="70" cy="30" r="4" fill="rgba(255,255,255,0.3)"/>
-                            <circle cx="140" cy="80" r="6" fill="#139fd5"/><circle cx="200" cy="20" r="6" fill="#18abc0"/><circle cx="240" cy="70" r="6" fill="#1fb8aa"/>
-                        </g>
+                        <circle cx="70" cy="30" r="4" fill="rgba(255,255,255,0.3)"/>
+                        <g fill="#fff"><circle cx="20" cy="90" r="6"/><circle cx="140" cy="80" r="6"/><circle cx="200" cy="20" r="6"/><circle cx="240" cy="70" r="6"/></g>
                         <defs><linearGradient id="routeGrad" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
                     </svg>
                     <p class="mt-2 font-chakra text-sm text-slate-400">Dnes ušetřeno <span class="font-bold text-white">23</span> km</p>
                 </div>
             </article>
 
-            {{# 4) Jsem na cestě – zpráva ze šablony přes SMS / WhatsApp #}}
-            <article data-spotlight data-reveal class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-3">
+            {{# 4) QR platba na místě #}}
+            <article data-spotlight data-reveal class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center lg:grid-cols-1 xl:grid-cols-2">
-                    <div>
-                        <h3 class="text-xl font-bold">Zákazník ví, že jedeš</h3>
-                        <p class="mt-2 text-sm text-slate-300">Klepneš na „Jsem na cestě“ a zpráva i s časem příjezdu je připravená v SMS nebo WhatsAppu.</p>
+                <div class="relative">
+                    <h3 class="text-xl font-bold">QR platba na místě</h3>
+                    <p class="mt-2 text-sm text-slate-300">Zákazník naskenuje kód a zaplatí z mobilu. Žádné „pošlu vám to příští týden“.</p>
+                    <div class="mt-5 flex items-center gap-5">
+                        <div class="size-24 shrink-0 rounded-xl shadow-glow transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-105"><svg viewBox="-1 -1 23 23" class="size-full" fill="#1c1a2b" aria-hidden="true"><rect x="-1" y="-1" width="23" height="23" rx="2" fill="#fff"/><rect x="0" y="0" width="7" height="7" rx="1.2"/><rect x="1" y="1" width="5" height="5" rx="0.8" fill="#fff"/><rect x="2" y="2" width="3" height="3" rx="0.6"/><rect x="14" y="0" width="7" height="7" rx="1.2"/><rect x="15" y="1" width="5" height="5" rx="0.8" fill="#fff"/><rect x="16" y="2" width="3" height="3" rx="0.6"/><rect x="0" y="14" width="7" height="7" rx="1.2"/><rect x="1" y="15" width="5" height="5" rx="0.8" fill="#fff"/><rect x="2" y="16" width="3" height="3" rx="0.6"/><rect x="8" y="0" width="1" height="1"/><rect x="9" y="0" width="1" height="1"/><rect x="11" y="0" width="1" height="1"/><rect x="8" y="1" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="12" y="1" width="1" height="1"/><rect x="8" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="12" y="2" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="12" y="3" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="11" y="4" width="1" height="1"/><rect x="12" y="4" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="11" y="6" width="1" height="1"/><rect x="12" y="6" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="4" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="11" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="14" y="8" width="1" height="1"/><rect x="16" y="8" width="1" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="4" y="9" width="1" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="14" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="18" y="9" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="20" y="9" width="1" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="2" y="10" width="1" height="1"/><rect x="3" y="10" width="1" height="1"/><rect x="4" y="10" width="1" height="1"/><rect x="6" y="10" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/><rect x="12" y="10" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="17" y="10" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="19" y="10" width="1" height="1"/><rect x="20" y="10" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="3" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="5" y="11" width="1" height="1"/><rect x="12" y="11" width="1" height="1"/><rect x="17" y="11" width="1" height="1"/><rect x="18" y="11" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="1" y="12" width="1" height="1"/><rect x="2" y="12" width="1" height="1"/><rect x="3" y="12" width="1" height="1"/><rect x="4" y="12" width="1" height="1"/><rect x="5" y="12" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="7" y="12" width="1" height="1"/><rect x="8" y="12" width="1" height="1"/><rect x="9" y="12" width="1" height="1"/><rect x="10" y="12" width="1" height="1"/><rect x="13" y="12" width="1" height="1"/><rect x="14" y="12" width="1" height="1"/><rect x="15" y="12" width="1" height="1"/><rect x="16" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="20" y="12" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="12" y="13" width="1" height="1"/><rect x="14" y="13" width="1" height="1"/><rect x="15" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="20" y="13" width="1" height="1"/><rect x="12" y="14" width="1" height="1"/><rect x="13" y="14" width="1" height="1"/><rect x="14" y="14" width="1" height="1"/><rect x="18" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="15" y="15" width="1" height="1"/><rect x="16" y="15" width="1" height="1"/><rect x="17" y="15" width="1" height="1"/><rect x="18" y="15" width="1" height="1"/><rect x="19" y="15" width="1" height="1"/><rect x="9" y="16" width="1" height="1"/><rect x="13" y="16" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="15" y="16" width="1" height="1"/><rect x="16" y="16" width="1" height="1"/><rect x="17" y="16" width="1" height="1"/><rect x="8" y="17" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="16" y="17" width="1" height="1"/><rect x="17" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="9" y="18" width="1" height="1"/><rect x="10" y="18" width="1" height="1"/><rect x="13" y="18" width="1" height="1"/><rect x="14" y="18" width="1" height="1"/><rect x="15" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="12" y="19" width="1" height="1"/><rect x="17" y="19" width="1" height="1"/><rect x="20" y="19" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="9" y="20" width="1" height="1"/><rect x="10" y="20" width="1" height="1"/><rect x="12" y="20" width="1" height="1"/><rect x="13" y="20" width="1" height="1"/><rect x="14" y="20" width="1" height="1"/><rect x="16" y="20" width="1" height="1"/><rect x="17" y="20" width="1" height="1"/><rect x="20" y="20" width="1" height="1"/></svg></div>
+                        <div class="font-chakra">
+                            <p class="text-xs text-slate-400">K úhradě</p>
+                            <p class="text-2xl font-bold text-white">18 450 Kč</p>
+                            <p class="mt-2 inline-flex rounded-full bg-white/10 px-2.5 py-0.5 text-xs font-semibold text-gradient">Zaplaceno ✓</p>
+                        </div>
                     </div>
-                    <div class="space-y-2 text-sm">
-                        <p class="ml-auto w-fit max-w-[90%] rounded-2xl rounded-br-md bg-brand-gradient px-3.5 py-2 text-white shadow-glow">Dobrý den, jsem na cestě, budu u Vás cca za 25 minut. Petr, Obklady Novák</p>
+                </div>
+            </article>
+
+            {{# 5) Jsem na cestě – zpráva ze šablony přes SMS / WhatsApp #}}
+            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-2">
+                <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
+                <div class="relative">
+                    <h3 class="text-xl font-bold">Zákazník ví, že jedeš</h3>
+                    <p class="mt-2 text-sm text-slate-300">Klepneš na „Jsem na cestě“ a zpráva i s časem příjezdu je připravená v SMS nebo WhatsAppu.</p>
+                    <div class="mt-5 space-y-2 text-sm">
+                        <p class="ml-auto w-fit max-w-[90%] rounded-2xl rounded-br-md bg-brand-gradient px-3.5 py-2 text-white shadow-glow">Dobrý den, jsem na cestě, budu u Vás cca za 25 minut. Petr</p>
                         <p class="w-fit max-w-[80%] rounded-2xl rounded-bl-md bg-white/10 px-3.5 py-2 text-slate-200">Super, děkuju za info 👍</p>
                         <p class="text-right text-[11px] text-slate-500">Přes WhatsApp · 9:58</p>
                     </div>
                 </div>
             </article>
 
-            {{# 5) Klid v hlavě #}}
-            <article data-spotlight data-reveal style="--reveal-delay:80ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-brand-teal/50 sm:p-8 lg:col-span-3">
+            {{# 6) Předávací protokol s podpisem #}}
+            <article data-spotlight data-reveal style="--reveal-delay:160ms" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition-colors duration-300 hover:border-white/25 sm:p-8 lg:col-span-2">
                 <div class="spotlight pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></div>
-                <div class="relative grid gap-6 sm:grid-cols-2 sm:items-center lg:grid-cols-1 xl:grid-cols-2">
-                    <div>
-                        <h3 class="text-xl font-bold">Statistiky, které dávají smysl</h3>
-                        <p class="mt-2 text-sm text-slate-300">Kolik jsi vydělal, co ti dluží a které zakázky se vyplácí nejvíc. Plus hlídání splatností a připomínky daňových termínů.</p>
+                <div class="relative">
+                    <h3 class="text-xl font-bold">Předávací protokol s podpisem</h3>
+                    <p class="mt-2 text-sm text-slate-300">Zákazník se podepíše prstem na displeji a PDF máš hned v telefonu. Konec sporům „to jsme takhle nedomluvili“.</p>
+                    <div class="mt-5 rounded-2xl border border-white/10 bg-brand-deep/60 px-4 pt-3 pb-4">
+                        <svg viewBox="0 0 240 60" class="h-14 w-full" fill="none" aria-hidden="true">
+                            <path data-draw d="M8 42c10-18 18-30 24-26s-8 30-2 30 14-28 22-28-4 24 4 24 10-16 16-16 0 14 8 14 12-20 20-20-2 18 6 18 18-10 28-12 30-2 40-6" stroke="url(#signGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>
+                            <defs><linearGradient id="signGrad" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
+                        </svg>
+                        <div class="mt-1 flex items-center justify-between border-t border-dashed border-white/15 pt-2 text-xs text-slate-400">
+                            <span>Podpis zákazníka</span>
+                            <span class="font-chakra font-semibold text-white">Protokol.pdf</span>
+                        </div>
                     </div>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-038 · Dvořák</span><span class="rounded-full bg-emerald-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-emerald-400">Zaplaceno</span></li>
-                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-040 · Malá</span><span class="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-amber-400">Za 3 dny</span></li>
-                        <li class="flex items-center justify-between rounded-xl bg-white/5 px-3.5 py-2.5"><span>FV 2026-035 · Horák</span><span class="rounded-full bg-rose-500/15 px-2 py-0.5 text-xs font-semibold whitespace-nowrap text-rose-400">Po splatnosti</span></li>
-                    </ul>
                 </div>
             </article>
         </div>
 
-        {{# Další funkce – kompaktní mřížka #}}
-        <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <li data-reveal style="--reveal-delay: 0ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2M14 18h2v2M18 18h2v2"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">QR platba na místě</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Zákazník naskenuje kód a zaplatí z mobilu. Žádné „pošlu vám to příští týden“.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 70ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M6 17V9l2-4h8l2 4v8M7.5 17v2M16.5 17v2M6 12h12"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Doprava se spočítá sama</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Vzdálenost, spotřeba tvého auta a ceny benzínu, nafty a LPG z ČSÚ. Jedním klepnutím ji přeúčtuješ zákazníkovi.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 140ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Firmu najdeš podle IČO</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Zadáš IČO a název, adresa i DIČ se doplní z ARES.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 210ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 17c1.5-2 2.5-2 3.5 0s2 2 3.5 0"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Předávací protokol s podpisem</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Zákazník se podepíše prstem na displeji, PDF máš hned v telefonu. Konec sporům „to jsme takhle nedomluvili“.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 0ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 15l2 2 4-4"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Google Kalendář bez přepisování</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Zakázky se samy zapíšou do kalendáře, appka hlídá kolize a najde volný termín.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 70ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Sklad v kapse</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Víš, co máš v dodávce. Vyfotíš účtenku ze stavebnin a materiál se naskladní sám, po dokončení zakázky se odečte.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 140ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0M12 19h.01M3 3l18 18"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">Funguje i bez signálu</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Ve sklepě nebo na stavbě zapíšeš zakázku offline. Synchronizuje se, až chytíš signál.</p></div>
-            </li>
-            <li data-reveal style="--reveal-delay: 210ms" class="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:block sm:p-5">
-                <span class="grid size-10 shrink-0 place-items-center rounded-xl border border-white/10 bg-brand-dark/60 text-brand-teal transition-colors group-hover:border-brand-teal/50">
-                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM8 9h8M8 13h5"/></svg>
-                </span>
-                <div><h3 class="text-base font-semibold sm:mt-4">AI poradce</h3>
-                <p class="mt-1.5 text-sm text-slate-400">Kolik dlažby na 12 m²? Jaký jistič na sporák? Zeptej se, jako bys volal kolegovi. S Profíkem bez limitu.</p></div>
-            </li>
-        </ul>
+        {{# Další funkce – jen krátce #}}
+        <div class="mt-10" data-reveal>
+            <p class="text-center font-chakra text-sm font-semibold text-white">A k tomu</p>
+            <ul class="mx-auto mt-4 flex max-w-4xl flex-wrap justify-center gap-2 text-sm">
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Doprava se spočítá sama, i s cenami paliv z ČSÚ</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Firma podle IČO z ARES</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Google Kalendář bez přepisování</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Sklad a naskladnění z účtenky</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Statistiky a daňové termíny</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>Funguje i bez signálu</li>
+                <li class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-slate-300"><span class="size-1.5 rotate-45 bg-brand-gradient"></span>AI poradce</li>
+            </ul>
+        </div>
     </div>
 </section>

@@ -9,8 +9,9 @@
                 Od faktur zpět<br class="hidden sm:block">
                 k <span class="relative inline-block">
                     <span class="text-gradient">nářadí!</span>
-                    <svg class="absolute -bottom-2 left-0 w-full text-brand-teal sm:-bottom-3" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
-                        <path data-draw d="M2 9C40 3 120 1 198 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" pathLength="1" />
+                    <svg class="absolute -bottom-2 left-0 w-full sm:-bottom-3" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none" aria-hidden="true">
+                        <defs><linearGradient id="heroUnderline" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs>
+                        <path data-draw d="M2 9C40 3 120 1 198 7" stroke="url(#heroUnderline)" stroke-width="3" stroke-linecap="round" pathLength="1" />
                     </svg>
                 </span>
             </h1>
@@ -20,6 +21,12 @@
                 materiál a práci dopočítá sama a hlídá, jestli se ti zakázka vůbec vyplatí.
             </p>
 
+            {{# Hlavní přínos – úspora času #}}
+            <div data-reveal style="--reveal-delay:200ms" class="mt-7 inline-flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-4 text-left backdrop-blur-md">
+                <span class="font-chakra text-4xl leading-none font-bold whitespace-nowrap text-gradient sm:text-5xl">až 10 h</span>
+                <span class="text-sm leading-snug text-slate-300 sm:text-base">týdně ušetříš na papírování.<br class="hidden sm:block"> Ten čas patří práci nebo rodině.</span>
+            </div>
+
             <div data-reveal style="--reveal-delay:240ms" class="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
                 {{ partial:components/button size="lg" attrs="data-magnetic" }}
                     Vyzkoušet zdarma
@@ -27,7 +34,7 @@
                 {{ /partial:components/button }}
                 {{ partial:components/button href="#demo" variant="ghost" size="lg" attrs="data-demo-open" }}
                     <span class="relative grid size-7 place-items-center rounded-full bg-brand-gradient">
-                        <span class="absolute inset-0 animate-pulse-ring rounded-full bg-brand-teal/60"></span>
+                        <span class="absolute inset-0 animate-pulse-ring rounded-full bg-white/60"></span>
                         <svg class="relative size-3.5 translate-x-px text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"/></svg>
                     </span>
                     Přehrát demo

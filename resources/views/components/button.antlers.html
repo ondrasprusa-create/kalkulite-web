@@ -11,10 +11,10 @@
 <a
     href="{{ href ?? app_url ?? 'https://app.kalkulite.cz' }}"
     {{ attrs }}
-    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.97]
         {{ size == 'sm' ? 'px-4 py-2 text-sm' : (size == 'lg' ? 'px-7 py-4 text-base sm:text-lg' : 'px-5 py-3 text-base') }}
         {{ if variant == 'ghost' }}
-            glass text-white hover:border-brand-teal/50 hover:bg-white/10
+            glass text-white hover:border-white/25 hover:bg-white/10
         {{ else }}
             bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
         {{ /if }}

@@ -11,7 +11,7 @@
         {{ if featured }}
             glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg backdrop-blur-md xl:-my-4 xl:py-11
         {{ else }}
-            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
+            border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-white/25
         {{ /if }}"
 >
     {{ if featured }}
@@ -45,7 +45,7 @@
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         {{ features }}
             <li class="flex items-start gap-3">
-                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full {{ featured ? 'bg-brand-gradient text-white' : 'bg-brand-teal/15 text-brand-teal' }}" aria-hidden="true">
+                <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full {{ featured ? 'bg-brand-gradient text-white' : 'bg-white/10 text-white' }}" aria-hidden="true">
                     <svg class="size-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.58l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
                 </span>
                 <span class="text-slate-200">{{ value }}</span>
