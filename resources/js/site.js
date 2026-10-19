@@ -238,9 +238,11 @@ function initIndexCalc() {
     const root = $('[data-index-calc]');
     if (!root) return;
 
+    // Index = skutečný zisk zakázky po odečtení dopravy a materiálu, v % z ceny (0–100), jako v aplikaci
     const COST_PER_KM = 7;     // Kč/km (palivo + opotřebení)
-    const AVG_SPEED = 60;      // km/h
-    const TOP_RATE = 1100;     // Kč/h čistého = index 10
+    const AVG_SPEED = 60;      // km/h – jen pro orientační hodinový výdělek
+    const GOOD = 40;           // od 40 = vyplatí se
+    const MEH = 20;            // 20–39 = na hraně, pod 20 = pálíš naftu
 
     const inputs = $$('input[type=range]', root);
     const setOut = (k, v) => $$(`[data-out="${k}"]`, root).forEach((el) => (el.textContent = v));
@@ -260,18 +262,18 @@ function initIndexCalc() {
         const net = v.price - v.material - travel;
         const totalHours = v.hours + v.km / AVG_SPEED;
         const hourly = net / totalHours;
-        const index = Math.max(0, Math.min(10, (hourly / TOP_RATE) * 10));
+        const index = Math.max(0, Math.min(100, v.price > 0 ? (net / v.price) * 100 : 0));
 
-        setOut('index', index.toFixed(1).replace('.', ','));
+        setOut('index', Math.round(index));
         setOut('hourly', czk(hourly));
         setOut('travel', czk(travel));
 
-        const verdict = index >= 6.5 ? 'good' : index >= 3.5 ? 'meh' : 'bad';
+        const verdict = index >= GOOD ? 'good' : index >= MEH ? 'meh' : 'bad';
         root.dataset.verdict = verdict;
         setOut('verdict', { good: 'Vyplatí se ✓', meh: 'Na hraně – zvaž cenu', bad: 'Jen pálíš naftu ✕' }[verdict]);
 
-        arc.style.strokeDashoffset = 100 - index * 10;
-        needle.style.transform = `rotate(${index * 18}deg)`;
+        arc.style.strokeDashoffset = 100 - index;
+        needle.style.transform = `rotate(${index * 1.8}deg)`;
     };
 
     inputs.forEach((i) => i.addEventListener('input', update));

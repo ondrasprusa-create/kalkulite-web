@@ -1,6 +1,6 @@
 {{#
     Karta tarifu. Očekává proměnné z položky gridu `plans`:
-    name, tagline, price, period, featured, features (list), cta_label, handle
+    name, tagline, price, price_yearly, period, featured, features (list), cta_label, handle
     Při zapnutém `free_trial` (pole stránky) je karta zešedlá, cena přeškrtnutá a bez tlačítka.
 #}}
 <article
@@ -36,6 +36,10 @@
             <span class="font-chakra text-lg text-white">Kč</span>
             <span class="text-sm text-slate-400">/ {{ period ?? 'měsíc' }}</span>
         </p>
+    {{ /if }}
+
+    {{ if price_yearly }}
+        <p class="mt-1.5 text-xs text-slate-400">nebo {{ price_yearly }} Kč ročně · 2 měsíce zdarma</p>
     {{ /if }}
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">

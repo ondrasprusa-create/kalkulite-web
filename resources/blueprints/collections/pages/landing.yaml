@@ -67,6 +67,9 @@ tabs:
                   handle: price
                   field: { type: text, display: 'Cena (Kč)', width: 33, validate: [required] }
                 -
+                  handle: price_yearly
+                  field: { type: text, display: 'Roční cena (Kč)', width: 33 }
+                -
                   handle: period
                   field: { type: text, display: Období, width: 33, default: měsíc }
                 -

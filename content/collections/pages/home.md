@@ -16,53 +16,70 @@ plans:
     period: navždy
     featured: false
     cta_label: 'Začít zdarma'
-    tagline: 'Na zkoušku. Vyzkoušej AI fakturaci na jednotlivých zakázkách.'
+    tagline: 'Evidence zakázek. Vyzkoušej si appku a zvykni si.'
     features:
-      - 'AI faktura hlasem na jednotlivé zakázky'
-      - 'QR platba na faktuře'
-      - 'Funguje v prohlížeči na mobilu i počítači'
+      - 'Ruční zakázky (až 10 aktivních)'
+      - 'Kalendář zakázek'
+      - 'Automatická doprava s cenami paliv z ČSÚ'
+      - 'Navigace k zakázce jedním klepnutím'
+      - 'Funguje i bez signálu'
+      - '5 AI dotazů denně'
   -
     id: plan1partak
     name: Parťák
     handle: partak
-    price: '290'
+    price: '299'
+    price_yearly: '2 990'
     period: měsíc
     featured: false
     cta_label: 'Chci Parťáka'
-    tagline: 'Pořádek v papírech pro OSVČ, která chce mít klid.'
+    tagline: 'Doklady a peníze. Pořádek v papírech pro OSVČ.'
     features:
-      - 'Základní evidence zakázek'
-      - 'Hlídání splatností'
-      - 'Zpráva „Jsem na cestě“ přes SMS nebo WhatsApp'
-      - 'Archiv zakázek a QR platby'
+      - 'Vše z tarifu Učeň, bez limitu zakázek'
+      - 'Faktury a nabídky s QR platbou'
+      - 'Vyhledání firmy v ARES'
+      - 'Sklad materiálu'
+      - 'Vozidla a automatická doprava'
+      - 'KALKULite Index'
+      - 'Podrobné statistiky'
+      - '25 AI dotazů denně'
   -
     id: plan2mistr
     name: Mistr
     handle: mistr
-    price: '590'
+    price: '599'
+    price_yearly: '5 990'
     period: měsíc
     featured: true
     cta_label: 'Chci Mistra'
-    tagline: 'Plná síla AI. Pro ty, kdo chtějí vydělávat víc, ne jen víc makat.'
+    tagline: 'Automatizace a čas. Pro ty, kdo chtějí vydělávat víc, ne jen víc makat.'
     features:
       - 'Vše z tarifu Parťák'
-      - 'AI výpočty materiálu a práce'
-      - 'KALKULite Index ziskovosti'
-      - 'Optimalizace tras mezi zakázkami'
+      - 'Google Kalendář'
+      - 'Předávací protokol s podpisem'
+      - 'Naskladnění z fotky účtenky'
+      - 'Optimalizace trasy'
+      - 'Zpráva „Jsem na cestě“'
+      - '75 AI dotazů denně'
   -
     id: plan3profik
     name: Profík
     handle: profik
-    price: '990'
+    price: '1 199'
+    price_yearly: '11 990'
     period: měsíc
     featured: false
     cta_label: 'Chci Profíka'
-    tagline: 'Pro malé party, které jedou na plný plyn.'
+    tagline: 'Bez limitů a s nejvyšším výkonem. Pro ty, kdo s appkou jedou celý den.'
     features:
       - 'Vše z tarifu Mistr'
-      - 'Neomezená agenda'
-      - 'Prioritní AI zpracování'
-      - 'Podpora pro malé týmy'
+      - 'AI bez limitu'
+      - 'Přepočet ceny na cílový zisk'
+      - 'Stavebniny po cestě'
+      - 'Zakázky z Google Kalendáře přes AI'
+      - 'Hromadný import z Excelu / CSV'
+      - 'Prioritní podpora'
+      - 'Nové funkce jako první'
 stats:
   -
     id: st1
@@ -105,11 +122,11 @@ faq:
   -
     id: faq3
     question: 'Co je KALKULite Index?'
-    answer: 'Číslo od 0 do 10, které porovná čas, najeté kilometry a fakturovanou částku. Hned uvidíš, jestli se zakázka vyplatí, nebo jen pálíš naftu.'
+    answer: 'Číslo od 0 do 100, které ukáže skutečný zisk zakázky po odečtení dopravy a materiálu. Hned uvidíš, jestli se zakázka vyplatí, nebo jen pálíš naftu.'
   -
     id: faq4
     question: 'Kolik KALKULite stojí?'
-    answer: 'Teď ji vyzkoušíš zdarma po dobu trvání limitované nabídky. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.'
+    answer: 'Teď ji vyzkoušíš zdarma po dobu trvání limitované nabídky. Potom bude Učeň zdarma, Parťák za 299 Kč, Mistr za 599 Kč a Profík s AI bez limitu za 1 199 Kč měsíčně. Při roční platbě máš 2 měsíce zdarma.'
   -
     id: faq5
     question: 'Kde KALKULite najdu a potřebuju něco instalovat?'

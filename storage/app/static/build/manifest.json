@@ -96,7 +96,7 @@
     "src": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2"
   },
   "resources/css/site.css": {
-    "file": "assets/site-sQUCfGpX.css",
+    "file": "assets/site-PlCMp8iE.css",
     "name": "site",
     "names": [
       "site.css"
@@ -131,7 +131,7 @@
     ]
   },
   "resources/js/site.js": {
-    "file": "assets/site-BWFVHKt-.js",
+    "file": "assets/site-B5YKlv9U.js",
     "name": "site",
     "src": "resources/js/site.js",
     "isEntry": true

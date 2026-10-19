@@ -42,7 +42,7 @@
                     "@type": "Offer",
                     "name": {{ name | to_json }},
                     "description": {{ tagline | to_json }},
-                    "price": "{{ price }}",
+                    "price": "{{ price | replace(' ', '') }}",
                     "priceCurrency": "CZK"
                 }{{ unless last }},{{ /unless }}
                 {{ /plans }}
