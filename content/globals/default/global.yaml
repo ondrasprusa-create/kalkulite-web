@@ -1,23 +1,6 @@
 app_url: https://app.kalkulite.cz
-contact_email: info@kalkulite.cz
-social_instagram: ''
+contact_email: kalkulite@gmail.com
+social_instagram: 'https://www.instagram.com/kalkulite/'
 social_tiktok: ''
-social_facebook: ''
+social_facebook: 'https://www.facebook.com/profile.php?id=61584773771988&locale=cs_CZ'
 social_linkedin: ''
-team:
-  -
-    id: tm1vaclav
-    name: 'Václav Šámal'
-    photo: /assets/team/vaclav-samal.webp
-    roles:
-      - 'Validace trhu'
-      - Marketing
-      - 'Akvizice zákazníků'
-  -
-    id: tm2ondrej
-    name: 'Ondřej Průša'
-    photo: /assets/team/ondrej-prusa.webp
-    roles:
-      - 'Vývoj aplikace'
-      - 'Vizuální identita'
-      - 'Grafický design'

@@ -1,15 +1,137 @@
 {
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-500-normal.woff": {
+    "file": "assets/chakra-petch-latin-500-normal-CnUQnZ4D.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-500-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-500-normal.woff2": {
+    "file": "assets/chakra-petch-latin-500-normal-BR1ody1F.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-500-normal.woff2"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff": {
+    "file": "assets/chakra-petch-latin-600-normal-DQKfcdKo.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff2": {
+    "file": "assets/chakra-petch-latin-600-normal-DVQm9bgb.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-600-normal.woff2"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-700-normal.woff": {
+    "file": "assets/chakra-petch-latin-700-normal-D1s_c2du.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-700-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-700-normal.woff2": {
+    "file": "assets/chakra-petch-latin-700-normal-CnDBPjkL.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-700-normal.woff2"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-500-normal.woff": {
+    "file": "assets/chakra-petch-latin-ext-500-normal-BCHeNDEx.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-500-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-500-normal.woff2": {
+    "file": "assets/chakra-petch-latin-ext-500-normal-gA6791b0.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-500-normal.woff2"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-600-normal.woff": {
+    "file": "assets/chakra-petch-latin-ext-600-normal-nL80L4xU.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-600-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-600-normal.woff2": {
+    "file": "assets/chakra-petch-latin-ext-600-normal-CdGvbdDU.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-600-normal.woff2"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-700-normal.woff": {
+    "file": "assets/chakra-petch-latin-ext-700-normal-BeviJPUl.woff",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-700-normal.woff"
+  },
+  "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-700-normal.woff2": {
+    "file": "assets/chakra-petch-latin-ext-700-normal-DAkvJhej.woff2",
+    "src": "node_modules/@fontsource/chakra-petch/files/chakra-petch-latin-ext-700-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff": {
+    "file": "assets/inter-latin-400-normal-CyCys3Eg.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2": {
+    "file": "assets/inter-latin-400-normal-C38fXH4l.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff": {
+    "file": "assets/inter-latin-500-normal-BL9OpVg8.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2": {
+    "file": "assets/inter-latin-500-normal-Cerq10X2.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff": {
+    "file": "assets/inter-latin-600-normal-CiBQ2DWP.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2": {
+    "file": "assets/inter-latin-600-normal-LgqL8muc.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff": {
+    "file": "assets/inter-latin-ext-400-normal-77YHD8bZ.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff2": {
+    "file": "assets/inter-latin-ext-400-normal-C1nco2VV.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-400-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff": {
+    "file": "assets/inter-latin-ext-500-normal-BxGbmqWO.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff2": {
+    "file": "assets/inter-latin-ext-500-normal-CV4jyFjo.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-500-normal.woff2"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff": {
+    "file": "assets/inter-latin-ext-600-normal-CIVaiw4L.woff",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff"
+  },
+  "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2": {
+    "file": "assets/inter-latin-ext-600-normal-D2bJ5OIk.woff2",
+    "src": "node_modules/@fontsource/inter/files/inter-latin-ext-600-normal.woff2"
+  },
   "resources/css/site.css": {
-    "file": "assets/site-BTIYemyK.css",
+    "file": "assets/site-CRsit9jJ.css",
     "name": "site",
     "names": [
       "site.css"
     ],
     "src": "resources/css/site.css",
-    "isEntry": true
+    "isEntry": true,
+    "assets": [
+      "assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "assets/inter-latin-400-normal-CyCys3Eg.woff",
+      "assets/inter-latin-ext-400-normal-C1nco2VV.woff2",
+      "assets/inter-latin-ext-400-normal-77YHD8bZ.woff",
+      "assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "assets/inter-latin-500-normal-BL9OpVg8.woff",
+      "assets/inter-latin-ext-500-normal-CV4jyFjo.woff2",
+      "assets/inter-latin-ext-500-normal-BxGbmqWO.woff",
+      "assets/inter-latin-600-normal-LgqL8muc.woff2",
+      "assets/inter-latin-600-normal-CiBQ2DWP.woff",
+      "assets/inter-latin-ext-600-normal-D2bJ5OIk.woff2",
+      "assets/inter-latin-ext-600-normal-CIVaiw4L.woff",
+      "assets/chakra-petch-latin-500-normal-BR1ody1F.woff2",
+      "assets/chakra-petch-latin-500-normal-CnUQnZ4D.woff",
+      "assets/chakra-petch-latin-ext-500-normal-gA6791b0.woff2",
+      "assets/chakra-petch-latin-ext-500-normal-BCHeNDEx.woff",
+      "assets/chakra-petch-latin-600-normal-DVQm9bgb.woff2",
+      "assets/chakra-petch-latin-600-normal-DQKfcdKo.woff",
+      "assets/chakra-petch-latin-ext-600-normal-CdGvbdDU.woff2",
+      "assets/chakra-petch-latin-ext-600-normal-nL80L4xU.woff",
+      "assets/chakra-petch-latin-700-normal-CnDBPjkL.woff2",
+      "assets/chakra-petch-latin-700-normal-D1s_c2du.woff",
+      "assets/chakra-petch-latin-ext-700-normal-DAkvJhej.woff2",
+      "assets/chakra-petch-latin-ext-700-normal-BeviJPUl.woff"
+    ]
   },
   "resources/js/site.js": {
-    "file": "assets/site-BaHq9_ec.js",
+    "file": "assets/site-zf405WGc.js",
     "name": "site",
     "src": "resources/js/site.js",
     "isEntry": true

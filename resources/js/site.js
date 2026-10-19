@@ -50,9 +50,9 @@ function initNavbar() {
     window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => e.matches && setOpen(false));
 
     // Odkaz v menu: zavřít, odemknout scroll a teprve pak plynule sjet na sekci
-    $$('a[href^="#"]', overlay).forEach((a) => a.addEventListener('click', (e) => {
-        const target = $(a.hash);
-        if (!target) return;
+    $$('a[href*="#"]', overlay).forEach((a) => a.addEventListener('click', (e) => {
+        const target = a.pathname === location.pathname && a.hash ? $(a.hash) : null;
+        if (!target) { setOpen(false); return; } // odkaz na jinou stránku – normální přechod
         e.preventDefault();
         setOpen(false);
         requestAnimationFrame(() => {
@@ -70,7 +70,7 @@ function initNavbar() {
         }),
         { rootMargin: '-45% 0px -50% 0px' },
     );
-    links.forEach((l) => { const s = $(l.hash); s && io.observe(s); });
+    links.forEach((l) => { const s = l.pathname === location.pathname && l.hash ? $(l.hash) : null; s && io.observe(s); });
 }
 
 /* ---------- Reveal on scroll ---------- */
@@ -353,7 +353,7 @@ function initCookies() {
         }
     }));
 
-    $$('[data-cookie-settings]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); show(); }));
+    $$('[data-cookie-settings], a[href$="#nastaveni-cookies"]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); show(); }));
 }
 
 [

@@ -1,0 +1,54 @@
+title: 'Textová stránka'
+tabs:
+  main:
+    display: Obsah
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Titulek
+              required: true
+          -
+            handle: valid_from
+            field:
+              type: date
+              display: 'Platné od'
+              width: 50
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Obsah
+              buttons: [h2, h3, bold, italic, unorderedlist, orderedlist, link]
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo_title
+            field: { type: text, display: 'SEO titulek' }
+          -
+            handle: seo_description
+            field: { type: textarea, display: 'SEO popis' }
+          -
+            handle: no_index
+            field: { type: toggle, display: 'Skrýt před vyhledávači (noindex)' }
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              validate: 'max:200'
+          -
+            handle: template
+            field:
+              type: template
+              display: Šablona

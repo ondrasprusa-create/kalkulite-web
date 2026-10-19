@@ -11,6 +11,7 @@
         </ul>
 
         <div class="flex items-center gap-2">
+            {{ partial:components/social-links size="sm" class="mr-1" }}
             <div class="hidden sm:block">
             {{ partial:components/button size="sm" }}
                 Vyzkoušet zdarma
@@ -62,9 +63,10 @@
         {{ partial:components/button size="lg" class="w-full" }}
             Vyzkoušet zdarma
         {{ /partial:components/button }}
+        {{ partial:components/social-links class="justify-center" }}
         <p class="flex items-center justify-between text-sm text-slate-400">
             <span>Zatím v prohlížeči, brzy i v obchodech</span>
-            <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
+            <a href="mailto:{{ contact_email ?? 'kalkulite@gmail.com' }}">{{ contact_email ?? 'kalkulite@gmail.com' }}</a>
         </p>
     </div>
 </div>

@@ -27,20 +27,14 @@ tabs:
             handle: social_linkedin
             field: { type: text, input_type: url, display: LinkedIn, width: 50 }
       -
-        display: Tým
+        display: 'Provozovatel (pro zásady ochrany osobních údajů)'
         fields:
           -
-            handle: team
-            field:
-              type: grid
-              display: Tým
-              fields:
-                -
-                  handle: name
-                  field: { type: text, display: Jméno, width: 50 }
-                -
-                  handle: photo
-                  field: { type: text, display: 'Fotka (URL)', width: 50 }
-                -
-                  handle: roles
-                  field: { type: list, display: Role }
+            handle: operator_name
+            field: { type: text, display: 'Jméno / název provozovatele', instructions: 'Fyzická osoba (OSVČ) nebo firma, která je správcem osobních údajů.', width: 50 }
+          -
+            handle: operator_id
+            field: { type: text, display: IČO, width: 50 }
+          -
+            handle: operator_address
+            field: { type: text, display: 'Sídlo / adresa' }
