@@ -1,17 +1,34 @@
 <!doctype html>
 <html lang="cs" class="no-js">
     <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC3F75PTKX"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <!-- Google tag (gtag.js) + Consent Mode v2: bez souhlasu se gtag.js vůbec nenačte -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied'
+            });
 
-            gtag('config', 'G-JC3F75PTKX');
+            window.kalkuliteLoadAnalytics = function () {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+                if (document.getElementById('gtag-js')) return;
+                gtag('js', new Date());
+                gtag('config', 'G-JC3F75PTKX');
+                var s = document.createElement('script');
+                s.id = 'gtag-js';
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JC3F75PTKX';
+                document.head.appendChild(s);
+            };
+            try {
+                if (localStorage.getItem('kalkulite-consent') === 'granted') window.kalkuliteLoadAnalytics();
+            } catch (e) {}
         </script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
         
         <title>Aplikace pro řemeslníky: faktura hlasem z mobilu | KALKULite</title>
@@ -48,7 +65,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
         <script>document.documentElement.classList.replace('no-js', 'js');</script>
-        <link rel="preload" as="style" href="https://www.kalkulite.cz/build/assets/site-pQsWvZDg.css" /><link rel="modulepreload" as="script" href="https://www.kalkulite.cz/build/assets/site-phqktyiH.js" /><link rel="stylesheet" href="https://www.kalkulite.cz/build/assets/site-pQsWvZDg.css" /><script type="module" src="https://www.kalkulite.cz/build/assets/site-phqktyiH.js"></script>
+        <link rel="preload" as="style" href="https://www.kalkulite.cz/build/assets/site-BTIYemyK.css" /><link rel="modulepreload" as="script" href="https://www.kalkulite.cz/build/assets/site-BaHq9_ec.js" /><link rel="stylesheet" href="https://www.kalkulite.cz/build/assets/site-BTIYemyK.css" /><script type="module" src="https://www.kalkulite.cz/build/assets/site-BaHq9_ec.js"></script>
 
         <script type="application/ld+json">
 {
@@ -144,7 +161,7 @@
                 {
                     "@type": "Question",
                     "name": "Kolik KALKULite stoj\u00ed?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Tarif U\u010de\u0148 je zdarma. Par\u0165\u00e1k stoj\u00ed 290 K\u010d m\u011bs\u00ed\u010dn\u011b, Mistr 590 K\u010d a Prof\u00edk pro mal\u00e9 t\u00fdmy 990 K\u010d m\u011bs\u00ed\u010dn\u011b." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Zat\u00edm je aplikace zdarma k vyzkou\u0161en\u00ed, ale jen na omezenou dobu. Potom bude tarif U\u010de\u0148 zdarma, Par\u0165\u00e1k za 290 K\u010d m\u011bs\u00ed\u010dn\u011b, Mistr za 590 K\u010d a Prof\u00edk pro mal\u00e9 t\u00fdmy za 990 K\u010d m\u011bs\u00ed\u010dn\u011b." }
                 },
                 
                 {
@@ -360,7 +377,7 @@
             </div>
 
             <p data-reveal style="--reveal-delay:320ms" class="mt-6 text-sm text-slate-400">
-                Tarif Učeň je zdarma. Funguje v prohlížeči na mobilu i počítači.
+                Zatím zdarma k vyzkoušení. Funguje v prohlížeči na mobilu i počítači.
             </p>
         </div>
 
@@ -1029,10 +1046,36 @@
         Ceník
     </h2>
     
-        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">Začni zdarma a přejdi výš, až ti appka začne šetřit čas.</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">Ceny níže budou platit po skončení zkušebního období.</p>
     
 </div>
 
+
+        
+        
+            <div data-reveal class="glow-border relative mx-auto mt-12 flex max-w-3xl flex-col items-center gap-5 rounded-3xl bg-brand-deep/70 p-6 text-center backdrop-blur-xl sm:flex-row sm:p-7 sm:text-left">
+                <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white shadow-glow" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <p class="flex-1 font-chakra text-lg font-semibold text-white">Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu.</p>
+                <a
+    href="https://app.kalkulite.cz"
+    
+    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
+        px-5 py-3 text-base
+        
+            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
+        
+        shrink-0"
+>
+    
+        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
+    
+    <span class="relative inline-flex items-center gap-2">Vyzkoušet zdarma</span>
+</a>
+
+            </div>
+        
 
         <div class="mt-16 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
             
@@ -1040,7 +1083,7 @@
     data-reveal
     data-tilt-card
     style="--reveal-delay: 0ms"
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 opacity-60 saturate-[.35]
         
             border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
         "
@@ -1050,11 +1093,14 @@
     <h3 class="font-chakra text-2xl font-bold">Učeň</h3>
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Na zkoušku. Vyzkoušej AI fakturaci na jednotlivých zakázkách.</p>
 
-    <p class="mt-6 flex items-baseline gap-1.5">
-        <span class="font-chakra text-5xl font-bold tracking-tight text-white">0</span>
-        <span class="font-chakra text-lg text-white">Kč</span>
-        <span class="text-sm text-slate-400">/ navždy</span>
-    </p>
+    
+        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 ">
+            <span class="font-chakra text-5xl font-bold tracking-tight">0</span>
+            <span class="font-chakra text-lg">Kč</span>
+            <span class="text-sm">/ navždy</span>
+        </p>
+    
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         
@@ -1081,24 +1127,7 @@
         
     </ul>
 
-    <div class="mt-8">
-        
-            <a
-    href="https://app.kalkulite.cz"
     
-    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
-        px-5 py-3 text-base
-        
-            glass text-white hover:border-brand-teal/50 hover:bg-white/10
-        
-        w-full"
->
-    
-    <span class="relative inline-flex items-center gap-2">Začít zdarma</span>
-</a>
-
-        
-    </div>
 </article>
 
             
@@ -1106,7 +1135,7 @@
     data-reveal
     data-tilt-card
     style="--reveal-delay: 90ms"
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 opacity-60 saturate-[.35]
         
             border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
         "
@@ -1116,11 +1145,14 @@
     <h3 class="font-chakra text-2xl font-bold">Parťák</h3>
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pořádek v papírech pro OSVČ, která chce mít klid.</p>
 
-    <p class="mt-6 flex items-baseline gap-1.5">
-        <span class="font-chakra text-5xl font-bold tracking-tight text-white">290</span>
-        <span class="font-chakra text-lg text-white">Kč</span>
-        <span class="text-sm text-slate-400">/ měsíc</span>
-    </p>
+    
+        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
+            <span class="font-chakra text-5xl font-bold tracking-tight">290</span>
+            <span class="font-chakra text-lg">Kč</span>
+            <span class="text-sm">/ měsíc</span>
+        </p>
+    
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         
@@ -1154,24 +1186,7 @@
         
     </ul>
 
-    <div class="mt-8">
-        
-            <a
-    href="https://app.kalkulite.cz"
     
-    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
-        px-5 py-3 text-base
-        
-            glass text-white hover:border-brand-teal/50 hover:bg-white/10
-        
-        w-full"
->
-    
-    <span class="relative inline-flex items-center gap-2">Chci Parťáka</span>
-</a>
-
-        
-    </div>
 </article>
 
             
@@ -1179,7 +1194,7 @@
     data-reveal
     data-tilt-card
     style="--reveal-delay: 180ms"
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 opacity-60 saturate-[.35]
         
             glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg backdrop-blur-md xl:-my-4 xl:py-11
         "
@@ -1193,11 +1208,14 @@
     <h3 class="font-chakra text-2xl font-bold">Mistr</h3>
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Plná síla AI. Pro ty, kdo chtějí vydělávat víc, ne jen víc makat.</p>
 
-    <p class="mt-6 flex items-baseline gap-1.5">
-        <span class="font-chakra text-5xl font-bold tracking-tight text-gradient">590</span>
-        <span class="font-chakra text-lg text-white">Kč</span>
-        <span class="text-sm text-slate-400">/ měsíc</span>
-    </p>
+    
+        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
+            <span class="font-chakra text-5xl font-bold tracking-tight">590</span>
+            <span class="font-chakra text-lg">Kč</span>
+            <span class="text-sm">/ měsíc</span>
+        </p>
+    
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         
@@ -1231,26 +1249,7 @@
         
     </ul>
 
-    <div class="mt-8">
-        
-            <a
-    href="https://app.kalkulite.cz"
     
-    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
-        px-5 py-3 text-base
-        
-            bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
-        
-        w-full"
->
-    
-        <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
-    
-    <span class="relative inline-flex items-center gap-2">Chci Mistra</span>
-</a>
-
-        
-    </div>
 </article>
 
             
@@ -1258,7 +1257,7 @@
     data-reveal
     data-tilt-card
     style="--reveal-delay: 270ms"
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 opacity-60 saturate-[.35]
         
             border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 hover:border-brand-teal/50
         "
@@ -1268,11 +1267,14 @@
     <h3 class="font-chakra text-2xl font-bold">Profík</h3>
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pro malé party, které jedou na plný plyn.</p>
 
-    <p class="mt-6 flex items-baseline gap-1.5">
-        <span class="font-chakra text-5xl font-bold tracking-tight text-white">990</span>
-        <span class="font-chakra text-lg text-white">Kč</span>
-        <span class="text-sm text-slate-400">/ měsíc</span>
-    </p>
+    
+        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
+            <span class="font-chakra text-5xl font-bold tracking-tight">990</span>
+            <span class="font-chakra text-lg">Kč</span>
+            <span class="text-sm">/ měsíc</span>
+        </p>
+    
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         
@@ -1306,24 +1308,7 @@
         
     </ul>
 
-    <div class="mt-8">
-        
-            <a
-    href="https://app.kalkulite.cz"
     
-    class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
-        px-5 py-3 text-base
-        
-            glass text-white hover:border-brand-teal/50 hover:bg-white/10
-        
-        w-full"
->
-    
-    <span class="relative inline-flex items-center gap-2">Chci Profíka</span>
-</a>
-
-        
-    </div>
 </article>
 
             
@@ -1530,7 +1515,7 @@
                             <svg class="size-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"/></svg>
                         </span>
                     </summary>
-                    <p class="-mt-1 pb-6 text-slate-300">Tarif Učeň je zdarma. Parťák stojí 290 Kč měsíčně, Mistr 590 Kč a Profík pro malé týmy 990 Kč měsíčně.</p>
+                    <p class="-mt-1 pb-6 text-slate-300">Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.</p>
                 </details>
             
                 <details name="faq" class="group px-5 sm:px-7" >
@@ -1584,7 +1569,7 @@
                 Vrať se <span class="text-gradient">k nářadí</span>. Ještě dnes.
             </h2>
             <p class="mx-auto mt-5 max-w-xl text-lg text-pretty text-slate-300">
-                KALKULite běží v prohlížeči na mobilu i počítači. Zaregistruj se, začni zdarma s tarifem Učeň
+                KALKULite běží v prohlížeči na mobilu i počítači. Zaregistruj se, vyzkoušej ji zdarma
                 a první nabídku nadiktuješ ještě na stavbě.
             </p>
 
@@ -1734,6 +1719,7 @@
                 <a href="#faq" class="text-slate-400 transition-colors hover:text-white">Časté otázky</a>
                 <a href="https://app.kalkulite.cz" class="text-slate-400 transition-colors hover:text-white">Aplikace</a>
                 <a href="mailto:info@kalkulite.cz" class="text-slate-400 transition-colors hover:text-white">info@kalkulite.cz</a>
+                <button type="button" data-cookie-settings class="text-slate-400 transition-colors hover:text-white">Nastavení cookies</button>
             </nav>
 
             
@@ -1785,5 +1771,30 @@
 
 
         </div>
+
+        <div
+    data-cookie-banner
+    hidden
+    role="region"
+    aria-label="Souhlas s cookies"
+    class="fixed inset-x-3 bottom-3 z-[60] sm:inset-x-auto sm:right-auto sm:bottom-5 sm:left-5 sm:max-w-md"
+>
+    <div class="animate-pop rounded-2xl border border-white/15 bg-brand-darker/95 p-5 shadow-2xl backdrop-blur-xl">
+        <p class="font-chakra text-base font-semibold text-white">Cookies</p>
+        <p class="mt-1.5 text-sm text-slate-300">
+            Rádi bychom měřili návštěvnost přes Google Analytics, abychom věděli, co na webu funguje.
+            Bez tvého souhlasu analytiku nespustíme.
+        </p>
+        <div class="mt-4 grid grid-cols-2 gap-2">
+            <button type="button" data-cookie-choice="denied" class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 font-chakra text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                Odmítnout
+            </button>
+            <button type="button" data-cookie-choice="granted" class="rounded-xl bg-brand-gradient px-4 py-2.5 font-chakra text-sm font-semibold text-white shadow-glow transition-transform hover:-translate-y-0.5">
+                Přijmout
+            </button>
+        </div>
+    </div>
+</div>
+
     </body>
 </html>

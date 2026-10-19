@@ -3,9 +3,22 @@
     {{ partial:components/aura corners="tl-br" grid="true" }}
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {{ partial:components/section-heading lead="Začni zdarma a přejdi výš, až ti appka začne šetřit čas." }}
+        {{ partial:components/section-heading :lead="free_trial ? 'Ceny níže budou platit po skončení zkušebního období.' : 'Začni zdarma a přejdi výš, až ti appka začne šetřit čas.'" }}
             Ceník
         {{ /partial:components/section-heading }}
+
+        {{# Zkušební období – poznámka nad ceníkem #}}
+        {{ if free_trial }}
+            <div data-reveal class="glow-border relative mx-auto mt-12 flex max-w-3xl flex-col items-center gap-5 rounded-3xl bg-brand-deep/70 p-6 text-center backdrop-blur-xl sm:flex-row sm:p-7 sm:text-left">
+                <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white shadow-glow" aria-hidden="true">
+                    <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <p class="flex-1 font-chakra text-lg font-semibold text-white">{{ free_trial_note ?? 'Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu.' }}</p>
+                {{ partial:components/button class="shrink-0" }}
+                    Vyzkoušet zdarma
+                {{ /partial:components/button }}
+            </div>
+        {{ /if }}
 
         <div class="mt-16 grid items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {{ plans }}

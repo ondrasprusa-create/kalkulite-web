@@ -1,0 +1,28 @@
+{{#
+    Lišta pro souhlas s cookies. Výchozí stav je skrytý; site.js ji zobrazí,
+    dokud návštěvník nevybere. Volbu jde změnit odkazem [data-cookie-settings] v patičce.
+    Google Analytics se načte až po kliknutí na „Přijmout“ (window.kalkuliteLoadAnalytics v layoutu).
+#}}
+<div
+    data-cookie-banner
+    hidden
+    role="region"
+    aria-label="Souhlas s cookies"
+    class="fixed inset-x-3 bottom-3 z-[60] sm:inset-x-auto sm:right-auto sm:bottom-5 sm:left-5 sm:max-w-md"
+>
+    <div class="animate-pop rounded-2xl border border-white/15 bg-brand-darker/95 p-5 shadow-2xl backdrop-blur-xl">
+        <p class="font-chakra text-base font-semibold text-white">Cookies</p>
+        <p class="mt-1.5 text-sm text-slate-300">
+            Rádi bychom měřili návštěvnost přes Google Analytics, abychom věděli, co na webu funguje.
+            Bez tvého souhlasu analytiku nespustíme.
+        </p>
+        <div class="mt-4 grid grid-cols-2 gap-2">
+            <button type="button" data-cookie-choice="denied" class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 font-chakra text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                Odmítnout
+            </button>
+            <button type="button" data-cookie-choice="granted" class="rounded-xl bg-brand-gradient px-4 py-2.5 font-chakra text-sm font-semibold text-white shadow-glow transition-transform hover:-translate-y-0.5">
+                Přijmout
+            </button>
+        </div>
+    </div>
+</div>

@@ -37,6 +37,19 @@ tabs:
       -
         fields:
           -
+            handle: free_trial
+            field:
+              type: toggle
+              display: 'Zkušební období zdarma'
+              instructions: 'Zapnuto = ceny v ceníku jsou přeškrtnuté a zešedlé a nad nimi se zobrazí poznámka níže.'
+              width: 33
+          -
+            handle: free_trial_note
+            field:
+              type: text
+              display: 'Poznámka ke zkušebnímu období'
+              width: 66
+          -
             handle: plans
             field:
               type: grid

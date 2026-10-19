@@ -322,9 +322,43 @@ function initDemo() {
     dialog.addEventListener('click', (e) => e.target === dialog && dialog.close());
 }
 
+/* ---------- Souhlas s cookies (Google Analytics až po souhlasu) ---------- */
+function initCookies() {
+    const banner = $('[data-cookie-banner]');
+    if (!banner) return;
+    const KEY = 'kalkulite-consent';
+    const read = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
+    const write = (v) => { try { localStorage.setItem(KEY, v); } catch { /* bez úložiště se lišta ukáže znovu */ } };
+
+    const show = () => (banner.hidden = false);
+    const hide = () => (banner.hidden = true);
+
+    if (!read()) show();
+
+    $$('[data-cookie-choice]', banner).forEach((btn) => btn.addEventListener('click', () => {
+        const choice = btn.dataset.cookieChoice;
+        write(choice);
+        hide();
+        if (choice === 'granted') {
+            window.kalkuliteLoadAnalytics?.();
+        } else {
+            // Odmítnutí / odvolání souhlasu: vypnout měření a smazat případné cookies Google Analytics
+            window.gtag?.('consent', 'update', { analytics_storage: 'denied' });
+            const host = location.hostname.replace(/^www\./, '');
+            document.cookie.split(';').map((c) => c.split('=')[0].trim()).filter((n) => n.startsWith('_ga')).forEach((n) => {
+                [location.hostname, `.${host}`, ''].forEach((d) => {
+                    document.cookie = `${n}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${d ? `; domain=${d}` : ''}`;
+                });
+            });
+        }
+    }));
+
+    $$('[data-cookie-settings]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); show(); }));
+}
+
 [
     initNavbar, initReveal, initSpotlight, initAura, initTilt,
-    initMagnetic, initCompare, initVoiceCard, initIndexCalc, initDemo,
+    initMagnetic, initCompare, initVoiceCard, initIndexCalc, initDemo, initCookies,
 ].forEach((fn) => {
     try { fn(); } catch (err) { console.error(`[KALKULite] ${fn.name}`, err); }
 });

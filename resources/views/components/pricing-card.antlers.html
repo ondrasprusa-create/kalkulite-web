@@ -1,12 +1,13 @@
 {{#
     Karta tarifu. Očekává proměnné z položky gridu `plans`:
     name, tagline, price, period, featured, features (list), cta_label, handle
+    Při zapnutém `free_trial` (pole stránky) je karta zešedlá, cena přeškrtnutá a bez tlačítka.
 #}}
 <article
     data-reveal
     data-tilt-card
     style="--reveal-delay: {{ index * 90 }}ms"
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300
+    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 {{ free_trial ? 'opacity-60 saturate-[.35]' : '' }}
         {{ if featured }}
             glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg backdrop-blur-md xl:-my-4 xl:py-11
         {{ else }}
@@ -22,11 +23,20 @@
     <h3 class="font-chakra text-2xl font-bold">{{ name }}</h3>
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">{{ tagline }}</p>
 
-    <p class="mt-6 flex items-baseline gap-1.5">
-        <span class="font-chakra text-5xl font-bold tracking-tight {{ featured ? 'text-gradient' : 'text-white' }}">{{ price }}</span>
-        <span class="font-chakra text-lg text-white">Kč</span>
-        <span class="text-sm text-slate-400">/ {{ period ?? 'měsíc' }}</span>
-    </p>
+    {{ if free_trial }}
+        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 {{ price != '0' ? 'line-through decoration-slate-400/80 decoration-2' : '' }}">
+            <span class="font-chakra text-5xl font-bold tracking-tight">{{ price }}</span>
+            <span class="font-chakra text-lg">Kč</span>
+            <span class="text-sm">/ {{ period ?? 'měsíc' }}</span>
+        </p>
+    {{ else }}
+        <p class="mt-6 flex items-baseline gap-1.5">
+            <span class="font-chakra text-5xl font-bold tracking-tight {{ featured ? 'text-gradient' : 'text-white' }}">{{ price }}</span>
+            <span class="font-chakra text-lg text-white">Kč</span>
+            <span class="text-sm text-slate-400">/ {{ period ?? 'měsíc' }}</span>
+        </p>
+    {{ /if }}
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">
         {{ features }}
@@ -39,6 +49,7 @@
         {{ /features }}
     </ul>
 
+    {{ unless free_trial }}
     <div class="mt-8">
         {{ if featured }}
             {{ partial:components/button class="w-full" }}
@@ -50,4 +61,5 @@
             {{ /partial:components/button }}
         {{ /if }}
     </div>
+    {{ /unless }}
 </article>

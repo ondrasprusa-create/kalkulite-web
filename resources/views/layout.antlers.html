@@ -1,17 +1,34 @@
 <!doctype html>
 <html lang="{{ site:short_locale }}" class="no-js">
     <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC3F75PTKX"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <!-- Google tag (gtag.js) + Consent Mode v2: bez souhlasu se gtag.js vůbec nenačte -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied'
+            });
 
-            gtag('config', 'G-JC3F75PTKX');
+            window.kalkuliteLoadAnalytics = function () {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+                if (document.getElementById('gtag-js')) return;
+                gtag('js', new Date());
+                gtag('config', 'G-JC3F75PTKX');
+                var s = document.createElement('script');
+                s.id = 'gtag-js';
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JC3F75PTKX';
+                document.head.appendChild(s);
+            };
+            try {
+                if (localStorage.getItem('kalkulite-consent') === 'granted') window.kalkuliteLoadAnalytics();
+            } catch (e) {}
         </script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
         {{# ---------- SEO ---------- #}}
         <title>{{ (seo_title ?? title) | sanitize }} | KALKULite</title>
@@ -66,5 +83,7 @@
 
             {{ partial:components/footer }}
         </div>
+
+        {{ partial:components/cookie-banner }}
     </body>
 </html>
