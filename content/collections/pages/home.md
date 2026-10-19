@@ -3,7 +3,7 @@ title: 'Mobilní parťák pro řemeslníky'
 id: 049ed0c0-9796-43f7-b158-4f6129328c12
 template: home
 blueprint: landing
-seo_title: 'Aplikace pro řemeslníky: faktura hlasem z mobilu'
+seo_title: 'Faktury a nabídky pro řemeslníky z mobilu'
 seo_description: 'Aplikace pro řemeslníky: faktury a nabídky z mobilu za minutu, trasa dne i hlídání zisku. Ušetří až 10 hodin papírování týdně.'
 free_trial: true
 free_trial_note: 'Vyzkoušej aplikaci zdarma po dobu trvání limitované nabídky.'

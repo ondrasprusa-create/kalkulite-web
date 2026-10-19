@@ -31,7 +31,7 @@
         </script>
 
         {{# ---------- SEO ---------- #}}
-        <title>{{ (seo_title ?? title) | sanitize }} | KALKULite</title>
+        <title>KALKULite | {{ (seo_title ?? title) | sanitize }}</title>
         <meta name="description" content="{{ seo_description | sanitize }}">
         {{ if config:seo:allow_indexing && ! no_index }}
             <meta name="robots" content="index, follow, max-image-preview:large">
@@ -45,7 +45,7 @@
         <meta property="og:site_name" content="KALKULite">
         <meta property="og:locale" content="cs_CZ">
         <meta property="og:url" content="{{ permalink }}">
-        <meta property="og:title" content="{{ (seo_title ?? title) | sanitize }} | KALKULite">
+        <meta property="og:title" content="KALKULite | {{ (seo_title ?? title) | sanitize }}">
         <meta property="og:description" content="{{ seo_description | sanitize }}">
         <meta property="og:image" content="{{ config:app:url }}/assets/brand/og-image.jpg">
         <meta property="og:image:width" content="1200">
