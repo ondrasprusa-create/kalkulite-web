@@ -60,7 +60,7 @@
         <meta name="theme-color" content="#323044">
 
         <script>document.documentElement.classList.replace('no-js', 'js');</script>
-        <link rel="preload" as="style" href="https://www.kalkulite.cz/build/assets/site-CRsit9jJ.css" /><link rel="modulepreload" as="script" href="https://www.kalkulite.cz/build/assets/site-zf405WGc.js" /><link rel="stylesheet" href="https://www.kalkulite.cz/build/assets/site-CRsit9jJ.css" /><script type="module" src="https://www.kalkulite.cz/build/assets/site-zf405WGc.js"></script>
+        <link rel="preload" as="style" href="https://www.kalkulite.cz/build/assets/site-sQUCfGpX.css" /><link rel="modulepreload" as="script" href="https://www.kalkulite.cz/build/assets/site-zf405WGc.js" /><link rel="stylesheet" href="https://www.kalkulite.cz/build/assets/site-sQUCfGpX.css" /><script type="module" src="https://www.kalkulite.cz/build/assets/site-zf405WGc.js"></script>
 
         <script type="application/ld+json">
 {
@@ -156,7 +156,7 @@
                 {
                     "@type": "Question",
                     "name": "Kolik KALKULite stoj\u00ed?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Zat\u00edm je aplikace zdarma k vyzkou\u0161en\u00ed, ale jen na omezenou dobu. Potom bude tarif U\u010de\u0148 zdarma, Par\u0165\u00e1k za 290 K\u010d m\u011bs\u00ed\u010dn\u011b, Mistr za 590 K\u010d a Prof\u00edk pro mal\u00e9 t\u00fdmy za 990 K\u010d m\u011bs\u00ed\u010dn\u011b." }
+                    "acceptedAnswer": { "@type": "Answer", "text": "Te\u010f ji vyzkou\u0161\u00ed\u0161 zdarma po dobu trv\u00e1n\u00ed limitovan\u00e9 nab\u00eddky. Potom bude tarif U\u010de\u0148 zdarma, Par\u0165\u00e1k za 290 K\u010d m\u011bs\u00ed\u010dn\u011b, Mistr za 590 K\u010d a Prof\u00edk pro mal\u00e9 t\u00fdmy za 990 K\u010d m\u011bs\u00ed\u010dn\u011b." }
                 },
                 
                 {
@@ -418,7 +418,7 @@
             </div>
 
             <p data-reveal style="--reveal-delay:320ms" class="mt-6 text-sm text-slate-400">
-                Zatím zdarma k vyzkoušení. Funguje v prohlížeči na mobilu i počítači.
+                Teď zdarma v rámci limitované nabídky. Funguje v prohlížeči na mobilu i počítači.
             </p>
         </div>
 
@@ -1087,34 +1087,45 @@
         Ceník
     </h2>
     
-        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">Ceny níže budou platit po skončení zkušebního období.</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">Uvedený ceník bude platit po skončení časově omezené nabídky.</p>
     
 </div>
 
 
         
         
-            <div data-reveal class="glow-border relative mx-auto mt-12 flex max-w-3xl flex-col items-center gap-5 rounded-3xl bg-brand-deep/70 p-6 text-center backdrop-blur-xl sm:flex-row sm:p-7 sm:text-left">
-                <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white shadow-glow" aria-hidden="true">
-                    <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div data-reveal class="glow-border relative mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl bg-brand-deep/80 px-6 py-9 text-center shadow-glow-lg backdrop-blur-xl sm:px-12 sm:py-11">
+                <div class="absolute -top-24 left-1/2 -z-10 h-48 w-4/5 -translate-x-1/2 bg-brand-gradient opacity-20 blur-3xl" aria-hidden="true"></div>
+
+                <span class="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-3.5 py-1.5 font-chakra text-xs font-bold tracking-[0.2em] text-amber-300 uppercase">
+                    <span class="relative flex size-2"><span class="absolute inline-flex size-full animate-ping rounded-full bg-amber-400 opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-amber-400"></span></span>
+                    Limitovaná nabídka
                 </span>
-                <p class="flex-1 font-chakra text-lg font-semibold text-white">Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu.</p>
-                <a
+
+                <p class="mx-auto mt-5 max-w-2xl font-chakra text-2xl leading-tight font-bold text-balance text-white sm:text-4xl">
+                    Vyzkoušej aplikaci <span class="text-amber-400">zdarma</span> po dobu trvání limitované nabídky.
+                </p>
+                <p class="mx-auto mt-4 max-w-xl text-slate-300">Po jejím skončení začne platit ceník níže.</p>
+
+                <div class="mt-8">
+                    <a
     href="https://app.kalkulite.cz"
-    
+    data-magnetic
     class="group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl font-chakra font-semibold tracking-wide whitespace-nowrap transition-all duration-300 select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal active:scale-[0.97]
-        px-5 py-3 text-base
+        px-7 py-4 text-base sm:text-lg
         
             bg-brand-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-glow-lg
         
-        shrink-0"
+        "
 >
     
         <span class="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" aria-hidden="true"></span>
     
-    <span class="relative inline-flex items-center gap-2">Vyzkoušet zdarma</span>
+    <span class="relative inline-flex items-center gap-2">Vyzkoušet zdarma hned
+                        <svg class="size-5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-4.22-4.22a.75.75 0 1 1 1.06-1.06l5.5 5.5a.75.75 0 0 1 0 1.06l-5.5 5.5a.75.75 0 1 1-1.06-1.06l4.22-4.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/></svg></span>
 </a>
 
+                </div>
             </div>
         
 
@@ -1135,7 +1146,7 @@
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Na zkoušku. Vyzkoušej AI fakturaci na jednotlivých zakázkách.</p>
 
     
-        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-6 text-xs text-slate-400">Po skončení nabídky</p>
         <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 ">
             <span class="font-chakra text-5xl font-bold tracking-tight">0</span>
             <span class="font-chakra text-lg">Kč</span>
@@ -1187,7 +1198,7 @@
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pořádek v papírech pro OSVČ, která chce mít klid.</p>
 
     
-        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-6 text-xs text-slate-400">Po skončení nabídky</p>
         <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
             <span class="font-chakra text-5xl font-bold tracking-tight">290</span>
             <span class="font-chakra text-lg">Kč</span>
@@ -1250,7 +1261,7 @@
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Plná síla AI. Pro ty, kdo chtějí vydělávat víc, ne jen víc makat.</p>
 
     
-        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-6 text-xs text-slate-400">Po skončení nabídky</p>
         <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
             <span class="font-chakra text-5xl font-bold tracking-tight">590</span>
             <span class="font-chakra text-lg">Kč</span>
@@ -1309,7 +1320,7 @@
     <p class="mt-1 min-h-[2.5rem] text-sm text-slate-400">Pro malé party, které jedou na plný plyn.</p>
 
     
-        <p class="mt-6 text-xs text-slate-400">Po zkušebním období</p>
+        <p class="mt-6 text-xs text-slate-400">Po skončení nabídky</p>
         <p class="mt-1 flex items-baseline gap-1.5 text-slate-400 line-through decoration-slate-400/80 decoration-2">
             <span class="font-chakra text-5xl font-bold tracking-tight">990</span>
             <span class="font-chakra text-lg">Kč</span>
@@ -1378,7 +1389,7 @@
 
 
         
-        <dl class="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <dl class="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-3">
             
                 <div data-reveal style="--reveal-delay: 0ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
                     <dt class="mt-2 text-sm text-slate-400">od diktování k hotové faktuře</dt>
@@ -1398,13 +1409,6 @@
                     <dt class="mt-2 text-sm text-slate-400">místo 3+ nepropojených nástrojů</dt>
                     <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
                         1 appka
-                    </dd>
-                </div>
-            
-                <div data-reveal style="--reveal-delay: 240ms" class="group flex flex-col-reverse rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 sm:p-7">
-                    <dt class="mt-2 text-sm text-slate-400">řemeslníků v ČR, pro které to stavíme</dt>
-                    <dd class="font-chakra text-3xl font-bold text-gradient sm:text-5xl">
-                        180 000
                     </dd>
                 </div>
             
@@ -1556,7 +1560,7 @@
                             <svg class="size-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"/></svg>
                         </span>
                     </summary>
-                    <p class="-mt-1 pb-6 text-slate-300">Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.</p>
+                    <p class="-mt-1 pb-6 text-slate-300">Teď ji vyzkoušíš zdarma po dobu trvání limitované nabídky. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.</p>
                 </details>
             
                 <details name="faq" class="group px-5 sm:px-7" >

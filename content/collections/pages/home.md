@@ -6,7 +6,7 @@ blueprint: landing
 seo_title: 'Aplikace pro řemeslníky: faktura hlasem z mobilu'
 seo_description: 'Fakturace a cenové nabídky pro řemeslníky přímo z mobilu. Nadiktuj zakázku, KALKULite spočítá materiál i práci, naplánuje trasu a ohlídá zisk.'
 free_trial: true
-free_trial_note: 'Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu.'
+free_trial_note: 'Vyzkoušej aplikaci zdarma po dobu trvání limitované nabídky.'
 plans:
   -
     id: plan0ucen
@@ -82,12 +82,6 @@ stats:
     value: '1'
     suffix: ' appka'
     label: 'místo 3+ nepropojených nástrojů'
-  -
-    id: st4
-    prefix: ''
-    value: '180 000'
-    suffix: ''
-    label: 'řemeslníků v ČR, pro které to stavíme'
 trades:
   - Zedníci
   - Podlaháři
@@ -115,7 +109,7 @@ faq:
   -
     id: faq4
     question: 'Kolik KALKULite stojí?'
-    answer: 'Zatím je aplikace zdarma k vyzkoušení, ale jen na omezenou dobu. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.'
+    answer: 'Teď ji vyzkoušíš zdarma po dobu trvání limitované nabídky. Potom bude tarif Učeň zdarma, Parťák za 290 Kč měsíčně, Mistr za 590 Kč a Profík pro malé týmy za 990 Kč měsíčně.'
   -
     id: faq5
     question: 'Kde KALKULite najdu a potřebuju něco instalovat?'

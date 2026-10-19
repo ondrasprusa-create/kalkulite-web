@@ -40,14 +40,14 @@ tabs:
             handle: free_trial
             field:
               type: toggle
-              display: 'Zkušební období zdarma'
-              instructions: 'Zapnuto = ceny v ceníku jsou přeškrtnuté a zešedlé a nad nimi se zobrazí poznámka níže.'
+              display: 'Limitovaná nabídka zdarma'
+              instructions: 'Zapnuto = ceny v ceníku jsou přeškrtnuté a nad nimi se zobrazí výrazný box s textem níže.'
               width: 33
           -
             handle: free_trial_note
             field:
               type: text
-              display: 'Poznámka ke zkušebnímu období'
+              display: 'Text limitované nabídky'
               width: 66
           -
             handle: plans
