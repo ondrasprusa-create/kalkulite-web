@@ -28,10 +28,10 @@
         {
             "@type": "SoftwareApplication",
             "name": "KALKULite",
-            "url": "https://app.kalkulite.cz",
+            "url": {{ (app_url ?? 'https://app.kalkulite.cz') | to_json }},
             "applicationCategory": "BusinessApplication",
             "applicationSubCategory": "Fakturace a cenové nabídky pro řemeslníky",
-            "operatingSystem": "Web, Android, iOS",
+            "operatingSystem": "Web",
             "inLanguage": "cs-CZ",
             "description": {{ seo_description | to_json }},
             "image": "{{ config:app:url }}/assets/brand/og-image.jpg",

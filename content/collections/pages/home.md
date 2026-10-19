@@ -18,7 +18,7 @@ plans:
     features:
       - 'AI faktura hlasem na jednotlivé zakázky'
       - 'QR platba na faktuře'
-      - 'Bez platební karty'
+      - 'Funguje v prohlížeči na mobilu i počítači'
   -
     id: plan1partak
     name: Parťák
@@ -31,7 +31,7 @@ plans:
     features:
       - 'Základní evidence zakázek'
       - 'Hlídání splatností'
-      - 'Automatické SMS zákazníkům'
+      - 'Zpráva „Jsem na cestě“ přes SMS nebo WhatsApp'
       - 'Archiv zakázek a QR platby'
   -
     id: plan2mistr
@@ -116,6 +116,10 @@ faq:
     answer: 'Tarif Učeň je zdarma. Parťák stojí 290 Kč měsíčně, Mistr 590 Kč a Profík pro malé týmy 990 Kč měsíčně.'
   -
     id: faq5
-    question: 'Kdy můžu aplikaci začít používat?'
-    answer: 'Prototyp si můžeš vyzkoušet hned na app.kalkulite.cz. Do ostrého provozu pouštíme řemeslníky postupně podle waitlistu.'
+    question: 'Kde KALKULite najdu a potřebuju něco instalovat?'
+    answer: 'Nic instalovat nemusíš. KALKULite běží na app.kalkulite.cz v prohlížeči na mobilu i počítači, stačí se zaregistrovat. Aplikace pro iPhone a Android připravujeme.'
+  -
+    id: faq6
+    question: 'Posílá KALKULite zprávy zákazníkům sám?'
+    answer: 'Ne, zprávy odesíláš vždycky ty. Jednou si připravíš šablonu a když vyrážíš k zákazníkovi, klepneš na „Jsem na cestě“. Vybereš WhatsApp nebo SMS, appka podle polohy doplní, za jak dlouho dorazíš, a ty jen klepneš na Odeslat.'
 ---

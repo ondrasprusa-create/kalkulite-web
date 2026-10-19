@@ -6,6 +6,9 @@ tabs:
         display: Kontakt
         fields:
           -
+            handle: app_url
+            field: { type: text, input_type: url, display: 'URL webové aplikace', instructions: 'Kam vedou všechna tlačítka „Vyzkoušet zdarma“.' }
+          -
             handle: contact_email
             field: { type: text, input_type: email, display: 'Kontaktní e-mail' }
       -

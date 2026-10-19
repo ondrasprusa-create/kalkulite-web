@@ -1,5 +1,5 @@
 {{# FOOTER – tým, kontakt, sociální sítě #}}
-<footer class="relative pt-10 pb-10">
+<footer id="kontakt" class="relative pt-10 pb-10">
     {{ partial:components/section-divider }}
     {{ partial:components/aura corners="tl-br" intensity="soft" }}
 
@@ -9,9 +9,20 @@
             <div data-reveal>
                 {{ partial:components/logo }}
                 <p class="mt-5 max-w-md text-lg text-slate-300">Měníme způsob, jak řemeslníci pracují. Aby se konečně mohli soustředit na práci, ne na papíry.</p>
-                <a href="https://app.kalkulite.cz" target="_blank" rel="noopener" class="group mt-6 inline-flex items-center gap-2 font-chakra font-semibold text-white">
+                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="group mt-6 inline-flex items-center gap-2 font-chakra font-semibold text-white">
                     <span class="text-gradient">app.kalkulite.cz</span>
                     <svg class="size-4 text-brand-teal transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.2 14.8a.75.75 0 0 1 0-1.06L12.94 6H7.75a.75.75 0 0 1 0-1.5h7a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-1.5 0V7.06l-7.74 7.74a.75.75 0 0 1-1.06 0Z" clip-rule="evenodd"/></svg>
+                </a>
+
+                {{# Kontakt – sem míří odkaz „Kontakt“ v menu #}}
+                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="group mt-8 flex w-fit items-center gap-3 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-3 backdrop-blur-md transition-colors hover:border-brand-teal/50">
+                    <span class="grid size-10 place-items-center rounded-xl bg-brand-gradient text-white">
+                        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    </span>
+                    <span>
+                        <span class="block text-xs text-slate-400">Napište nám</span>
+                        <span class="block font-chakra font-semibold text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</span>
+                    </span>
                 </a>
             </div>
 
@@ -41,7 +52,7 @@
                 <a href="#funkce" class="text-slate-400 transition-colors hover:text-white">Funkce</a>
                 <a href="#cenik" class="text-slate-400 transition-colors hover:text-white">Ceník</a>
                 <a href="#faq" class="text-slate-400 transition-colors hover:text-white">Časté otázky</a>
-                <a href="#waitlist" class="text-slate-400 transition-colors hover:text-white">Waitlist</a>
+                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">Aplikace</a>
                 <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
             </nav>
 

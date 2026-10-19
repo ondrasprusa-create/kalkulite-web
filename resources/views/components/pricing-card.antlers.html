@@ -41,11 +41,11 @@
 
     <div class="mt-8">
         {{ if featured }}
-            {{ partial:components/button href="#waitlist" class="w-full" :plan="handle" }}
+            {{ partial:components/button class="w-full" }}
                 {{ cta_label ?? 'Chci tenhle tarif' }}
             {{ /partial:components/button }}
         {{ else }}
-            {{ partial:components/button href="#waitlist" variant="ghost" class="w-full" :plan="handle" }}
+            {{ partial:components/button variant="ghost" class="w-full" }}
                 {{ cta_label ?? 'Chci tenhle tarif' }}
             {{ /partial:components/button }}
         {{ /if }}
