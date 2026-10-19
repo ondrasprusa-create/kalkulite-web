@@ -1,0 +1,7 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "redirects": [
+        { "source": "/privacy", "destination": "https://app.kalkulite.cz/privacy", "statusCode": 301 },
+        { "source": "/privacy/", "destination": "https://app.kalkulite.cz/privacy", "statusCode": 301 }
+    ]
+}

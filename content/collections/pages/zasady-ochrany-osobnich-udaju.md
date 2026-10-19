@@ -7,7 +7,7 @@ valid_from: '2026-10-19'
 seo_title: 'Zásady ochrany osobních údajů'
 seo_description: 'Jaké osobní údaje zpracovává web KALKULite, proč, jak dlouho a jaká máš práva. Analytické cookies používáme jen s tvým souhlasem.'
 ---
-Tyto zásady popisují, jak zpracováváme osobní údaje návštěvníků webu **www.kalkulite.cz**. Zpracování údajů v samotné webové aplikaci **app.kalkulite.cz** (účet, zakázky, faktury) popisují samostatné zásady aplikace.
+Tyto zásady popisují, jak zpracováváme osobní údaje návštěvníků webu **www.kalkulite.cz**. Zpracování údajů v samotné webové aplikaci **app.kalkulite.cz** (účet, zakázky, faktury) popisují samostatné [zásady ochrany soukromí aplikace](https://app.kalkulite.cz/privacy).
 
 ## Jaké údaje zpracováváme a proč
 
