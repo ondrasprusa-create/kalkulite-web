@@ -15,6 +15,7 @@
             });
 
             window.kalkuliteLoadAnalytics = function () {
+                window.kalkuliteAnalyticsEnabled = true; // events (site.js) se posílají jen se souhlasem
                 gtag('consent', 'update', { analytics_storage: 'granted' });
                 if (document.getElementById('gtag-js')) return;
                 gtag('js', new Date());

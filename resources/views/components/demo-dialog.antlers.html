@@ -2,7 +2,7 @@
     Demo – nativní <dialog> se simulací: hlas → AI → hotová faktura.
     Otevírá se prvky s [data-demo-open]; scénář řídí site.js.
 #}}
-<dialog data-demo-dialog aria-labelledby="demo-title" class="m-auto w-[min(28rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-slate-300 backdrop:bg-brand-deep/80 backdrop:backdrop-blur-sm open:animate-pop">
+<dialog data-demo-dialog data-track-location="demo" aria-labelledby="demo-title" class="m-auto w-[min(28rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-slate-300 backdrop:bg-brand-deep/80 backdrop:backdrop-blur-sm open:animate-pop">
     <div class="glow-border relative rounded-3xl bg-brand-dark p-6 shadow-2xl sm:p-8">
         <button type="button" data-demo-close class="absolute top-4 right-4 grid size-10 place-items-center rounded-xl text-slate-400 transition-colors hover:bg-white/10 hover:text-white" aria-label="Zavřít">
             <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>

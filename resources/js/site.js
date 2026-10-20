@@ -265,6 +265,8 @@ function initIndexCalc() {
         const index = Math.max(0, Math.min(100, v.price > 0 ? (net / v.price) * 100 : 0));
 
         setOut('index', Math.round(index));
+        root.dataset.index = String(Math.round(index));
+        root.dataset.hourly = String(Math.round(hourly));
         setOut('hourly', czk(hourly));
         setOut('travel', czk(travel));
 
@@ -277,6 +279,11 @@ function initIndexCalc() {
     };
 
     inputs.forEach((i) => i.addEventListener('input', update));
+    // „change“ přijde až po puštění posuvníku (myš, prst i klávesnice), ne při každém pixelu
+    inputs.forEach((i) => i.addEventListener('change', () => trackEvent('calculator_interact', {
+        calculated_index: Number(root.dataset.index),
+        net_hourly_rate: Number(root.dataset.hourly),
+    })));
     update();
 }
 
@@ -324,6 +331,81 @@ function initDemo() {
     dialog.addEventListener('click', (e) => e.target === dialog && dialog.close());
 }
 
+/* ---------- Měření událostí GA4 ---------- */
+
+/**
+ * Bezpečné odeslání události do GA4.
+ * Pošle se jen v prohlížeči, když existuje gtag a návštěvník dal souhlas s analytikou
+ * (bez souhlasu by se událost uložila do fronty dataLayer a odešla by zpětně po souhlasu).
+ *
+ * @param {string} eventName
+ * @param {Record<string, string | number>} [params]
+ */
+function trackEvent(eventName, params = {}) {
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+    if (window.kalkuliteAnalyticsEnabled !== true) return;
+    window.gtag('event', eventName, params);
+}
+
+/** @param {Element} el */
+const cleanText = (el) => (el.textContent || '').replace(/\s+/g, ' ').trim();
+
+/**
+ * Kde na stránce prvek je: hero, header, pricing, footer… (atribut data-track-location),
+ * jinak id nejbližší sekce.
+ * @param {Element} el
+ */
+const locationOf = (el) =>
+    el.closest('[data-track-location]')?.getAttribute('data-track-location')
+    ?? el.closest('section[id]')?.id
+    ?? 'other';
+
+function initTracking() {
+    document.addEventListener('click', (e) => {
+        const target = /** @type {Element} */ (e.target);
+        if (!(target instanceof Element)) return;
+
+        // 3) pricing_plan_select – klik na kartu tarifu (i v režimu limitované nabídky bez tlačítek)
+        const card = target.closest('[data-plan-name]');
+        if (card) {
+            trackEvent('pricing_plan_select', {
+                plan_name: card.getAttribute('data-plan-name') || '',
+                billing_cycle: 'monthly', // web zatím nemá přepínač měsíčně / ročně
+            });
+        }
+
+        const link = target.closest('a[href]');
+        if (!(link instanceof HTMLAnchorElement)) return;
+
+        // 5) contact_click – e-mail a sociální sítě
+        if (link.protocol === 'mailto:') {
+            trackEvent('contact_click', { target: 'email' });
+            return;
+        }
+        if (/instagram\.com/i.test(link.hostname)) { trackEvent('contact_click', { target: 'instagram' }); return; }
+        if (/facebook\.com/i.test(link.hostname)) { trackEvent('contact_click', { target: 'facebook' }); return; }
+
+        // 1) sign_up_click – vše, co vede do aplikace (kromě odkazu na zásady soukromí)
+        if (link.hostname === 'app.kalkulite.cz' && !link.pathname.startsWith('/privacy')) {
+            trackEvent('sign_up_click', {
+                button_location: locationOf(link),
+                button_text: cleanText(link),
+            });
+        }
+    });
+
+    // 4) faq_expand – jen když ji rozbalí návštěvník (klik/Enter na otázku), ne při sbalení
+    //    a ne u první otázky, která je otevřená už při načtení
+    $$('#faq details').forEach((d) => {
+        const summary = d.querySelector('summary');
+        summary?.addEventListener('click', () => {
+            if (!(d instanceof HTMLDetailsElement) || d.open) return; // klik před přepnutím → zavřená = rozbaluje se
+            const q = summary.querySelector('h3');
+            trackEvent('faq_expand', { question_title: q ? cleanText(q) : cleanText(summary) });
+        });
+    });
+}
+
 /* ---------- Souhlas s cookies (Google Analytics až po souhlasu) ---------- */
 function initCookies() {
     const banner = $('[data-cookie-banner]');
@@ -350,6 +432,7 @@ function initCookies() {
             window.kalkuliteLoadAnalytics?.();
         } else {
             // Odmítnutí / odvolání souhlasu: vypnout měření a smazat případné cookies Google Analytics
+            window.kalkuliteAnalyticsEnabled = false;
             window.gtag?.('consent', 'update', { analytics_storage: 'denied' });
             const host = location.hostname.replace(/^www\./, '');
             document.cookie.split(';').map((c) => c.split('=')[0].trim()).filter((n) => n.startsWith('_ga')).forEach((n) => {
@@ -365,7 +448,7 @@ function initCookies() {
 
 [
     initNavbar, initReveal, initSpotlight, initAura, initTilt,
-    initMagnetic, initCompare, initVoiceCard, initIndexCalc, initDemo, initCookies,
+    initMagnetic, initCompare, initVoiceCard, initIndexCalc, initDemo, initCookies, initTracking,
 ].forEach((fn) => {
     try { fn(); } catch (err) { console.error(`[KALKULite] ${fn.name}`, err); }
 });
