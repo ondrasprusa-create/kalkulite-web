@@ -5,21 +5,21 @@
 
     <div class="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
-            <div data-reveal>
+            <div>
                 {{ partial:components/logo }}
                 <p class="mt-5 max-w-md text-lg text-slate-300">Měníme způsob, jak řemeslníci pracují. Aby se konečně mohli soustředit na práci, ne na papíry.</p>
                 <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="group mt-6 inline-flex items-center gap-2 font-chakra font-semibold text-white">
-                    <span class="text-gradient">app.kalkulite.cz</span>
+                    <span>app.kalkulite.cz</span>
                     <svg class="size-4 text-white transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.2 14.8a.75.75 0 0 1 0-1.06L12.94 6H7.75a.75.75 0 0 1 0-1.5h7a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-1.5 0V7.06l-7.74 7.74a.75.75 0 0 1-1.06 0Z" clip-rule="evenodd"/></svg>
                 </a>
 
                 {{# Kontakt – sem míří odkaz „Kontakt“ v menu #}}
-                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="group mt-8 flex w-fit items-center gap-3 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-3 backdrop-blur-md transition-colors hover:border-white/25">
+                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="group mt-8 flex w-fit items-center gap-3 rounded-2xl border border-white/10 bg-white/5 py-3 pr-5 pl-3 transition-colors hover:border-white/25">
                     <span class="grid size-10 place-items-center rounded-xl bg-brand-gradient text-white">
                         <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
                     </span>
                     <span>
-                        <span class="block text-xs text-slate-400">Napište nám</span>
+                        <span class="block text-xs text-muted">Napište nám</span>
                         <span class="block font-chakra font-semibold text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</span>
                     </span>
                 </a>
@@ -28,30 +28,30 @@
             {{# Sociální sítě #}}
             {{ if social_instagram || social_facebook }}
             <div>
-                <p class="mb-5 font-chakra text-xs font-semibold tracking-[0.25em] text-slate-400 uppercase" data-reveal>Sledujte nás</p>
+                <p class="mb-5 font-chakra text-xs font-semibold tracking-[0.25em] text-muted uppercase">Sledujte nás</p>
                 <ul class="grid gap-4 sm:grid-cols-2">
                     {{ if social_instagram }}
-                    <li data-reveal>
-                        <a href="{{ social_instagram }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
-                            <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient-diagonal text-white">
+                    <li>
+                        <a href="{{ social_instagram }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
+                            <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white">
                                 <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
                             </span>
                             <span>
                                 <span class="block font-chakra text-lg font-bold text-white">Instagram</span>
-                                <span class="block text-sm text-slate-400">@kalkulite</span>
+                                <span class="block text-sm text-muted">@kalkulite</span>
                             </span>
                         </a>
                     </li>
                     {{ /if }}
                     {{ if social_facebook }}
-                    <li data-reveal style="--reveal-delay: 100ms">
-                        <a href="{{ social_facebook }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
-                            <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient-diagonal text-white">
+                    <li>
+                        <a href="{{ social_facebook }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
+                            <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white">
                                 <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
                             </span>
                             <span>
                                 <span class="block font-chakra text-lg font-bold text-white">Facebook</span>
-                                <span class="block text-sm text-slate-400">KALKULite</span>
+                                <span class="block text-sm text-muted">KALKULite</span>
                             </span>
                         </a>
                     </li>
@@ -64,17 +64,17 @@
         {{# Spodní lišta #}}
         <div class="mt-16 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-[1fr_auto] sm:items-center">
             <nav aria-label="Patička" class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:justify-start">
-                <a href="/#funkce" class="text-slate-400 transition-colors hover:text-white">Funkce</a>
-                <a href="/#cenik" class="text-slate-400 transition-colors hover:text-white">Ceník</a>
-                <a href="/#faq" class="text-slate-400 transition-colors hover:text-white">Časté otázky</a>
-                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">Aplikace</a>
-                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="text-slate-400 transition-colors hover:text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
-                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}/privacy" class="text-slate-400 transition-colors hover:text-white">Zásady ochrany soukromí</a>
-                <a href="/zasady-ochrany-osobnich-udaju" class="text-slate-400 transition-colors hover:text-white">Ochrana údajů na webu</a>
-                <button type="button" data-cookie-settings class="text-slate-400 transition-colors hover:text-white">Nastavení cookies</button>
+                <a href="/#funkce" class="text-muted transition-colors hover:text-white">Funkce</a>
+                <a href="/#cenik" class="text-muted transition-colors hover:text-white">Ceník</a>
+                <a href="/#faq" class="text-muted transition-colors hover:text-white">Časté otázky</a>
+                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="text-muted transition-colors hover:text-white">Aplikace</a>
+                <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="text-muted transition-colors hover:text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
+                <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}/privacy" class="text-muted transition-colors hover:text-white">Zásady ochrany soukromí</a>
+                <a href="/zasady-ochrany-osobnich-udaju" class="text-muted transition-colors hover:text-white">Ochrana údajů na webu</a>
+                <button type="button" data-cookie-settings class="text-muted transition-colors hover:text-white">Nastavení cookies</button>
             </nav>
 
-            <p class="text-center text-sm text-slate-500 sm:text-right">© {{ now format="Y" }} KALKULite. Od faktur zpět k nářadí.</p>
+            <p class="text-center text-sm text-muted sm:text-right">© {{ now format="Y" }} KALKULite. Od faktur zpět k nářadí.</p>
         </div>
     </div>
 </footer>

@@ -87,6 +87,17 @@ function initReveal() {
         { threshold: 0.15, rootMargin: '0px 0px -40px 0px' },
     );
     items.forEach((el) => io.observe(el));
+
+    // SVG čáry (trasa dne, podpis) se dokreslí, až se samy objeví na obrazovce
+    const drawIo = new IntersectionObserver(
+        (entries) => entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-drawn');
+            drawIo.unobserve(entry.target);
+        }),
+        { threshold: 0.4 },
+    );
+    $$('[data-draw]').forEach((el) => drawIo.observe(el));
 }
 
 /* ---------- Spotlight na kartách (sleduje kurzor) ---------- */
@@ -167,7 +178,7 @@ function initCompare() {
 
     const set = (state) => {
         box.dataset.state = state;
-        $$('[data-compare-btn]', box).forEach((b) => b.setAttribute('aria-selected', b.dataset.compareBtn === state));
+        $$('[data-compare-btn]', box).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.compareBtn === state)));
     };
     $$('[data-compare-btn]', box).forEach((b) => b.addEventListener('click', () => { touched = true; set(b.dataset.compareBtn); }));
 
@@ -217,9 +228,9 @@ function initVoiceCard() {
         running = true;
         items.innerHTML = '';
         total.style.opacity = 0;
-        status.textContent = '● Poslouchám…';
+        status.textContent = 'Poslouchám…';
         await typeText(text, '„Pokládka vinylu v obýváku, třicet dva metrů, podložka, lišty, jeden a půl dne.“', 22);
-        status.textContent = '⚙ AI počítá…';
+        status.textContent = 'AI počítá…';
         await sleep(600);
         const lines = [
             ['Vinyl 32 m² + 10 % prořez', '14 080 Kč'],
@@ -228,7 +239,7 @@ function initVoiceCard() {
         ];
         for (const [l, p] of lines) { addLine(items, l, p); await sleep(350); }
         total.style.opacity = 1;
-        status.textContent = '✓ Nabídka hotová za 38 s';
+        status.textContent = 'Nabídka hotová za 38 s';
         running = false;
     });
 }
@@ -272,7 +283,7 @@ function initIndexCalc() {
 
         const verdict = index >= GOOD ? 'good' : index >= MEH ? 'meh' : 'bad';
         root.dataset.verdict = verdict;
-        setOut('verdict', { good: 'Vyplatí se ✓', meh: 'Na hraně – zvaž cenu', bad: 'Jen pálíš naftu ✕' }[verdict]);
+        setOut('verdict', { good: 'Vyplatí se', meh: 'Na hraně – zvaž cenu', bad: 'Jen pálíš naftu' }[verdict]);
 
         arc.style.strokeDashoffset = 100 - index;
         needle.style.transform = `rotate(${index * 1.8}deg)`;

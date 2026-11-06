@@ -1,14 +1,21 @@
-{{# Řádek srovnání. Parametry: label, them, us #}}
-<div class="grid gap-2 rounded-2xl border border-white/10 bg-black/15 p-4 transition-colors duration-500 group-data-[state=us]/cmp:border-white/20 group-data-[state=us]/cmp:bg-white/[0.06] sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:p-5">
-    <dt class="font-chakra text-xs font-semibold tracking-widest text-slate-400 uppercase">{{ label }}</dt>
+{{#
+    Řádek srovnání. Parametry: label, them, us
+    Vizuálně se přepíná mezi „ostatní“ a „KALKULite“; čtečka přečte obojí s popiskem.
+#}}
+<div class="grid gap-2 py-4 sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-4 sm:py-5">
+    <dt class="font-chakra text-xs font-semibold tracking-widest text-muted uppercase">{{ label }}</dt>
     <dd class="grid">
-        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
-            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-xs text-rose-400" aria-hidden="true">✕</span>
-            {{ them }}
+        <span class="col-start-1 row-start-1 flex items-start gap-3 text-slate-300 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:-translate-y-2 group-data-[state=us]/cmp:opacity-0">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-rose-500/20 text-rose-400" aria-hidden="true">
+                <svg class="size-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            </span>
+            <span><span class="sr-only">Ostatní nástroje: </span>{{ them }}</span>
         </span>
-        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
-            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-xs text-white" aria-hidden="true">✓</span>
-            {{ us }}
+        <span class="col-start-1 row-start-1 flex translate-y-2 items-start gap-3 text-white opacity-0 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:translate-y-0 group-data-[state=us]/cmp:opacity-100">
+            <span class="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand-gradient text-white" aria-hidden="true">
+                <svg class="size-3" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10.5l3.5 3.5L15 7"/></svg>
+            </span>
+            <span><span class="sr-only">KALKULite: </span>{{ us }}</span>
         </span>
     </dd>
 </div>

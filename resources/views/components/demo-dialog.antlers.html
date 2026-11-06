@@ -4,15 +4,14 @@
 #}}
 <dialog data-demo-dialog data-track-location="demo" aria-labelledby="demo-title" class="m-auto w-[min(28rem,calc(100vw-2rem))] overflow-visible bg-transparent p-0 text-slate-300 backdrop:bg-brand-deep/80 backdrop:backdrop-blur-sm open:animate-pop">
     <div class="glow-border relative rounded-3xl bg-brand-dark p-6 shadow-2xl sm:p-8">
-        <button type="button" data-demo-close class="absolute top-4 right-4 grid size-10 place-items-center rounded-xl text-slate-400 transition-colors hover:bg-white/10 hover:text-white" aria-label="Zavřít">
+        <button type="button" data-demo-close class="absolute top-4 right-4 grid size-10 place-items-center rounded-xl text-muted transition-colors hover:bg-white/10 hover:text-white" aria-label="Zavřít">
             <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
         </button>
 
-        <p class="font-chakra text-xs font-semibold tracking-[0.25em] text-gradient uppercase">Demo · 60 vteřin</p>
-        <h2 id="demo-title" class="mt-2 text-2xl font-bold">Faktura ze stavby, hlasem</h2>
+        <h2 id="demo-title" class="text-2xl font-bold">Faktura ze stavby, hlasem</h2>
 
         {{# Kroky #}}
-        <ol class="mt-6 grid grid-cols-3 gap-2 font-chakra text-[11px] font-semibold text-slate-500 uppercase" aria-hidden="true">
+        <ol class="mt-6 grid grid-cols-3 gap-2 font-chakra text-[11px] font-semibold text-muted uppercase" aria-hidden="true">
             <li data-demo-step="1" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">1 · Diktuješ</li>
             <li data-demo-step="2" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">2 · AI počítá</li>
             <li data-demo-step="3" class="rounded-lg border border-white/10 px-2 py-1.5 text-center transition-all data-[active=true]:border-transparent data-[active=true]:bg-brand-gradient data-[active=true]:text-white">3 · Hotovo</li>
@@ -28,13 +27,13 @@
             </div>
             <ul data-demo-items class="mt-5 space-y-2 text-sm"></ul>
             <div data-demo-total class="mt-4 flex items-center justify-between border-t border-white/10 pt-4 font-chakra opacity-0 transition-opacity duration-500">
-                <span class="text-slate-400">Celkem s DPH</span>
-                <span class="text-2xl font-bold text-gradient">18 450 Kč</span>
+                <span class="text-muted">Celkem s DPH</span>
+                <span class="text-2xl font-bold text-white tabular-nums">18 450 Kč</span>
             </div>
         </div>
 
         <div class="mt-6 grid gap-3 sm:grid-cols-2">
-            <button type="button" data-demo-replay class="rounded-xl glass px-4 py-3 font-chakra font-semibold text-white transition-colors hover:bg-white/10">↻ Přehrát znovu</button>
+            <button type="button" data-demo-replay class="rounded-xl glass px-4 py-3 font-chakra font-semibold text-white transition-colors hover:bg-white/10">Přehrát znovu</button>
             <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="rounded-xl bg-brand-gradient px-4 py-3 text-center font-chakra font-semibold text-white shadow-glow transition-transform hover:-translate-y-0.5">Vyzkoušet zdarma</a>
         </div>
     </div>

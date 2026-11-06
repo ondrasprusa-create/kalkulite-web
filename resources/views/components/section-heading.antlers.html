@@ -3,11 +3,11 @@
     Parametry: lead (krátký perex – volitelný), align (center|left)
     Slot: samotný nadpis
 #}}
-<div class="{{ align == 'left' ? 'text-left' : 'mx-auto text-center' }} max-w-3xl" data-reveal>
+<div class="{{ align == 'left' ? 'text-left' : 'mx-auto text-center' }} max-w-3xl">
     <h2 class="text-3xl leading-tight font-bold text-balance sm:text-4xl lg:text-5xl">
         {{ slot }}
     </h2>
     {{ if lead }}
-        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-slate-400 sm:text-lg">{{ lead }}</p>
+        <p class="mx-auto mt-5 max-w-2xl text-base text-pretty text-muted sm:text-lg">{{ lead }}</p>
     {{ /if }}
 </div>
