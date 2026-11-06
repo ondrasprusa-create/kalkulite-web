@@ -1,0 +1,155 @@
+<!doctype html>
+<!--
+    Úvodní fotka (cover) pro Facebook ve stylu webu – 1640 × 624 px.
+    Důležitý obsah je ve středu (~1100 px), protože Facebook na mobilu ořezává boky,
+    a levý dolní roh je volný kvůli profilové fotce.
+    Vygenerování PNG: viz resources/brand/README.md
+-->
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>KALKULite – Facebook cover</title>
+<style>
+    @import url("../../node_modules/@fontsource/chakra-petch/latin-600.css");
+    @import url("../../node_modules/@fontsource/chakra-petch/latin-ext-600.css");
+    @import url("../../node_modules/@fontsource/chakra-petch/latin-700.css");
+    @import url("../../node_modules/@fontsource/chakra-petch/latin-ext-700.css");
+    @import url("../../node_modules/@fontsource/inter/latin-400.css");
+    @import url("../../node_modules/@fontsource/inter/latin-ext-400.css");
+    @import url("../../node_modules/@fontsource/inter/latin-500.css");
+    @import url("../../node_modules/@fontsource/inter/latin-ext-500.css");
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1640px; height: 624px; overflow: hidden; background: #323044; }
+
+    .cover {
+        position: relative;
+        width: 1640px;
+        height: 624px;
+        overflow: hidden;
+        background: #323044;
+        font-family: "Inter", sans-serif;
+        color: #cbd5e1;
+    }
+
+    /* Aura – modrá vpravo nahoře, zelená vlevo dole (jako na webu) */
+    .blob { position: absolute; width: 1100px; height: 1100px; border-radius: 50%; filter: blur(70px); }
+    .blob--blue {
+        top: -640px; right: -380px;
+        background: radial-gradient(closest-side, rgba(36, 92, 150, 0.75), rgba(43, 74, 110, 0.4) 45%, rgba(43, 74, 110, 0.12) 70%, transparent);
+    }
+    .blob--green {
+        bottom: -640px; left: -360px;
+        background: radial-gradient(closest-side, rgba(38, 116, 96, 0.7), rgba(47, 90, 82, 0.38) 45%, rgba(47, 90, 82, 0.1) 70%, transparent);
+    }
+    .grid {
+        position: absolute; inset: 0;
+        background-image:
+            linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 44px 44px;
+        mask-image: radial-gradient(ellipse 55% 75% at 50% 50%, black, transparent);
+    }
+
+    .gradient-text {
+        background-image: linear-gradient(90deg, #0c92e9, #1fb8aa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    /* Střed – bezpečná zóna */
+    .center {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 1060px;
+        display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .brand { display: flex; align-items: center; gap: 18px; }
+    .brand img { width: 72px; height: 72px; border-radius: 22%; box-shadow: 0 0 0 1px rgba(31, 184, 170, 0.35), 0 12px 40px -10px rgba(12, 146, 233, 0.6); }
+    .brand .word { font-family: "Chakra Petch", sans-serif; font-weight: 700; font-size: 52px; letter-spacing: 0.02em; color: #fff; }
+
+    h1 {
+        margin-top: 34px;
+        font-family: "Chakra Petch", sans-serif; font-weight: 700;
+        font-size: 92px; line-height: 1; letter-spacing: -0.01em;
+        color: #fff;
+    }
+    h1 .accent { position: relative; display: inline-block; }
+    h1 .accent svg { position: absolute; left: 0; bottom: -18px; width: 100%; height: 16px; }
+
+    .sub {
+        margin-top: 40px;
+        display: flex; align-items: center; gap: 18px;
+        font-size: 26px; font-weight: 500; color: #cbd5e1;
+    }
+    .sub i { width: 8px; height: 8px; transform: rotate(45deg); background: linear-gradient(135deg, #0c92e9, #1fb8aa); }
+
+    .url {
+        margin-top: 34px;
+        padding: 12px 26px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        font-family: "Chakra Petch", sans-serif; font-weight: 600; font-size: 24px; letter-spacing: 0.04em;
+        color: #fff;
+    }
+
+    /* Dekorace na okrajích (na mobilu se oříznou – nevadí) */
+    .chip {
+        position: absolute;
+        display: flex; align-items: center; gap: 14px;
+        padding: 16px 22px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(43, 41, 64, 0.92);
+        box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+        font-family: "Chakra Petch", sans-serif;
+    }
+    .chip--invoice { left: 70px; top: 96px; transform: rotate(-4deg); }
+    .chip--index { right: 72px; top: 330px; transform: rotate(3deg); flex-direction: column; align-items: flex-start; gap: 2px; }
+    .chip .check {
+        display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+        background: linear-gradient(135deg, #0c92e9, #1fb8aa); color: #fff; font-size: 24px; font-weight: 700;
+    }
+    .chip b { display: block; color: #fff; font-size: 22px; }
+    .chip small { display: block; color: #94a3b8; font-family: "Inter", sans-serif; font-size: 15px; }
+    .chip .label { color: #94a3b8; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
+    .chip .big { display: flex; align-items: baseline; gap: 10px; }
+    .chip .big strong { font-size: 52px; line-height: 1; }
+    .chip .big em { font-style: normal; font-size: 18px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="cover">
+    <div class="blob blob--blue"></div>
+    <div class="blob blob--green"></div>
+    <div class="grid"></div>
+
+    <div class="chip chip--invoice">
+        <span class="check">✓</span>
+        <span><b>Faktura odeslána</b><small>i s QR platbou · 47 s</small></span>
+    </div>
+
+    <div class="chip chip--index">
+        <span class="label">KALKULite Index</span>
+        <span class="big"><strong class="gradient-text">64</strong><em class="gradient-text">Vyplatí se ↑</em></span>
+    </div>
+
+    <div class="center">
+        <div class="brand">
+            <img src="../../public/assets/brand/kalkulite-icon.png" alt="">
+            <span class="word">KALKU<span class="gradient-text">Lite</span></span>
+        </div>
+
+        <h1>Od faktur zpět k <span class="accent"><span class="gradient-text">nářadí!</span><svg viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><defs><linearGradient id="u" x1="0" x2="1"><stop stop-color="#0c92e9"/><stop offset="1" stop-color="#1fb8aa"/></linearGradient></defs><path d="M2 9C40 3 120 1 198 7" stroke="url(#u)" stroke-width="3.5" stroke-linecap="round"/></svg></span></h1>
+
+        <p class="sub">
+            Faktura ze stavby za minutu <i></i> Trasa dne <i></i> KALKULite Index
+        </p>
+
+        <p class="url">www.kalkulite.cz</p>
+    </div>
+</div>
+</body>
+</html>
