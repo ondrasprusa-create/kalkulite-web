@@ -22,7 +22,7 @@
 
                 {{# Přepínač #}}
                 <div role="group" aria-label="Zobrazit srovnání" class="relative grid w-full max-w-sm grid-cols-2 rounded-2xl border border-white/10 bg-black/20 p-1.5 font-chakra text-sm font-semibold sm:text-base">
-                    <span class="absolute inset-y-1.5 left-1.5 w-[calc(50%-0.375rem)] rounded-xl bg-white/10 transition-all duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:translate-x-full group-data-[state=us]/cmp:bg-brand-gradient group-data-[state=us]/cmp:shadow-glow" aria-hidden="true"></span>
+                    <span class="absolute inset-y-1.5 left-1.5 w-[calc(50%-0.375rem)] rounded-xl bg-white/10 transition-[translate,background-color,box-shadow] duration-300 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:translate-x-full group-data-[state=us]/cmp:bg-brand-gradient group-data-[state=us]/cmp:shadow-glow" aria-hidden="true"></span>
                     <button type="button" data-compare-btn="them" aria-pressed="true" class="relative z-10 rounded-xl px-4 py-3 text-white transition-colors group-data-[state=us]/cmp:text-muted">Ostatní appky</button>
                     <button type="button" data-compare-btn="us" aria-pressed="false" class="relative z-10 flex items-center justify-center gap-1.5 rounded-xl px-4 py-3 text-muted transition-colors group-data-[state=us]/cmp:text-white">
                         <img src="/assets/brand/kalkulite-icon-96.webp" alt="" width="20" height="20" class="size-5 rounded-md">KALKULite
@@ -33,7 +33,7 @@
             <div class="mt-10 grid items-center gap-10 lg:grid-cols-[1fr_1.4fr]">
                 {{# Vizuál: chaos aplikací vs. jedna appka #}}
                 <div class="relative mx-auto grid aspect-square w-full max-w-xs place-items-center" aria-hidden="true">
-                    <div class="absolute inset-0 rounded-full border border-dashed border-white/10 transition-all duration-700 group-data-[state=us]/cmp:scale-75 group-data-[state=us]/cmp:border-white/25"></div>
+                    <div class="absolute inset-0 rounded-full border border-dashed border-white/10 transition-[scale,border-color] duration-300 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:scale-75 group-data-[state=us]/cmp:border-white/25"></div>
 
                     {{# Roztříštěné appky #}}
                     {{ partial:components/app-chip pos="top-[8%] left-[10%]" rot="-rotate-12" label="Excel" color="bg-slate-600" }}
@@ -42,8 +42,8 @@
                     {{ partial:components/app-chip pos="bottom-[6%] right-[14%]" rot="-rotate-6" label="Fakturace" color="bg-slate-500" }}
 
                     {{# Jedna appka #}}
-                    <div class="relative grid place-items-center transition-all duration-700 ease-[cubic-bezier(.22,1,.36,1)] scale-50 opacity-30 grayscale group-data-[state=us]/cmp:scale-100 group-data-[state=us]/cmp:opacity-100 group-data-[state=us]/cmp:grayscale-0">
-                        <span class="absolute size-40 rounded-full bg-brand-gradient opacity-0 blur-2xl transition-opacity duration-700 group-data-[state=us]/cmp:opacity-50"></span>
+                    <div class="relative grid place-items-center transition-[scale,opacity,filter] duration-300 ease-[cubic-bezier(.22,1,.36,1)] scale-50 opacity-30 grayscale group-data-[state=us]/cmp:scale-100 group-data-[state=us]/cmp:opacity-100 group-data-[state=us]/cmp:grayscale-0">
+                        <span class="absolute size-40 rounded-full bg-brand-gradient opacity-0 blur-2xl transition-opacity duration-300 group-data-[state=us]/cmp:opacity-50"></span>
                         <img src="/assets/brand/kalkulite-icon-224.webp" alt="" width="112" height="112" loading="lazy" class="relative size-28 rounded-[26%] shadow-glow-lg">
                     </div>
                     <p class="absolute -bottom-2 font-chakra text-sm font-semibold text-muted">

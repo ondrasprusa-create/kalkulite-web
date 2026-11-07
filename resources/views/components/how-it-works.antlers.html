@@ -1,0 +1,21 @@
+{{#
+    JAK TO FUNGUJE – tři kroky od zakázky k zaplacené faktuře.
+    Číslování nese informaci (pořadí kroků); na desktopu je spojuje vodorovná linka, na mobilu svislá.
+#}}
+<section id="jak-to-funguje" class="relative py-20 sm:py-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {{ partial:components/section-heading lead="Od zakázky k zaplacené faktuře ve třech krocích. Přímo ze stavby." }}
+            Jak to funguje
+        {{ /partial:components/section-heading }}
+
+        <ol class="relative mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {{# Spojovací linka mezi čísly kroků #}}
+            <span class="pointer-events-none absolute top-6 right-[16.66%] left-[16.66%] hidden h-px bg-gradient-to-r from-brand-blue/60 via-white/20 to-brand-teal/60 md:block" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute top-12 bottom-12 left-6 w-px bg-gradient-to-b from-brand-blue/60 via-white/20 to-brand-teal/60 md:hidden" aria-hidden="true"></span>
+
+            {{ partial:components/how-step number="1" title="Nadiktuj zakázku" text="Na stavbě řekneš do mobilu, co děláš: „Jsem u Nováka, obklad dvanáct metrů, dva dny práce.“ Nic nepřepisuješ." }}
+            {{ partial:components/how-step number="2" title="Zkontroluj nabídku nebo fakturu" text="KALKULite z toho sestaví položky, materiál i práci. Celkovou cenu vidíš hned a upravíš ji klepnutím." }}
+            {{ partial:components/how-step number="3" title="Pošli ji s QR platbou" text="PDF pošleš zákazníkovi přes WhatsApp nebo e-mail. Zaplatí přes QR kód, klidně hned na místě." }}
+        </ol>
+    </div>
+</section>

@@ -8,15 +8,15 @@
     data-tilt-card
     data-plan-name="{{ name }}"
    
-    class="group relative flex flex-col rounded-3xl p-7 transition-all duration-300 
+    class="group relative flex flex-col rounded-3xl p-7 transition-colors duration-200 
         {{ if featured }}
             glow-border bg-gradient-to-b from-brand-blue/20 via-brand-teal/10 to-white/5 shadow-glow-lg xl:-my-4 xl:py-11
         {{ else }}
-            border border-white/10 bg-white/5 hover:-translate-y-1 hover:border-white/25
+            border border-white/10 bg-white/5
         {{ /if }}"
 >
     {{ if featured }}
-        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-4 py-1 font-chakra text-xs font-bold tracking-wider whitespace-nowrap text-white uppercase shadow-glow">
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-4 py-1 font-chakra text-xs font-bold whitespace-nowrap text-white shadow-glow">
             Nejoblíbenější
         </span>
     {{ /if }}
@@ -40,7 +40,7 @@
     {{ /if }}
 
     {{ if price_yearly }}
-        <p class="mt-1.5 text-xs text-muted">nebo {{ price_yearly }} Kč ročně · 2 měsíce zdarma</p>
+        <p class="mt-1.5 text-xs text-muted">nebo {{ price_yearly }} Kč ročně (2 měsíce zdarma)</p>
     {{ /if }}
 
     <ul class="mt-7 flex-1 space-y-3 text-sm">

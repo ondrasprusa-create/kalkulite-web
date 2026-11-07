@@ -28,11 +28,11 @@
             {{# Sociální sítě #}}
             {{ if social_instagram || social_facebook }}
             <div>
-                <p class="mb-5 font-chakra text-xs font-semibold tracking-[0.25em] text-muted uppercase">Sledujte nás</p>
+                <h2 class="mb-5 font-chakra text-lg font-semibold text-white">Sledujte nás</h2>
                 <ul class="grid gap-4 sm:grid-cols-2">
                     {{ if social_instagram }}
                     <li>
-                        <a href="{{ social_instagram }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
+                        <a href="{{ social_instagram }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1 hover:border-white/25">
                             <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white">
                                 <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
                             </span>
@@ -45,7 +45,7 @@
                     {{ /if }}
                     {{ if social_facebook }}
                     <li>
-                        <a href="{{ social_facebook }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/25">
+                        <a href="{{ social_facebook }}" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition duration-200 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1 hover:border-white/25">
                             <span class="grid size-14 shrink-0 place-items-center rounded-2xl bg-brand-gradient text-white">
                                 <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
                             </span>
@@ -70,6 +70,7 @@
                 <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}" class="text-muted transition-colors hover:text-white">Aplikace</a>
                 <a href="mailto:{{ contact_email ?? 'info@kalkulite.cz' }}" class="text-muted transition-colors hover:text-white">{{ contact_email ?? 'info@kalkulite.cz' }}</a>
                 <a href="{{ app_url ?? 'https://app.kalkulite.cz' }}/privacy" class="text-muted transition-colors hover:text-white">Zásady ochrany soukromí</a>
+                <a href="/obchodni-podminky" class="text-muted transition-colors hover:text-white">Obchodní podmínky</a>
                 <a href="/zasady-ochrany-osobnich-udaju" class="text-muted transition-colors hover:text-white">Ochrana údajů na webu</a>
                 <button type="button" data-cookie-settings class="text-muted transition-colors hover:text-white">Nastavení cookies</button>
             </nav>

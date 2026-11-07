@@ -1,5 +1,5 @@
 {{# Ikonka „cizí“ aplikace ve srovnání. Parametry: pos, rot, label, color #}}
-<div class="absolute {{ pos }} transition-all duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:scale-0 group-data-[state=us]/cmp:rotate-45 group-data-[state=us]/cmp:opacity-0">
+<div class="absolute {{ pos }} transition-[scale,opacity] duration-250 ease-[cubic-bezier(.22,1,.36,1)] group-data-[state=us]/cmp:scale-95 group-data-[state=us]/cmp:opacity-0">
     <div class="{{ rot }} flex flex-col items-center gap-1.5 animate-float [animation-duration:5s]">
         <span class="grid size-14 place-items-center rounded-2xl {{ color }} font-chakra text-xl font-bold text-white/90 shadow-lg">{{ label | substr(0, 1) }}</span>
         <span class="text-xs text-muted">{{ label }}</span>
